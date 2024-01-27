@@ -1,9 +1,6 @@
 *{
-    background-color:linear-gradient(red, orange, yellow, green, blue);;
-    background-position:right;
-    background-repeat: no-repeat;
-    background-size: 100%,100%;
-    background-attachment: fixed;
+    background:black;
+    
 }
 
 
@@ -135,17 +132,18 @@
     color:rgb(72, 252, 27);
     border-radius: 100px;
     transition-duration: 0.3s;
+    padding: 10px;
 
 }
 #bt:hover{
     cursor: pointer;
-    color: rgb(31, 253, 242);
-    background-color: rgb(186, 22, 236);
+    color: rgb(204, 241, 38);
+    background-color: rgb(250, 34, 232);
     position:absolute; top: 19.5%; left:44.5%;
     border-radius: 50px;
     display: block;
     text-align: center;
-    border-color: #ff1361;
+    border-color: #4aff13;
     border-width: 10px;
 }
 
@@ -169,7 +167,6 @@ a:hover{
  
     cursor: pointer;
     color: rgb(250, 34, 232);
-    background-color: burlywood;
     padding: auto;
     border-radius: 50px;
     display: block;
@@ -192,11 +189,11 @@ a:hover{
 }
 #bt2:hover{
     cursor: pointer;
-    color: rgb(31, 253, 242);
-    background-color: rgb(186, 22, 236);
+    color: rgb(204, 241, 38);
+    background-color: rgb(250, 34, 232);
     border-radius: 50px;
     display: block;
     text-align: center;
-    border-color: #ff1361;
+    border-color: #4aff13;
     border-width: 10px;
 }

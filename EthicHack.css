@@ -1,17 +1,12 @@
 *{
     background-color:black;
-    background-image: url(IMG/Background/2.jpg);
-    background-position:right;
     background-repeat: no-repeat;
-    background-size: 100%,100%;
-    background-attachment: fixed;
 }
 
 
 
 
 #icon{
-    
     width:150px;
     position:relative;
     animation: iconanirotate 1s  linear infinite, iconani2 5s 5s linear ;
@@ -21,31 +16,21 @@
     display: inline;
 }
 @keyframes iconanirotate{
-    
-   
- 
  from{transform: rotate(0deg);}
  100%{  transform: rotate(360deg);}
-
-
 }
 @keyframes iconani2{
-    
-
     0%   { }
     20%   {border-radius: 25%; }
     30% {border-radius: 50%;}
     50% { border-radius: 25%; }
     100% {border-radius: 10%; }
-     
-
 }
 
 
 
 
 #hd {
-    
     background-image: linear-gradient(
         -225deg,
         #3bda2d 0%,
@@ -63,7 +48,6 @@
     -webkit-text-fill-color: transparent;
     animation: textani 5s linear infinite , textslide 5s linear;
     animation-timing-function:relative;
-   
     position:relative;
     font-size: 80px;
     text-align:center;
@@ -81,9 +65,11 @@
 }
 
 
-
+#Disclaimer{
+    margin-right: 20%;
+    margin-left: 20%;
+}
 #ethical{
-
     margin-right: 20%;
     margin-left: 20%;
 }
@@ -92,7 +78,7 @@
     margin-left: 20%;
 }
 #hdeh{
-
+    content: center;
     color: #57f8dd;
     font-family: 'Brush Script MT', 'cursive';
     font-size:xx-large;
@@ -107,3 +93,40 @@
     color: aquamarine;
    display: inline-flexbox;
 }
+
+
+
+
+a[href]{
+    color:chartreuse ;
+    text-decoration: none;
+}
+
+#BtToHome{
+    font-size: xx-large;
+    margin-right: 20%;
+    margin-left: 20%;
+    position: absolute ;top: 12%; right: 2%;
+    padding: auto;
+    border-radius: 100px;
+}
+#link{
+    font-family: 'Brush Script MT', 'cursive';
+    border-radius: 100px;
+}
+#link:hover{
+    background-color:rgb(250, 34, 232) ;
+}
+#BtToHome:hover{
+    cursor: pointer;
+    color: rgb(204, 241, 38);
+    background-color: rgb(151, 5, 236);
+    position: absolute ;top: 11.5%; right: 1.5%;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    border-color: #4aff13;
+    border-width: 10px;
+}
+
+    
