@@ -86,11 +86,10 @@
     
     
     #bt{
-        display:flex;
+        display:block;
         justify-content: center;
         text-align: center;
         margin-top: 5%;
-        margin-left: 15%;
         position:relative; 
         font-size:xx-large;
         font-family: 'Brush Script MT', 'cursive';
