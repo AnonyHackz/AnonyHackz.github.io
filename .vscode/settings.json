@@ -1,0 +1,52 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "PR1",
+            "username": "root",
+            "password": "dingdong",
+            "database": "vj"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "username": "root",
+            "name": "root",
+            "database": "vjhex",
+            "password": "dingdong"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {}
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "vjhex",
+            "database": "vjhex",
+            "username": "root",
+            "password": "dingdong"
+        }
+    ],
+    "open-php-html-js-in-browser.alternativeDocumentRootFolders": [
+        "vjhackz/vjhex"
+    ],
+    "open-php-html-js-in-browser.urlToOpen": "http://localhost/",
+    "open-php-html-js-in-browser.customUrlToOpen": "http://${localhost}/${relativeDirnameDocumentRoot}/${fileBasename}"
+}
