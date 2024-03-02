@@ -1,5 +1,21 @@
-
-
+function check(){
+      
+                  var sqlCon = new ActiveXObject("adodb.connection");
+                  var strConn = "driver={sql server};server=localhost;database=vjhex;uid=root;password=dingdong";
+                  sqlCon.Open(strConn);
+                  var rs = new ActiveXObject("ADODB.Recordset");
+                  var strQuery = "SELECT * FROM  user";
+                  rs.Open(strQuery, sqlCon);
+                  rs.MoveFirst();
+                  while (!rs.EOF) {
+                        document.write(rs.fields(0) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+                        document.write(rs.fields(1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+                        document.write(rs.fields(2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+                        document.write(rs.fields(3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
+                        document.write(rs.fields(4) + "<br/>");
+                        rs.movenext();
+                  }
+}
 /*
   function hi(event){
 
