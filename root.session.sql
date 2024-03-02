@@ -1,1 +1,1 @@
-SHOW DATABASES;
+SELECT * from users;
