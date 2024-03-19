@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template,request
+'''from flask import Flask, render_template,request
 from flask import Response
 from werkzeug.serving import make_server
 from multiprocessing import Process
@@ -89,14 +89,16 @@ def shutdown():
 
 if __name__ == '__main__':
     app.debug=True
-    app.run()
-   
+    app.run()'''
+from django.http import JsonResponse
+def print_some(request):
     
+        variable = request.GET.get('variable', 'default')
+        print('Variable:', variable)
+        return JsonResponse({})
 
 
 
-
-    
     
     
 

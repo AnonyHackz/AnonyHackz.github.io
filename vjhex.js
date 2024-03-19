@@ -1,21 +1,34 @@
+function GetInfo(e){
+      document.getElementById("test3").innerHTML = e.target.myCustomID;
+      var tagID = e.target.myCustomID;
+      $.ajax({
+      url: 'Ajax1',
+      type: "POST",
+      data: {
+            'tagID': tagID,
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
+      },
+      success: function (data) {
+            alert ("Congrats! You sent some data: " + tagID);}
+      ,
+      error: function() {
+            alert ("Something went wrong");
+      }
+      })};
+/*var local = 'hii';
 function check(){
-      
-                  var sqlCon = new ActiveXObject("adodb.connection");
-                  var strConn = "driver={sql server};server=localhost;database=vjhex;uid=root;password=dingdong";
-                  sqlCon.Open(strConn);
-                  var rs = new ActiveXObject("ADODB.Recordset");
-                  var strQuery = "SELECT * FROM  user";
-                  rs.Open(strQuery, sqlCon);
-                  rs.MoveFirst();
-                  while (!rs.EOF) {
-                        document.write(rs.fields(0) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-                        document.write(rs.fields(1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-                        document.write(rs.fields(2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
-                        document.write(rs.fields(3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ");
-                        document.write(rs.fields(4) + "<br/>");
-                        rs.movenext();
-                  }
-}
+      $.ajax({
+            type: "GET",
+            url:`printsome/?variable=` + local,
+            
+            
+            success: function(response) {
+                  console.log('success')
+                  console.log(local)
+                  alert("success returned");},
+            error: function (response){
+                  console.log('error');}})};*/
+  
 /*
   function hi(event){
 
@@ -41,7 +54,38 @@ function check(){
 
   }*/
 
+
+
+       // soon() section
+
+  function Soon(){
+      var con = document.getElementById("container");
+      var pr = document.getElementById("project");
+      con.removeChild(pr);
+      document.getElementById("intro").innerHTML=" We are pleased to consider exploring alternative courses at the moment."   ;                     
+      con.innerHTML += ` <h1 id="GoBack" >Coming Soon.......</h1>`;
+      con.innerHTML += `<center id="cenbt"><button id="btsoon" onclick="soonremove(); he()">Previous Page</button></center>`;
+  }
+  function soonremove(){
+      var con = document.getElementById("container");
+      var GoBack = document.getElementById("GoBack"); 
+      con.removeChild(GoBack);
+      var cenbt = document.getElementById("cenbt");
+    
+      con.removeChild(cenbt);
+  }
+
+  
+
+
+
+
+
+
+         // he()  section 
+
   function he(){
+        
 
         var pro= document.createElement("nav");            // To create element
         
@@ -49,26 +93,47 @@ function check(){
         pro.setAttribute('id','project');                  // To set id or class name to the created element
       
                                                            // TO replace text content to any html tag
-        document.getElementById("intro").innerHTML=" Hereby we are thrilled to inform you that we have multiple courses available for you to pursue  in the field of IT.  </p>"   ;                                                      
+        document.getElementById("intro").innerHTML=" Hereby we are thrilled to inform you that we have multiple courses available for you to pursue  in the field of IT."   ;                                                      
         
                                                             // To append html codes into created element
-        pro.innerHTML+='<form><table><td><ol>   <li><a>HTML</a></li>  <li><a>JavaScript</a></li>  <li><a>CSS</a></li> <li><a>SQL</a></li> <li><a>Python</a></li> <li><a href="EthicHackz.html" targrt="blank">Ethical Hacking</a></li> <li><a>Machine Learning</a></li>  <li><a>Java</a></li>    <li><a>AutoCad</a></li>  <li><a>Web Development</a></li>  <li><a>Reverse Engineering</a></li>  </ol></td>  </table><button id="bt2" onclick="home()">Previous Page</button></form>';
-      
+        pro.innerHTML+='<form>\
+                              <table>\
+                                    <td>\
+                                          <ol>\
+                                                <li><a onclick="Soon()">HTML</a></li> \
+                                                <li><a onclick="Soon()" >JavaScript</a></li>\
+                                                <li><a onclick="Soon()">CSS</a></li>\
+                                                <li><a onclick="Soon()" >SQL</a></li>\
+                                                <li><a onclick="Soon()" >Python</a></li>\
+                                                <li><a href="EthicHackz.html" targrt="blank">Ethical Hacking</a></li>\
+                                                <li><a onclick="Soon()" >Machine Learning</a></li>\
+                                                <li><a onclick="Soon()" >Java</a></li>\
+                                                <li><a onclick="Soon()" >AutoCad</a></li>\
+                                                <li><a onclick="Soon()" >Web Development</a></li>\
+                                                <li><a onclick="Soon()" >Reverse Engineering</a></li>\
+                                          </ol>\
+                                    </td>\
+                              </table>\
+                              <button id="bt2" onclick="home()">Previous Page</button>\
+                        </form>';
+       
       
         var con = document.getElementById("container");    // To append created element into html file
         con.appendChild(pro);
 
         var bt = document.getElementById("bt");            // To remove elements
         con.removeChild(bt);
-
-   
-        
-
-
+      
 
   }
   
 
+
+
+
+
+
+         // home() section
 
   function home(){
     

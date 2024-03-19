@@ -1,7 +1,4 @@
 
-
-
-
 @media (max-width: 480px){
     *{
         background:black;
@@ -172,7 +169,10 @@
 @media (min-width: 1281px) {}
 @media  (min-width: 1025px){
     *{
-        background:black;
+        background-image: url(IMG/Logo/logo-white.png);
+        background-attachment: fixed;
+        
+        
         
     }
     
@@ -300,12 +300,12 @@
     }
     #bt:hover{
         cursor: pointer;
-        color: rgb(241, 38, 11);
-        background-color: rgb(6, 247, 58);
+        color: rgb(18, 255, 58);
+        background-color: rgb(255, 4, 4);
        
         border-radius: 50px;
         text-align: center;
-        border-color: #fc1d0d;
+        border-color: #0dfcf0;
         border-width: 5px;
     }
     
@@ -351,13 +351,70 @@
     }
     #bt2:hover{
         cursor: pointer;
-        color: rgb(241, 38, 11);
-        background-color: rgb(6, 247, 58);
+        color: rgb(18, 255, 58);
+        background-color: rgb(255, 4, 4);
         border-radius: 50px;
         display: block;
         text-align: center;
-        border-color: #fc1d0d;
+        border-color: #0dfcf0;
         border-width: 5px;
     }
     }
+
+
+
+
+
+    #GoBack{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        color: rgb(44, 223, 21);
+        
+        
+        animation: blackintro 5s  linear  , gobackanifi 5s 7s linear infinite; 
+    }
+
+    @keyframes blackintro{
+        0%   {color:black;}
+        50%  {color:rgb(156, 95, 95);}
+        100% {color:blueviolet;}
+    }
+    @keyframes gobackanifi{
+        0%  {color:red; }
+        10% {color:aquamarine;}
+        20% {color:blue;}
+        30% {color: beige;}
+        40% {color: #fff800;}
+        50% {color:skyblue;}
+        60% {color: chartreuse;}
+        70% {color:#57f8dd;}
+        80% {color: blue;}
+        90% {color: aqua;}
+        100% {color: rgb(6, 247, 58);}
+    }
+
+
+    #btsoon{
+        display:block;
+        
+        justify-content: center;
+        text-align: center;
+        font-size:xx-large;
+        font-family: 'Brush Script MT', 'cursive';
+        color:rgb(72, 252, 27);
+        border-radius: 100px;
+        transition-duration: 0.3s;
+    }
     
+    #btsoon:hover{
+       
+        cursor: pointer;
+        color: rgb(18, 255, 58);
+        background-color: rgb(255, 4, 4);
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+        border-color: #0dfcf0;
+        border-width: 5px;
+    }

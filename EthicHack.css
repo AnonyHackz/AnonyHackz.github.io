@@ -277,3 +277,28 @@ a[href]:hover{
 }
 
 }
+
+#ok{
+    color: red;
+    font-size: xx-large;
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    animation: blink 3s linear infinite  ;
+}
+
+@keyframes blink {
+
+    0%  {color:red; }
+    10% {color:aquamarine;}
+    20% {color:blue;}
+    30% {color: beige;}
+    40% {color: #fff800;}
+    50% {color:skyblue;}
+    60% {color: chartreuse;}
+    70% {color:#57f8dd;}
+    80% {color: blue;}
+    90% {color: aqua;}
+    100% {color: rgb(6, 247, 58);}
+    
+}
