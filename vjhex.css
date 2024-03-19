@@ -169,11 +169,8 @@
 @media (min-width: 1281px) {}
 @media  (min-width: 1025px){
     *{
-        background-image: url(IMG/Logo/logo-white.png);
-        background-attachment: fixed;
         
-        
-        
+        background-color: black;
     }
     
     
