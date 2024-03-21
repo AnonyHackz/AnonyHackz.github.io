@@ -1,5 +1,5 @@
 
-'''from flask import Flask, render_template,request
+from flask import Flask, render_template,request
 from flask import Response
 from werkzeug.serving import make_server
 from multiprocessing import Process
@@ -17,12 +17,6 @@ app = Flask(__name__,template_folder='templates', static_folder='static')
 
 
 
-
-def shutdown_server():
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()
 
 
 
@@ -77,25 +71,12 @@ def check():
 
 
 
-"""@app.get('/shutdown')
-def shutdown():
-    ...
-    shutdown_hook = request.environ.get('werkzeug.server.shutdown')
-    if shutdown_hook is not None:
-        shutdown_hook()
-    return Response("Bye", mimetype='text/plain')"""
 
     
 
 if __name__ == '__main__':
     app.debug=True
-    app.run()'''
-from django.http import JsonResponse
-def print_some(request):
-    
-        variable = request.GET.get('variable', 'default')
-        print('Variable:', variable)
-        return JsonResponse({})
+    app.run()
 
 
 

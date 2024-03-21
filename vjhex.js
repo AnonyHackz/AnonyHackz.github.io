@@ -1,58 +1,7 @@
-function GetInfo(e){
-      document.getElementById("test3").innerHTML = e.target.myCustomID;
-      var tagID = e.target.myCustomID;
-      $.ajax({
-      url: 'Ajax1',
-      type: "POST",
-      data: {
-            'tagID': tagID,
-            'csrfmiddlewaretoken': '{{ csrf_token }}',
-      },
-      success: function (data) {
-            alert ("Congrats! You sent some data: " + tagID);}
-      ,
-      error: function() {
-            alert ("Something went wrong");
-      }
-      })};
-/*var local = 'hii';
-function check(){
-      $.ajax({
-            type: "GET",
-            url:`printsome/?variable=` + local,
-            
-            
-            success: function(response) {
-                  console.log('success')
-                  console.log(local)
-                  alert("success returned");},
-            error: function (response){
-                  console.log('error');}})};*/
+
   
-/*
-  function hi(event){
-
-
-   
-
-        var ip = document.getElementById("project").value;
-        
-        var tg = document.createElement("h1");
-
-        var tt =document.createTextNode(ip)
-        
-        tg.appendChild(tt);
-        console.log(tg);
-       
-        var gt= document.getElementById("new");
-
-    
-        gt.appendChild(tg);
-        
-       
-
-
-  }*/
+  
+  
 
 
 

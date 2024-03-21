@@ -1,0 +1,28 @@
+{
+  "name": "anonyhackz.github.io",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {},
+  "version": "1.0.0",
+  "main": "EthicHackz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjveerappa/AnonyHackz.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vjveerappa/AnonyHackz.github.io/issues"
+  },
+  "homepage": "https://github.com/vjveerappa/AnonyHackz.github.io#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.2"
+  }
+}

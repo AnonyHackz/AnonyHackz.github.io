@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
-    <py-script src="vjhex.py"></py-script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script defer type="text/javascript" src="login.js"></script>
+
+    
    
 </head>
 <body id="BD">
 
-    <form id="Hd" name="input_form" action="/send" method="POST" >
-        <div>
+    <form id="Hd" >
+        <tr>
             <label id="lun" for="name">Username :</label>
-            <input class="form-control" id="Un" type="text" name="name" ></input>
-        </div>
-        <div>
+            <td><input id="Un" type="text" ></input></td>
+        </tr>
+        <tr>
             <label id="lpass" for="pass">Password :</label> 
-            <input class="form-control" id="Ps" type="text" name="pass"></input><br> 
-        </div>       
-        <div>
+            <td><input  id ="Ps" type="text"></input></td>
+        </tr>     
+        <tr>
    
          
-            <input name="submit" type="submit"  value="submit">
-            <input type="reset" value="Clear">
-        </div>
+            <td><button onclick="Con()">Log In</button></td>
+            
+        </tr>
     </form>  
 
 </body>

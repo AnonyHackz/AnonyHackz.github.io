@@ -1,32 +1,48 @@
 
-
-function Crlog(){
-    var BD =document.getElementById("BD");
-    var Hd = document.getElementById("Hd");
-    var sbt = document.getElementById("sbt");
-    var cbt = document.getElementById("cbt");
-    var Ps = document.getElementById("Ps");
-    var lpass = document.getElementById("lpass");
-    var Un = document.getElementById("Un");
-    var lun = document.getElementById("lun");
+function Con(){
     
-    Hd.removeChild(Un);
-    Hd.removeChild(lun);
-    Hd.removeChild(lpass);
-    Hd.removeChild(Ps);
-    BD.removeChild(sbt);
-    BD.removeChild(cbt);
+    var Un = document.getElementById("Un").value;
+    var Ps = document.getElementById("Ps").value;
 
 
-    Hd.innerHTML +='<label id="lun" for="name">Username :</label>\
-                    <input id="Un" type="t" name="name" ></input><br>\
-                    <label for="createpass">Create Password :</label> \
-                    <input  type="text" name="createpass"></input><br> \
-                    <label for="confirmpass">Confirm Password :</label> \
-                    <input  type="text" name="confirmpass" ></input><br>';
+  
+  
+    const mysql = require('mysql2');
+
+
+    // create a new MySQL connection
+    const pool = mysql.createPool( { 
+        host: 'localhost',
+        user: 'root',
+        password: 'dingdong',
+        database: 'vjhex'}).promise();
+  
+    
+    var value;
+    globalThis.value=value;
+
+    if((Un==false) & (Ps == false)){
+            async function getall(Un){     
+                value = await pool.query(`SELECT PASSWORD FROM users WHERE USER_NAME = ?`,[Un])
+            
+                console.log(value);
+                pool.end();
+                if ( Pass = value){
+                    console.log("You are loged In");
+                    window.open("index.html","_self");
+                }else{
+                    console.log("Incorrect password")
+                }
+                getall(Un)                               // close the MySQL connection
+
+                
         
-    BD.innerHTML +='<button id="lbt" onclick="Ccompare()">Log</button>';
-
+            };
+    }else{
+        alert('Incorrect Username or Password')
+        }
     
-       
+   
+ 
+    
 }
