@@ -1,8 +1,10 @@
 
 function Con(){
     
-    var Un = document.getElementById("Un").value;
-    var Ps = document.getElementById("Ps").value;
+    //var Un = document.getElementById("Un").value;
+   // var Ps = document.getElementById("Ps").value;
+   var Un = "VijayVeerappa";
+   var Ps = "KVAFamily";
 
 
   
@@ -21,23 +23,25 @@ function Con(){
     var value;
     globalThis.value=value;
 
-    if((Un==false) & (Ps == false)){
+    var g =10;
+
+    if((g=10) ){
             async function getall(Un){     
                 value = await pool.query(`SELECT PASSWORD FROM users WHERE USER_NAME = ?`,[Un])
             
                 console.log(value);
-                pool.end();
+                pool.end();                     // close the MySQL connection
                 if ( Pass = value){
                     console.log("You are loged In");
                     window.open("index.html","_self");
                 }else{
                     console.log("Incorrect password")
                 }
-                getall(Un)                               // close the MySQL connection
+                                          
 
-                
+            }; 
         
-            };
+            getall(Un) 
     }else{
         alert('Incorrect Username or Password')
         }
@@ -46,3 +50,4 @@ function Con(){
  
     
 }
+Con();
