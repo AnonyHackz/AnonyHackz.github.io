@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-    <script defer type="text/javascript" src="login.js"></script>
+    <script defer type="text/javascript" src="login.cjs"></script>
 
     
    
@@ -15,19 +15,20 @@
     <form id="Hd" >
         <tr>
             <label id="lun" for="name">Username :</label>
-            <td><input id="Un" type="text" ></input></td>
+            <td><input id="Un" name="Name" type="text" ></input></td>
         </tr>
         <tr>
             <label id="lpass" for="pass">Password :</label> 
-            <td><input  id ="Ps" type="text"></input></td>
+            <td><input  id ="Ps" name="Pas" type="password"></input></td>
         </tr>     
         <tr>
    
          
-            <td><button onclick="Con()">Log In</button></td>
+            <td><button onclick="Con()" type="button">Log In</button></td>
             
         </tr>
     </form>  
+    <div id="ValOut"></div>
 
 </body>
 </html> 

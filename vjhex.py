@@ -1,7 +1,8 @@
 
 from flask import Flask, render_template,request
 from flask import Response
-from werkzeug.serving import make_server
+import json 
+
 from multiprocessing import Process
 
 import mysql.connector
@@ -11,28 +12,13 @@ from mysql.connector import Error
 
 
 
-app = Flask(__name__,template_folder='templates', static_folder='static')
 
-
-
-
-
-
-
-
-
-@app.route('/')
-def login():
-    return render_template('login.html')
-
-
-@app.route('/send', methods=['POST'])
 def check():
    
     global UserName
     global  pwd
-    UserName = request.form.get('name')
-    pwd  = request.form.get('pass')
+    UserName = "VijayVeerappa" 
+    pwd  = 'KVAFamily'
 
     try:
         con = mysql.connector.connect(host='localhost',
@@ -46,10 +32,10 @@ def check():
             cursor.execute("select database();")
             record = cursor.fetchone()
             print("You're connected to database: ",record)
-            cursor.execute("select PASSWORD from users where USER_NAME = '%s';"%UserName)
+            cursor.execute(" select PASSWORD from users where USER_NAME = '%s';"%UserName)
             user=cursor.fetchall()
             print(user)
-            cursor.execute("select AGE from users where USER_NAME = '%s';"%UserName)
+            cursor.execute("select AGE from users;")
             Age=cursor.fetchall()
             print(Age)
             con.commit()
@@ -65,18 +51,13 @@ def check():
                 
 
 
-    return render_template('index.html')
+    '''return render_template('index.html')'''
    
     #return render_template('check.html',Uname=UserName,pswd=pwd)
 
 
+check()
 
-
-    
-
-if __name__ == '__main__':
-    app.debug=True
-    app.run()
 
 
 
