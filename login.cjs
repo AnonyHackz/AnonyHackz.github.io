@@ -1,6 +1,5 @@
 
-
-function Con(){
+/*function Con(){
     
     //var Un = document.getElementById("Un").value;
    // var Ps = document.getElementById("Ps").value;
@@ -32,7 +31,7 @@ function Con(){
             
                 console.log(value);
                 pool.end();                     // close the MySQL connection
-                if ( Pass = value){
+                if ( Pass = value){L } = require('dns');
                     console.log("You are loged In");
                     window.open("index.html","_self");
                 }else{
@@ -50,11 +49,13 @@ function Con(){
    
  
     
-}
-Con();
+}*/
 
-function Con() {
-    let form = document.getElementById("Hd");
+const { ALL } = require('dns');
+let form = document.getElementsByClassName("Hd");
+
+function Con() {                                       // Collecting data from login.html
+    
     let formData = {};
     for (let i = 0; i < form.elements.length; i++) {
         let element = form.elements[i];
@@ -63,15 +64,30 @@ function Con() {
         }
     }
     let jsonData = JSON.stringify(formData);
-    let ValOut = document.getElementById("ValOut");
-    ValOut.innerHTML =  "<pre>" +jsonData +"<pre>";
-}
+   // let ValOut = document.getElementById("ValOut");
+  //  ValOut.innerHTML =  "<pre>" +jsonData +"<pre>";
+
+                                                      // Ending data collectiing from login.html
+   
+
+    const spawner =require(['child_process']).spawn;    // Sending data to python file
+    console.log("2 ",jsonData);
+    const send = spawner['python',['./vjhex.py',JSON.stringify(jsonData)]];  // Sending data to python file
+    console.log("3 ",jsonData);
+    send.stdout.on('data',(data)=>{
+        console.log('Welcme :' ,JSON.parse(data.toString()));
+    });
+    console.log("4 ",jsonData);
+    
+};
 
 
-var LocalStorage = require('node-localstorage').LocalStorage,
-localStorage = new LocalStorage('./scratch');
+Con();
+    
 
-// Create an object
+
+
+/*// Create an object
 const userData = {
     job: "Programmer",
     skills: [
@@ -81,3 +97,7 @@ const userData = {
     ],
   };// Store the object into storage
 localStorage.setItem("userData", JSON.stringify(userData));
+
+
+*/
+

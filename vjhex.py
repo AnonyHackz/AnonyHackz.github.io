@@ -1,7 +1,11 @@
 
 from flask import Flask, render_template,request
 from flask import Response
+
+
+import sys
 import json 
+import ast
 
 from multiprocessing import Process
 
@@ -56,15 +60,19 @@ def check():
     #return render_template('check.html',Uname=UserName,pswd=pwd)
 
 
-check()
 
 
 
+
+
+input= ast.literal_eval(sys.argv[1])
 
     
-    
-
-
+for i in input: 
+    output= input
+    print(json.dumps(output))
+    sys.stdout.flush()
+    i+1
 
 
 
