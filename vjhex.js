@@ -42,7 +42,7 @@
         pro.setAttribute('id','project');                  // To set id or class name to the created element
       
                                                            // TO replace text content to any html tag
-        document.getElementById("intro").innerHTML=" Hereby we are thrilled to inform you that we have multiple courses available for you to pursue  in the field of IT."   ;                                                      
+        document.getElementById("intro").innerHTML=" Hereby we are thrilled to inform you that we have multiple courses made available for you to pursue  in the field of IT."   ;                                                      
         
                                                             // To append html codes into created element
         pro.innerHTML+='<form>\

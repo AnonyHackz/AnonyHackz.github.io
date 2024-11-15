@@ -17,6 +17,21 @@
         {
             "mysqlOptions": {
                 "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {}
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "vjhex",
+            "database": "vjhex",
+            "username": "root",
+            "password": "dingdong"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
                 "enableSsl": "Disabled"
             },
             "previewLimit": 50,
@@ -31,17 +46,16 @@
         {
             "mysqlOptions": {
                 "authProtocol": "default",
-                "enableSsl": "Enabled",
-                "ssl": {}
+                "enableSsl": "Disabled"
             },
             "previewLimit": 50,
             "server": "localhost",
             "port": 3306,
-            "driver": "MySQL",
-            "name": "vjhex",
+            "driver": "MariaDB",
+            "name": "root",
             "database": "vjhex",
             "username": "root",
-            "password": "dingdong"
+            "password": "DingDong"
         }
     ],
     "open-php-html-js-in-browser.alternativeDocumentRootFolders": [
