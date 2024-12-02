@@ -54,7 +54,7 @@
                                                 <li><a onclick="Soon()">CSS</a></li>\
                                                 <li><a onclick="Soon()" >SQL</a></li>\
                                                 <li><a onclick="Soon()" >Python</a></li>\
-                                                <li><a href="Cyber Security/EthicHackz.html" target="blank">Ethical Hacking</a></li>\
+                                                <li><a href="Cyber Security/EthicHackz.html" target="blank">Cyber Security / Ethical Hacking</a></li>\
                                                 <li><a onclick="Soon()" >Machine Learning</a></li>\
                                                 <li><a onclick="Soon()" >Java</a></li>\
                                                 <li><a href="Cloud Computing/CloudComputing.html" target="blank" >Cloud Computing</a></li>\
