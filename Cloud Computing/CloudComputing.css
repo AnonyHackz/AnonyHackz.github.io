@@ -89,6 +89,11 @@
         font-size: 100%;
         
     }
+    button:hover{
+        cursor: pointer;
+        color:burlywood;
+        font-size: 100%;
+    }
     #topics{           
         position:relative;
         color:rgb(241, 245, 244);
@@ -119,6 +124,11 @@
             color: whitesmoke; 
     }
     #Home{margin-left: 2%;}
+    #Explore:hover,#Home:hover{
+        cursor: pointer;
+        color:burlywood;
+        transition: 1s;
+    }
 
  
     
@@ -216,6 +226,7 @@
             color:burlywood;
             font-size: 100%;
         }
+       
 
         #topics{           
             position:fixed;
@@ -254,6 +265,12 @@
             font-size: 150%;
         }
         #Home{margin-left: 2%;}
+        #Explore:hover,#Home:hover{
+            cursor: pointer;
+            color:burlywood;
+            transition: 1s;
+            
+        }
 
 
         #content{
