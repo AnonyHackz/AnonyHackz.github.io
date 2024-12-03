@@ -13,7 +13,7 @@ function en(){
                                 <tr><td><th><center><h3 color="red"> Cloud Computing Syllabus</h3></th></center></td> </tr>\
                                 <tr>\
                                     <td>\
-                                        <ul>\
+                                        <ol>\
                                             <li id="1" onclick="Syllabus()" >Syllabus</li>\
                                             <li id="2" onclick="Introduction()">Cloud Computing Introduction</li>\
                                             <li id="3" onclick="Advantages_and_Disadvantages()">Advantages and Disadvantages</li>\
@@ -34,7 +34,7 @@ function en(){
                                             <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
                                             <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
                                             <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
-                                        </ul>\
+                                        </ol>\
                                     </td>\
                                 </tr>\
                             </form>\
@@ -75,7 +75,7 @@ function Syllabus(){
                                 <tr><th><center><h3> Cloud Computing Syllabus</h3></th></center> </tr>\
                                 <tr>\
                                     <td>\
-                                        <ul>\
+                                        <ol>\
                                             <li id="1" style="color: yellow;" >Syllabus</li>\
                                             <li id="2" onclick="Introduction()">Cloud Computing Introduction</li>\
                                             <li id="3" onclick="Advantages_and_Disadvantages()">Advantages and Disadvantages</li>\
@@ -96,7 +96,7 @@ function Syllabus(){
                                             <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
                                             <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
                                             <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
-                                        </ul>\
+                                        </ol>\
                                     </td>\
                                 </tr>\
                             </form>\
@@ -173,7 +173,7 @@ function Introduction(){
                                 <tr><th><center><h3> Cloud Computing Syllabus</h3></th></center> </tr>\
                                 <tr>\
                                     <td>\
-                                        <ul>\
+                                        <ol>\
                                             <li id="1" onclick="Syllabus()" >Syllabus</li>\
                                             <li id="2" style="color: yellow;" >Cloud Computing Introduction</li>\
                                             <li id="3" onclick="Advantages_and_Disadvantages()">Advantages and Disadvantages</li>\
@@ -194,7 +194,7 @@ function Introduction(){
                                             <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
                                             <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
                                             <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
-                                        </ul>\
+                                        </ol>\
                                     </td>\
                                 </tr>\
                             </form>\
@@ -322,7 +322,7 @@ function Advantages_and_Disadvantages(){
                                 <tr><th><center><h3> Cloud Computing Syllabus</h3></th></center> </tr>\
                                 <tr>\
                                     <td>\
-                                        <ul>\
+                                        <ol>\
                                             <li id="1" onclick="Syllabus()" >Syllabus</li>\
                                             <li id="2" onclick="Introduction()" >Cloud Computing Introduction</li>\
                                             <li id="3" style="color:yellow;">Advantages and Disadvantages</li>\
@@ -343,7 +343,7 @@ function Advantages_and_Disadvantages(){
                                             <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
                                             <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
                                             <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
-                                        </ul>\
+                                        </ol>\
                                     </td>\
                                 </tr>\
                             </form>\
