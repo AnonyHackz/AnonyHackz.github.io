@@ -1,0 +1,377 @@
+@media (max-width: 480px){
+    *{
+        background:black;
+    }
+    
+    #icon{
+        margin: 2%;
+    
+        width:50px;
+        position:absolute;top:0%; right:0%;
+        animation: iconanirotate 5s 5s linear infinite, iconani2 5s 5s linear ;
+        border-radius: 50%;
+        
+    }
+
+    @keyframes iconanirotate{
+        from{transform: rotate(0deg);}
+        100%{  transform: rotate(360deg);}
+       }
+       
+    @keyframes iconani2{
+           0%   { }
+           20%   {border-radius: 25%; }
+           30% {border-radius: 50%;}
+           50% { border-radius: 25%; }
+           100% {border-radius: 10%; }
+       }
+       
+
+
+
+       #hd {
+    
+        background-image: linear-gradient(
+            -225deg,
+            #3bda2d 0%,
+            #57f8dd 29%,
+            #ff1361 67%,
+            #fff800 100%  );
+        
+        background-size:auto auto;
+        background-clip: border-box;
+        background-size:  200%  auto;
+        color: #fff;
+        background-clip: text;
+        text-overflow: transparent;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+        animation: textani 5s linear infinite ;
+        animation-timing-function:relative;
+        margin-left: 10%;
+        margin-top: 1%;
+        position:sticky;
+        font-size: 200%;
+        text-align:center;
+        font-style: italic;
+        display: inline;
+
+        
+      
+        
+    }
+    
+    @keyframes textani{
+        to {
+            background-position: bottom;
+          }
+    }
+    
+    
+    
+    
+    #intro{
+        color: rgb(26, 240, 186);
+        font-family:'Brush Script MT', 'cursive' ;
+        text-align:center;
+        font-size:xx-large; 
+        
+    }
+  
+    
+    
+    
+    #bt{
+        display:block;
+        justify-content: center;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 25%;
+        position:relative; 
+        font-size:xx-large;
+        font-family: 'Brush Script MT', 'cursive';
+        color:rgb(72, 252, 27);
+        border-radius: 100px;
+        padding: 10px;
+        
+    
+    }
+    #bt:hover{
+        cursor: pointer;
+        color: rgb(204, 241, 38);
+        background-color: rgb(250, 34, 232);
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+        border-color: #4aff13;
+        border-width: 5px;
+    }
+    
+    
+       
+    
+    #project{
+        margin-top:30%;
+        color: chartreuse;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    
+    
+    }
+    a[href]{
+        color:chartreuse ;
+        text-decoration: none;
+    }
+    a:hover{
+     
+        cursor: pointer;
+        color: rgb(250, 34, 232);
+        padding: auto;
+        border-radius: 50px;
+        display: block;
+    }
+    
+    
+    
+    
+    #bt2{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-left: 10%;
+        font-size:xx-large;
+        font-family: 'Brush Script MT', 'cursive';
+        color:rgb(72, 252, 27);
+        border-radius: 100px;
+      
+     
+    }
+    #bt2:hover{
+        cursor: pointer;
+        color: rgb(204, 241, 38);
+        background-color: rgb(250, 34, 232);
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+        border-color: #4aff13;
+        border-width: 5px;
+    }
+
+
+
+    #GoBack{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        color: rgb(44, 223, 21);
+        
+        
+        animation: blackintro 5s  linear  , gobackanifi 5s 7s linear infinite; 
+    }
+
+    @keyframes blackintro{
+        0%   {color:black;}
+        50%  {color:rgb(156, 95, 95);}
+        100% {color:blueviolet;}
+    }
+    @keyframes gobackanifi{
+        0%  {color:red; }
+        10% {color:aquamarine;}
+        20% {color:blue;}
+        30% {color: beige;}
+        40% {color: #fff800;}
+        50% {color:skyblue;}
+        60% {color: chartreuse;}
+        70% {color:#57f8dd;}
+        80% {color: blue;}
+        90% {color: aqua;}
+        100% {color: rgb(6, 247, 58);}
+    }
+
+
+    #btsoon{
+        display:block;
+        
+        justify-content: center;
+        text-align: center;
+        font-size:xx-large;
+        font-family: 'Brush Script MT', 'cursive';
+        color:rgb(72, 252, 27);
+        border-radius: 100px;
+        transition-duration: 0.3s;
+    }
+    
+    #btsoon:hover{
+       
+        cursor: pointer;
+        color: rgb(18, 255, 58);
+        background-color: rgb(255, 4, 4);
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+        border-color: #0dfcf0;
+        border-width: 5px;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 1024px){}
+
+@media (min-width: 1025px) and (max-width: 1280px){}
+@media (min-width: 1281px) {}
+@media  (min-width: 1025px){
+        *{
+            background-image: url(../Common/IMG/Background/BG5.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        
+            
+        }
+        
+        
+      
+        #icon{
+            
+            width:100px;
+            position:fixed;
+            left: 3%;
+            top:3%;
+            animation:  iconani2 5s 5s linear ;
+            text-align: center;
+            border-radius: 50%;
+            display:flexbox;
+        
+            
+        }
+        @keyframes iconani2{
+            0%   { }
+            20%   {border-radius: 25%; }
+            30% {border-radius: 50%;}
+            50% { border-radius: 25%; }
+            100% {border-radius: 10%; }
+        }
+        
+
+
+
+
+
+
+
+        #hd {
+            background-image: linear-gradient(
+                -225deg,
+                #3bda2d 0%,
+                #57f8dd 29%,
+                #ff1361 67%,
+                #fff800 100%  );
+            
+            background-size:auto auto;
+            background-clip: border-box;
+            background-size:200% auto;
+            color: #fff;
+            background-clip: text;
+            text-overflow: transparent;
+            -webkit-background-clip:text;
+            -webkit-text-fill-color: transparent;
+            animation: textani 5s linear infinite ;
+            animation-timing-function:relative;
+        
+            position:fixed;
+            left: 10%;
+            top:7%;
+
+        
+            font-size: 200%;
+            text-align:left;
+            font-style: italic;
+        
+        }
+        
+        @keyframes textani{
+            to {
+                background-position: bottom;
+            }
+        }
+        
+
+
+        p{
+            color:antiquewhite ;
+        }
+        h3{
+            color:aqua;
+        }
+        h1{
+            color:aqua; 
+        }
+        h2{
+            color: red;
+        }
+        li:hover{
+            cursor: pointer;
+            color:burlywood;
+            font-size: 100%;
+            
+        }
+        #topics{           
+            position:fixed;
+            left: 1%;
+            top:20%;
+            margin-left: 1%;
+            width: 25% 25%;
+        
+            border: solid;
+            border-width: 5px;
+            border-color: rgb(21, 250, 231);
+            display: inline;
+            color: #ff1361;
+            padding: 1%;   
+        }
+
+
+
+        
+        #intro{
+            margin-top: 10%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        #Explore{
+            margin-top: 10%;
+            border: 10px;
+            border: solid;
+            border-radius: 20%;
+            padding: 10px;
+            justify-content: center;
+            position:relative  
+        }
+
+
+        #content{
+            margin-left: 30%;         
+        }    
+        
+        
+        
+        #page1{
+            position:static;
+            margin-top: 10%;
+            color: rgba(0, 0, 0, 0.966);
+            justify-content: space-around;
+        
+        }
+        
+        
+    
+    
+  
+
+}
+        
