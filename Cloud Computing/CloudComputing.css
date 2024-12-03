@@ -1,6 +1,6 @@
 @media (max-width: 640px){
     *{
-        background-image: url(../Common/IMG/Background/BG5.jpg);
+        background-image: url(../Common/Files/Background/BG5.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -145,7 +145,7 @@
 
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {}
+
 
 @media (min-width: 768px) and (max-width: 1024px){}
 
@@ -153,7 +153,7 @@
 @media (min-width: 1281px) {}
 @media  (min-width: 1025px){
         *{
-            background-image: url(../Common/IMG/Background/BG5.jpg);
+            background-image: url(../Common/Media/Background/BG5.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
