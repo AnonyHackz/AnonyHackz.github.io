@@ -231,16 +231,15 @@
 
         p{
             color:antiquewhite ;
+            padding-left: 2%;
         }
-        h3{
-            color:aqua;
-        }
-        h1{
-            color:aqua; 
-        }
-        h2{
-            color: red;
-        }
+        
+       
+        h1{color:aqua; }
+        h2{color: red;}
+        h3{color:aqua; }
+        h4{color:#3bda2d}
+
         li:hover{
             cursor: pointer;
             color:burlywood;
@@ -283,7 +282,8 @@
 
 
         #content{
-            margin-left: 30%;         
+            margin-left: 25%; 
+            margin-right: 2%;       
         }    
         
         
