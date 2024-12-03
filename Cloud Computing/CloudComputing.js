@@ -10,7 +10,7 @@ function en(){
                                                         // To append html codes into created element
         en.innerHTML+=     '<div id="topics">\
                                 <form>\
-                                <tr><th><center><h3 color="red"> Cloud Computing Syllabus</h3></th></center> </tr>\
+                                <tr><td><th><center><h3 color="red"> Cloud Computing Syllabus</h3></th></center></td> </tr>\
                                 <tr>\
                                     <td>\
                                         <ul>\

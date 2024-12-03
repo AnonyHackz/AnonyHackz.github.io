@@ -1,6 +1,6 @@
-@media (max-width: 640px){
+@media (min-width:320px ) and (max-width:480px){
     *{
-        background-image: url(../Common/Files/Background/BG5.jpg);
+        background-image: url(../Common/Media/Background/BG5.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -13,13 +13,11 @@
     #icon{
         
         width:100px;
-        position:fixed;
-        left: 3%;
-        top:3%;
+        position:relative;
         animation:  iconani2 5s 5s linear ;
         text-align: center;
         border-radius: 50%;
-        display:flexbox;
+        display:inline;
     
         
     }
@@ -39,6 +37,7 @@
 
 
     #hd {
+        
         background-image: linear-gradient(
             -225deg,
             #3bda2d 0%,
@@ -56,12 +55,7 @@
         -webkit-text-fill-color: transparent;
         animation: textani 5s linear infinite ;
         animation-timing-function:relative;
-    
-        position:fixed;
-        left: 10%;
-        top:7%;
-
-    
+        position:relative;
         font-size: 200%;
         text-align:left;
         font-style: italic;
@@ -75,19 +69,16 @@
     }
     
 
-
     p{
         color:antiquewhite ;
+        padding-left: 2%;
     }
-    h3{
-        color:aqua;
-    }
-    h1{
-        color:aqua; 
-    }
-    h2{
-        color: red;
-    }
+    h1{color:aqua; }
+    h2{color: red;}
+    h3{color:aqua; }
+    h4{color:#3bda2d}
+
+    
     li:hover{
         cursor: pointer;
         color:burlywood;
@@ -95,19 +86,15 @@
         
     }
     #topics{           
-        position:fixed;
-        left: 1%;
-        top:20%;
-        margin-left: 1%;
-        width: 25% 25%;
-    
-        border: solid;
-        border-width: 5px;
-        border-color: rgb(21, 250, 231);
-        display: inline;
+        position:relative;
         color: #ff1361;
         padding: 1%;   
+        backface-visibility: hidden;
     }
+    tr,td,th,ul,li {
+        border: 1px solid rgb(21, 250, 231);
+        border-collapse: collapse;
+      }
 
 
 
@@ -129,10 +116,7 @@
     }
 
 
-    #content{
-        margin-left: 30%;         
-    }    
-    
+ 
     
     
     #page1{
@@ -190,7 +174,6 @@
                 #57f8dd 29%,
                 #ff1361 67%,
                 #fff800 100%  );
-            
             background-size:auto auto;
             background-clip: border-box;
             background-size:200% auto;
@@ -208,7 +191,6 @@
             text-align:left;
             font-style: italic;
         }
-        
         @keyframes textani{to {background-position: bottom;}}
             
                 
