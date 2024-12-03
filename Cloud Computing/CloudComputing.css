@@ -3,7 +3,7 @@
         background-image: url(../Common/Media/Background/BG7.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+        background-size:cover;
     
         
     }
@@ -91,11 +91,11 @@
     }
     #topics{           
         position:relative;
-        color: #ff1361;
+        color:rgb(241, 245, 244);
         
     }
     td,th,ol,li {
-        border: 2px solid rgb(241, 245, 244);
+        border: 2px solid rgb(107, 105, 102);
         border-collapse: collapse;
         
       }
@@ -108,14 +108,15 @@
        
     }
 
-    #Explore{
-        margin-top: 10%;
-        border: 10px;
-        border: solid;
-        border-radius: 20%;
-        padding: 10px;
-        justify-content: center;
-        position:relative  
+    #Explore,#Home{
+            margin-top: 10%;
+            border: 10px;
+            border: solid;
+            border-radius: 20%;
+            padding: 10px;
+            justify-content: center;
+            position:relative;
+            color: whitesmoke; 
     }
 
 
@@ -209,6 +210,7 @@
         h3{color:aqua; }
         h4{color:#3bda2d}
 
+        li{padding: 2px;}
         li:hover{
             cursor: pointer;
             color:burlywood;
@@ -218,15 +220,15 @@
         #topics{           
             position:fixed;
             left: 1%;
-            top:20%;
+            top:15%;
             margin-left: 1%;
             width: 25% 25%;
             display: inline;
-            color: #ff1361;
+            color: rgb(241, 245, 244);
             padding: 1%;   
         }
         td,th,ol,li {
-            border: 2px solid rgb(241, 245, 244);
+            border: 2px solid rgb(107, 105, 102);
             border-collapse: collapse;
             
           }
@@ -240,7 +242,7 @@
             margin-right: 15%;
         }
 
-        #Explore{
+        #Explore,#Home{
             margin-top: 10%;
             border: 10px;
             border: solid;
@@ -248,7 +250,10 @@
             padding: 10px;
             justify-content: center;
             position:relative;
+            color: whitesmoke;
+            font-size: 150%;
         }
+        #Home{margin-left: 2%;}
 
 
         #content{
