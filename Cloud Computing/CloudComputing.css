@@ -157,8 +157,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-        
-            
         }
         
         
@@ -185,12 +183,6 @@
         }
         
 
-
-
-
-
-
-
         #hd {
             background-image: linear-gradient(
                 -225deg,
@@ -209,26 +201,18 @@
             -webkit-text-fill-color: transparent;
             animation: textani 5s linear infinite ;
             animation-timing-function:relative;
-        
             position:fixed;
             left: 10%;
             top:7%;
-
-        
             font-size: 200%;
             text-align:left;
             font-style: italic;
-        
         }
         
-        @keyframes textani{
-            to {
-                background-position: bottom;
-            }
-        }
-        
-
-
+        @keyframes textani{to {background-position: bottom;}}
+            
+                
+            
         p{
             color:antiquewhite ;
             padding-left: 2%;
@@ -244,15 +228,14 @@
             cursor: pointer;
             color:burlywood;
             font-size: 100%;
-            
         }
+
         #topics{           
             position:fixed;
             left: 1%;
             top:20%;
             margin-left: 1%;
             width: 25% 25%;
-        
             border: solid;
             border-width: 5px;
             border-color: rgb(21, 250, 231);
@@ -277,7 +260,7 @@
             border-radius: 20%;
             padding: 10px;
             justify-content: center;
-            position:relative  
+            position:relative;
         }
 
 
