@@ -1,6 +1,6 @@
 @media (min-width:320px ) and (max-width:480px){
     *{
-        background-image: url(../Common/Media/Background/BG5.jpg);
+        background-image: url(../Common/Media/Background/BG7.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -140,7 +140,7 @@
 @media (min-width: 1281px) {}
 @media  (min-width: 1025px){
         *{
-            background-image: url(../Common/Media/Background/BG5.jpg);
+            background-image: url(../Common/Media/Background/BG7.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -221,13 +221,15 @@
             top:20%;
             margin-left: 1%;
             width: 25% 25%;
-            border: solid;
-            border-width: 5px;
-            border-color: rgb(21, 250, 231);
             display: inline;
             color: #ff1361;
             padding: 1%;   
         }
+        td,th,ol,li {
+            border: 2px solid rgb(241, 245, 244);
+            border-collapse: collapse;
+            
+          }
 
 
 
