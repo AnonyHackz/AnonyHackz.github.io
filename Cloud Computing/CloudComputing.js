@@ -45,6 +45,20 @@ function en(){
                                         <source src="../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">\
                                 </video>\
                         </div>'
+
+        var bottmBID= document.createElement("div");            // To create element
+        
+
+        bottmBID.setAttribute('id','BID');                  // To set id or class name to the created element
+        
+                                                        // To append html codes into created element
+        bottmBID.innerHTML+=    '<center>\
+                                        <center><img id="BIcon" src="../Common/Media/Logo/logo-white.png">\
+                                        <h1 id="Bhd"> Anony Hackz </h1> </center>\
+                                        <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
+                                        <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\
+                                </center>'      
+                                 
                       
                                 
                      
@@ -54,7 +68,7 @@ function en(){
         var con = document.getElementById("container");    // To append created element into html file
         con.appendChild(en);                 
         con.removeChild(int);    // To remove elements
-                      
+        document.getElementById("Entry").insertAdjacentElement("afterend", bottmBID);       
                 
  }
 
@@ -105,10 +119,10 @@ function Syllabus(){
 
 
 
-        con.appendChild(en); 
+        document.getElementById("BID").insertAdjacentElement("beforebegin",en); 
         var content=document.getElementById("content");
         
-        var pro= document.createElement("nav");            // To create element
+        var pro= document.createElement("div");            // To create element
         
 
         pro.setAttribute('id','page');                  // To set id or class name to the created element
@@ -155,6 +169,7 @@ function Syllabus(){
                         </form>';
         var con = document.getElementById("content");    // To append created element into html file
         con.appendChild(pro);
+
         
       }
 
@@ -203,10 +218,10 @@ function Introduction(){
 
 
 
-        con.appendChild(en); 
+        document.getElementById("BID").insertAdjacentElement("beforebegin",en); 
         var content=document.getElementById("content");
         
-        var pro= document.createElement("nav");            // To create element
+        var pro= document.createElement("div");            // To create element
         
 
         pro.setAttribute('id','page');                  // To set id or class name to the created element
@@ -352,10 +367,10 @@ function Advantages_and_Disadvantages(){
 
 
 
-        con.appendChild(en); 
+        document.getElementById("BID").insertAdjacentElement("beforebegin",en); 
         var content=document.getElementById("content");
         
-        var pro= document.createElement("nav");            // To create element
+        var pro= document.createElement("div");            // To create element
         
 
         pro.setAttribute('id','page');                  // To set id or class name to the created element
@@ -473,9 +488,213 @@ function Advantages_and_Disadvantages(){
 
 }
 
-function History(){}
+function History(){
+        var con = document.getElementById("container");    // To append created element into html file
+        var Entry= document.getElementById("Entry");               
+        con.removeChild(Entry);
 
-function Architecture(){}
+        var en= document.createElement("div");            // To create element
+
+        en.setAttribute('id','Entry');                  // To set id or class name to the created element
+                                                        // To append html codes into created element
+        en.innerHTML+=     '<div id="topics">\
+                                <form>\
+                                <tr><th><center><h3> Cloud Computing Syllabus</h3></th></center> </tr>\
+                                <tr>\
+                                    <td>\
+                                        <ol>\
+                                            <li id="1" onclick="Syllabus()" >Syllabus</li>\
+                                            <li id="2" onclick="Introduction()" >Cloud Computing Introduction</li>\
+                                            <li id="3" onclick="Advantages_and_Disadvantages()" >Advantages and Disadvantages</li>\
+                                            <li id="4" style="color:yellow;">History of Cloud Computing</li>\
+                                            <li id="5" onclick="Architecture()">Cloud Computing Architecture</li>\
+                                            <li id="6" onclick="Technologies()">Cloud Computing Technologies</li>\
+                                            <li id="7" onclick="Cloud_vs_Grid()">Cloud Computing VS Grid Computing</li>\
+                                            <li id="8" onclick="Cloud_Computing_Works()">How Dose Cloud Computing Works</li>\
+                                            <li id="9" onclick="Applications()">Cloud Computing Applications</li>\
+                                            <li id="10" onclick="Security_And_Risk()">Security and Risk of Cloud Computing</li>\
+                                            <li id="11" onclick="AWS()">AWS</li>\
+                                            <li id="12" onclick="AWS_Architecture()">AWS Architecture</li>\
+                                            <li id="13" onclick="AWS_Features()">AWS Features</li>\
+                                            <li id="14" onclick="AWS_Pros_And_Cons()">AWS Pros & Cons</li>\
+                                            <li id="15" onclick="AWS_Application()">AWS Application</li>\
+                                            <li id="16" onclick="AWS_Console_Mobile_App()">AWS Console Mobile App</li>\
+                                            <li id="17" onclick="AWS_Account()">AWS Account</li>\
+                                            <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
+                                            <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
+                                            <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
+                                        </ol>\
+                                    </td>\
+                                </tr>\
+                            </form>\
+                        </div>\
+                        <div id="content"></div>'
+
+
+
+        document.getElementById("BID").insertAdjacentElement("beforebegin",en);  
+        var content=document.getElementById("content");
+        
+        var pro= document.createElement("div");            // To create element
+        
+
+        pro.setAttribute('id','page');                  // To set id or class name to the created element
+                                               
+        pro.innerHTML+="<form>\
+                                <table>\
+                                        <tr>\
+                                                <center><h1>History of Cloud Computing</h1></center>\
+                                                <p>Before emerging the cloud computing, there was Client/Server computing which is\
+                                                basically a centralized storage in which all the software applications, all the data and all the\
+                                                controls are resided on the server side.</p>\
+                                                <p> If a single user wants to access specific data or run a program, he/she need to connect\
+                                                to the server and then gain appropriate access, and then he/she can do his/her business.</p>\
+                                                <p> Then after, distributed computing came into picture, where all the computers are\
+                                                networked together and share their resources when needed.</p>\
+                                                <p> Cloud Computing is not a latest technology. Cloud computing has evolved (develop\
+                                                gradually) through a number of phases which includes Grid Computing, Utility Computing,\
+                                                Application Service Provision, and Software as a Service etc.</p>\
+                                                <p> But the overarching (overall) concept of delivering Computing resource through a global\
+                                                network is started in the sixties.</p>\
+                                                <p> By 2020 The Cloud computing market is forecast to exceed $241 Billion. But how did we\
+                                                get here and where did all this started is the history of Cloud computing.</p>\
+                                                <p> The actual history of Cloud computing is not that old, the first business and consumer\
+                                                Cloud Computing services website (Salesforce.com and Google) were launched in 1999. Cloud\
+                                                computing is tied directly to the development of the Internet and Business technology since\
+                                                Cloud computing is the solution to the problem of how the Internet can help improve Business\
+                                                Technology.</p>\
+                                                <p> Business technology has long and fascinating history, one that is almost as long as\
+                                                business itself, but the development that most directly influenced the history of Cloud\
+                                                computing start with the emergence of computers as providers of real business solutions.\
+                                                <p> On the basis of above computing, there was emerged of cloud computing concepts that\
+                                                later implemented.</p>\
+                                                <p> At around in 1961, John MacCharty suggested in a speech at MIT that computing can be\
+                                                sold like a utility, just like a water or electricity. It was a brilliant idea, but like all brilliant ideas, it\
+                                                was ahead if its time, as for the next few decades, despite interest in the model, the technology\
+                                                simply was not ready for it.</p>\
+                                                <h4>But of course time has passed and the technology caught that idea and after few years we\
+                                                mentioned that:</h4>\
+                                                <p> ● In 1963, DARPA (the Defense Advanced Research Projects Agency), presented MIT with\
+                                                $2 million for Project MAC.</p>\
+                                                <p>● In 1969, J. C. R. Licklider helped develop the ARPANET (Advanced Research Projects\
+                                                Agency Network), a “very” primitive version of the Internet. JCR, or “Lick” was both a\
+                                                psychologist and a computer scientist, and promoted a vision called the “Intergalactic\
+                                                Computer Network,” in which everyone on the planet would be interconnected by way\
+                                                of computers, and able to access information from anywhere.</p>\
+                                                <p>● The meaning of Virtualization began shifting in the 1970s, and now describes the\
+                                                creation of a virtual machine, that acts like a real computer, with a fully functional\
+                                                operating system. The concept of Virtualization has evolved with the Internet, as\
+                                                businesses began offering “virtual” private networks as a rentable service.</p>\
+                                                <p>● In its early stages, the Cloud was used to express the empty space between the end\
+                                                user and the provider. In 1997, Professor Ramnath Chellapa of Emory University defined\
+                                                Cloud Computing as the new 'computing paradigm, where the boundaries of\
+                                                computing will be determined by economic rationale, rather than technical limits\
+                                                alone.'</p>\
+                                                <p>● In 1999, Salesforce.com started delivering of applications to users using a simple\
+                                                website. The applications were delivered to enterprises over the Internet, and this way\
+                                                the dream of computing sold as utility were true.</p>\
+                                                <p>● In 2002, Amazon started Amazon Web Services, providing services like storage,\
+                                                computation and even human intelligence. However, only starting with the launch of the\
+                                                Elastic Compute Cloud in 2006 a truly commercial service open to everybody existed.</p>\
+                                                <p>● In 2006, Amazon launched Amazon Web Services, which offers online services to other\
+                                                websites, or clients. One of Amazon Web Services’ sites, called Amazon Mechanical\
+                                                Turk, provides a variety of Cloud-based services including storage, computation and\
+                                                “human intelligence.” Another of Amazon Web Services’ sites is the Elastic Compute\
+                                                Cloud (EC2), allowing individuals to rent virtual computers and use their own programs\
+                                                and applications.</p>\
+                                                <p>● In 2007, IBM, Google, and several universities joined forces to develop a server farm for\
+                                                research projects needing both fast processors and huge data sets. The University of\
+                                                Washington was the first to sign up and use resources provided by IBM and Google.\
+                                                Carnegie Mellon University, MIT, Stanford University, the University of Maryland, and the\
+                                                University of California at Berkeley, quickly followed suit. The universities immediately\
+                                                realized computer experiments can be done faster and for less money, if IBM and\
+                                                Google were supporting their research.</p>\
+                                                <p>● Eucalyptus offered the first AWS API compatible platform, which was used for\
+                                                distributing private Clouds, in 2008. In the same year, NASA’s OpenNebula provided\
+                                                the first open-source software for deploying Private and Hybrid Clouds. Many of its most\
+                                                innovative features focused on the needs of major businesses.</p>\
+                                                <p>● In 2009, Google Apps also started to provide cloud computing enterprise applications.</p>\
+                                                <p>● In 2011, IBM introduced the IBM SmartCloud framework, in support of Smarter\
+                                                Planet (a cultural thinking project). Then, Apple launched the ICloud, which focuses on\
+                                                storing more personal information (photos, music, videos, etc.). Also, during this year,\
+                                                Microsoft began advertising the Cloud on television, making the general public aware of\
+                                                its ability to store photos, or video, with easy access.</p>\
+                                                <p>● Oracle introduced the Oracle Cloud in 2012, offering the three basics for business, IaaS\
+                                                (Infrastructure-as-a-Service), PaaS (Platform-as-a-Service), and SAAS (Software-as-a-\
+                                                Service).</p>\
+                                                <p>Of course, all the big players are present in the cloud computing evolution, some were earlier,\
+                                                some were later. In 2009, Microsoft launched Windows Azure, and companies like Oracle and\
+                                                HP have all joined the game. This proves that today, cloud computing has become mainstream.</p>\
+                                        </td>\
+                                </table>\
+                        </form>";
+        var con = document.getElementById("content");    // To append created element into html file
+        con.appendChild(pro);
+}
+
+function Architecture(){
+        var con = document.getElementById("container");    // To append created element into html file
+        var Entry= document.getElementById("Entry");               
+        con.removeChild(Entry);
+
+        var en= document.createElement("div");            // To create element
+
+        en.setAttribute('id','Entry');                  // To set id or class name to the created element
+                                                        // To append html codes into created element
+        en.innerHTML+=     '<div id="topics">\
+                                <form>\
+                                <tr><th><center><h3> Cloud Computing Syllabus</h3></th></center> </tr>\
+                                <tr>\
+                                    <td>\
+                                        <ol>\
+                                            <li id="1" onclick="Syllabus()" >Syllabus</li>\
+                                            <li id="2" onclick="Introduction()" >Cloud Computing Introduction</li>\
+                                            <li id="3" onclick="Advantages_and_Disadvantages()" >Advantages and Disadvantages</li>\
+                                            <li id="4" style="color:yellow;">History of Cloud Computing</li>\
+                                            <li id="5" onclick="Architecture()">Cloud Computing Architecture</li>\
+                                            <li id="6" onclick="Technologies()">Cloud Computing Technologies</li>\
+                                            <li id="7" onclick="Cloud_vs_Grid()">Cloud Computing VS Grid Computing</li>\
+                                            <li id="8" onclick="Cloud_Computing_Works()">How Dose Cloud Computing Works</li>\
+                                            <li id="9" onclick="Applications()">Cloud Computing Applications</li>\
+                                            <li id="10" onclick="Security_And_Risk()">Security and Risk of Cloud Computing</li>\
+                                            <li id="11" onclick="AWS()">AWS</li>\
+                                            <li id="12" onclick="AWS_Architecture()">AWS Architecture</li>\
+                                            <li id="13" onclick="AWS_Features()">AWS Features</li>\
+                                            <li id="14" onclick="AWS_Pros_And_Cons()">AWS Pros & Cons</li>\
+                                            <li id="15" onclick="AWS_Application()">AWS Application</li>\
+                                            <li id="16" onclick="AWS_Console_Mobile_App()">AWS Console Mobile App</li>\
+                                            <li id="17" onclick="AWS_Account()">AWS Account</li>\
+                                            <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
+                                            <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
+                                            <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
+                                        </ol>\
+                                    </td>\
+                                </tr>\
+                            </form>\
+                        </div>\
+                        <div id="content"></div>'
+
+
+
+        document.getElementById("BID").insertAdjacentElement("beforebegin",en);  
+        var content=document.getElementById("content");
+        
+        var pro= document.createElement("div");            // To create element
+        
+
+        pro.setAttribute('id','page');                  // To set id or class name to the created element
+                                               
+        pro.innerHTML+="<form>\
+                                <table>\
+                                        <tr>\
+                                                <center><h1>Cloud Computing Architecture</h1></center>\
+                                                <p>● \
+                                        </td>\
+                                </table>\
+                        </form>";
+        var con = document.getElementById("content");    // To append created element into html file
+        con.appendChild(pro);
+}
 
 function Technologies(){}
 
