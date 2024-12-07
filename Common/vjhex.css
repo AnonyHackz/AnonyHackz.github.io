@@ -1,7 +1,10 @@
 
 @media (max-width: 480px){
     *{
-        background:black;
+        background-image: url(../Common/Media/Background/BG7.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
     }
     
     #icon{
@@ -227,7 +230,10 @@
 @media  (min-width: 1025px){
     *{
         
-        background-color: black;
+        background-image: url(../Common/Media/Background/BG7.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
         
     }
     

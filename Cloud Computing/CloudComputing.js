@@ -650,8 +650,8 @@ function Architecture(){
                                             <li id="1" onclick="Syllabus()" >Syllabus</li>\
                                             <li id="2" onclick="Introduction()" >Cloud Computing Introduction</li>\
                                             <li id="3" onclick="Advantages_and_Disadvantages()" >Advantages and Disadvantages</li>\
-                                            <li id="4" style="color:yellow;">History of Cloud Computing</li>\
-                                            <li id="5" onclick="Architecture()">Cloud Computing Architecture</li>\
+                                            <li id="4" onclick="History()">History of Cloud Computing</li>\
+                                            <li id="5" style="color:yellow;">Cloud Computing Architecture</li>\
                                             <li id="6" onclick="Technologies()">Cloud Computing Technologies</li>\
                                             <li id="7" onclick="Cloud_vs_Grid()">Cloud Computing VS Grid Computing</li>\
                                             <li id="8" onclick="Cloud_Computing_Works()">How Dose Cloud Computing Works</li>\
@@ -688,7 +688,114 @@ function Architecture(){
                                 <table>\
                                         <tr>\
                                                 <center><h1>Cloud Computing Architecture</h1></center>\
-                                                <p>● \
+                                                <p>&emsp;&emsp; As we know, cloud computing technology is used by both small and large organizations\
+                                                        to store the information in cloud and access it from anywhere at anytime using the internet\
+                                                        connection.</p>\
+                                                <p>&emsp;&emsp; Cloud computing architecture is a combination of service-oriented\
+                                                        architecture and event-driven architecture.</p>\
+                                                <p>&emsp;&emsp; Cloud computing architecture refers to the components and subcomponents required\
+                                                        for cloud computing. These components typically consist of a front end platform (fat client, thin\
+                                                        client, mobile device), back end platforms (servers, storage), a cloud based delivery, and a\
+                                                        network (Internet, Intranet, Intercloud). Combined, these components make up cloud\
+                                                        computing architecture.</p>\
+                                                <h3>Cloud computing architecture is divided into the following two parts -</h4>\
+                                                        <table> <ul>&emsp;  ● Front End</ul>\
+                                                                <ul>&emsp;  ● Back End</ul>\
+                                                         </table>\
+                                                <h4>    The below diagram shows the architecture of cloud computing </h4>\
+                                                <img src='../Cloud Computing/medias/IMG/5.png' style='width:100%;'>\
+                                                <h3> Front End:-</h3> \
+                                                <p>&emsp;   ● The front end is used by the client. It contains client-side interfaces and applications\
+                                                        that are required to access the cloud computing platforms. The front end includes web\
+                                                        servers (including Chrome, Firefox, internet explorer, etc.), thin & fat clients, tablets,\
+                                                        and mobile devices</p>\
+                                                <p>&emsp; ●.Front-end is the side that is visible to the client, customer, or user. Front-end pieces\
+                                                        include the user interface and the client’s computer system or network that is used for\
+                                                        accessing the cloud system. You have probably noticed that different cloud computing\
+                                                        systems use different user interfaces—for example, not only can you choose from a\
+                                                        variety of web browsers (including Chrome, Safari, Firefox, etc.), but the Google Docs\
+                                                        user interface is different than that of Salesforce.</p>\
+                                                <h3>   Back End:-</h3> \
+                                                <p>&emsp; ● The back end is used by the service provider. It manages all the resources that are\
+                                                        required to provide cloud computing services. It includes a huge amount of data\
+                                                        storage, security mechanism, virtual machines, deploying models, servers, traffic\
+                                                        control mechanisms, etc.</p>\
+                                                <p>&emsp; ● On the other hand, the back-end pieces are on the side used by the service provider.\
+                                                        These include various servers, computers, data storage systems, virtual machines, and\
+                                                        programs that together constitute the cloud of computing services. The back-end side\
+                                                        also is responsible for providing security mechanisms, traffic control, and protocols\
+                                                        that connect networked computers for communication.</p>\
+                                                <h5>Note: Both front end and back end are connected to others through a network, generally\
+                                                        using the internet connection.</h5>\
+                                                <h2>Components of Cloud Computing Architecture:-</h2>\
+                                                <h4>There are the following components of cloud computing architecture -</h4>\
+                                                <h3>1. Client Infrastructure:-</h3>\
+                                                <p>&emsp;  ● Client Infrastructure is a Front end component. It provides GUI (Graphical User\
+                                                        Interface) to interact with the cloud.</p>\
+                                                <h3>2. Application:-</h3>\
+                                                <p>&emsp;  ● The application may be any software or platform that a client wants to access.</p>\
+                                                <h3>3. Service:-</h3>\
+                                                <p>&emsp;  ● A Cloud Services manages that which type of service you access according to the\
+                                                        client’s requirement.</p>\
+                                                <h2>&emsp;&emsp;Cloud computing offers the following three type of services:</h2>\
+                                                <h3>&emsp;&emsp;&emsp;i. Software as a Service (SaaS) :-</h3>\
+                                                <p>&emsp;  ● It is also known as cloud application services. Mostly, SaaS applications run\
+                                                        directly through the web browser means we do not require to download and install\
+                                                        these applications.</p>\
+                                                <p>&emsp;  ● Consumers interact with the top layer of the cloud, Saas.</p>\
+                                                <p>&emsp; ● Whereas users view IaaS and PaaS as raw infrastructure and platform building\
+                                                        tools/environments, the SaaS layer of the cloud is the finished product as seen\
+                                                        through mobile applications, enterprise level business solutions and every single\
+                                                        app held within the Apple App Store and the Google Play store.Some important\
+                                                        example of SaaS is given below –</p>\
+                                                <h5>&emsp;&emsp;Example: Google Apps, Salesforce Dropbox, Slack, Hubspot, Cisco WebEx.</h5>\
+                                                <h3>&emsp;&emsp;ii. Platform as a Service (PaaS) :-</h3>\
+                                                <p>&emsp; ● It is also known as cloud platform services. It is quite similar to SaaS, but the\
+                                                        difference is that PaaS provides a platform for software creation, but using SaaS, we\
+                                                        can access software over the internet without the need of any platform.</p>\
+                                                <p>&emsp; ● PaaS is the secondary layer of the cloud providing developers with the tools needed\
+                                                        to build applications/software and the development environment required to build,\
+                                                        stage, edit and launch applications. Much like the IaaS layer of the cloud, PaaS\
+                                                        answers a specific need, dev tools, and environments, enabling companies and\
+                                                        individual developers to build the products and services they eventually bring to\
+                                                        market. PaaS is built on top of the IaaS layer as it requires RAM, bandwidth, CPU to\
+                                                        operate.</p>\
+                                                <p>&emsp; ● Traditional providers of PaaS are Amazon, Cloud Foundry, Long Jump, Rackspace,\
+                                                        and Google. PaaS is the middle layer of the cloud which leverages IaaS resources to\
+                                                        build SaaS applications.</p>\
+                                                <h5>&emsp;&emsp;Example: Windows Azure, Force.com, Magento Commerce Cloud, OpenShift.</h5>\
+                                                <h3>&emsp;&emsp;iii. Infrastructure as a Service (IaaS) :-</h3>\
+                                                <p>&emsp; ● It is also known as cloud infrastructure services. It is responsible for managing\
+                                                        applications data, middleware, and runtime environments.</p>\
+                                                <p>&emsp; ● IaaS is the primary layer of the cloud providing data center hardware (e.g. servers,\
+                                                        nodes, hypervisors) to consumers and companies for a low monthly price. IaaS\
+                                                        enables companies to lease servers packed with computing resources like RAM,\
+                                                        bandwidth, CPU and IP, hosted in a remote data center.</p>\
+                                                <p>&emsp; ● Traditional providers of IaaS are Digital Ocean, Amazon, Google, Microsoft, and\
+                                                        Rackspace. IaaS is the foundation for PaaS and SaaS.</p>\
+                                                <h5>&emsp;&emsp;Example: Amazon Web Services (AWS) EC2, Google Compute Engine (GCE), Cisco\
+                                                        Metapod.</h5>\
+                                                <h3>4. Runtime Cloud:-</h3>\
+                                                <p>&emsp; ● Runtime Cloud provides the execution and runtime environment to the virtual\
+                                                        machines.</p>\
+                                                <h3>5. Storage:-</h3>\
+                                                <p>&emsp; ● Storage is one of the most important components of cloud computing. It provides a\
+                                                        huge amount of storage capacity in the cloud to store and manage data.</p>\
+                                                <h3>6. Infrastructure:-</h3>\
+                                                <p>&emsp; ● It provides services on the host level, application level, and network level. Cloud\
+                                                        infrastructure includes hardware and software components such as servers, storage,\
+                                                        network devices, virtualization software, and other storage resources that are needed to\
+                                                        support the cloud computing model.</p>\
+                                                <h3>7. Management:-</h3>\
+                                                <p>&emsp; ● Management is used to manage components such as application, service, runtime\
+                                                        cloud, storage, infrastructure, and other security issues in the backend and establish\
+                                                        coordination between them.</p>\
+                                                <h3>8. Security:-</h3>\
+                                                <p>&emsp; ● Security is an in-built back end component of cloud computing. It implements a\
+                                                        security mechanism in the back end.</p>\
+                                                <h3>9. Internet:-</h3>\
+                                                <p>&emsp; ● The Internet is medium through which front end and back end can interact and\
+                                                        communicate with each other.</p>\
                                         </td>\
                                 </table>\
                         </form>";

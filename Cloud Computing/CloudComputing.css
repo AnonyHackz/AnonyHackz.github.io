@@ -81,6 +81,7 @@
     h2{color: red;}
     h3{color:aqua; }
     h4{color:#3bda2d}
+    h5{color: rgb(250, 139, 13); font-size: 100%;}
 
     
     li:hover{
@@ -262,7 +263,8 @@
         h1{color:aqua; }
         h2{color: red;}
         h3{color:aqua; }
-        h4{color:#3bda2d}
+        h4{color:#3bda2d;}
+        h5{color: rgb(250, 139, 13); font-size: 100%;}
 
         li{padding: 2px;}
         li:hover{
@@ -270,7 +272,7 @@
             color:burlywood;
             font-size: 100%;
         }
-       
+       ul{ color:yellow;}
 
         #topics{           
             position:fixed;
@@ -287,6 +289,7 @@
             border-collapse: collapse;
             
           }
+        
 
 
 
