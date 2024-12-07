@@ -1,0 +1,395 @@
+@media (min-width:320px ) and (max-width:480px){
+    *{
+        background-image: url(../../../Common/Media/Background/BG7.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+    
+        
+    }
+    
+    
+  
+    #icon{
+        
+        width:100px;
+        position:relative;
+        animation:  iconani2 5s 5s linear ;
+        text-align: center;
+        border-radius: 50%;
+        display:inline;
+        
+    
+        
+    }
+    @keyframes iconani2{
+        0%   { }
+        20%   {border-radius: 25%; }
+        30% {border-radius: 50%;}
+        50% { border-radius: 25%; }
+        100% {border-radius: 10%; }
+    }
+    
+
+
+
+
+
+
+
+    #hd {
+        
+        background-image: linear-gradient(
+            -225deg,
+            #3bda2d 0%,
+            #57f8dd 29%,
+            #ff1361 67%,
+            #fff800 100%  );
+        
+        background-size:auto auto;
+        background-clip: border-box;
+        background-size:200% auto;
+        color: #fff;
+        background-clip: text;
+        text-overflow: transparent;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+        animation: textani 5s linear infinite ;
+        animation-timing-function:relative;
+        position:absolute;
+        right: 2%;
+        top:2%;
+
+        font-size: 200%;
+        text-align:left;
+        font-style: italic;
+    
+    }
+    
+    @keyframes textani{
+        to {
+            background-position: bottom;
+        }
+    }
+    
+
+    p{
+        color:antiquewhite ;
+        padding-left: 2%;
+    }
+    h1{color:aqua; }
+    h2{color: red;}
+    h3{color:aqua; }
+    h4{color:#3bda2d}
+    h5{color: rgb(250, 139, 13); font-size: 100%;}
+
+    
+    li:hover{
+        cursor: pointer;
+        color:burlywood;
+        font-size: 100%;
+        
+    }
+    button:hover{
+        cursor: pointer;
+        color:burlywood;
+        font-size: 100%;
+    }
+    #topics{           
+        position:relative;
+        color:rgb(241, 245, 244);
+        
+    }
+    td,th,ol,li {
+        border: 2px solid rgb(107, 105, 102);
+        border-collapse: collapse;
+        
+      }
+
+
+
+    
+    #intro{
+        margin-top: 10%;
+       
+    }
+
+    #Explore,#Home{
+            margin-top: 10%;
+            border: 10px;
+            border: solid;
+            border-radius: 20%;
+            padding: 10px;
+            justify-content: center;
+            position:relative;
+            color: whitesmoke; 
+    }
+    #Home{margin-left: 2%;}
+    #Explore:hover,#Home:hover{
+        cursor: pointer;
+        color:burlywood;
+        transition: 1s;
+    }
+
+ 
+    
+    
+    #page1{
+        position:static;
+        margin-top: 10%;
+        color: rgba(0, 0, 0, 0.966);
+        justify-content: space-around;
+    
+    }
+
+    #BID{
+        position:relative;
+        bottom: 0%;
+        width: 100%;
+    }
+    #BIcon{
+        width:50px;
+        position:relative;
+        text-align: center;
+        border-radius: 50%;
+        display:flexbox;
+    }
+    #Bhd{background-image: linear-gradient(
+        -225deg,
+        #3bda2d 0%,
+        #57f8dd 29%,
+        #ff1361 67%,
+        #fff800 100%  );
+    background-size:auto auto;
+    background-clip: border-box;
+    background-size:200% auto;
+    color: #fff;
+    background-clip: text;
+    text-overflow: transparent;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation: textani 5s linear infinite ;
+    animation-timing-function:relative;
+    position:relative;
+    display: inline;
+    font-size: 100%;
+    text-align:left;
+    font-style: italic;
+}
+#BContact{
+    margin: 1%;
+    font-size: 80%;
+}
+#BContact:hover{
+    color: yellow;
+    cursor: pointer;
+}
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px){}
+
+@media (min-width: 1025px) and (max-width: 1280px){}
+@media (min-width: 1281px) {}
+@media  (min-width: 1025px){
+        *{
+            background-image: url(../../../Common/Media/Background/BG7.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        
+      
+        #icon{
+            
+            width:100px;
+            position:fixed;
+            left: 3%;
+            top:3%;
+            animation:  iconani2 5s 5s linear ;
+            text-align: center;
+            border-radius: 50%;
+            display:flexbox;
+        
+            
+        }
+        @keyframes iconani2{
+            0%   { }
+            20%   {border-radius: 25%; }
+            30% {border-radius: 50%;}
+            50% { border-radius: 25%; }
+            100% {border-radius: 10%; }
+        }
+        
+
+        #hd {
+            background-image: linear-gradient(
+                -225deg,
+                #3bda2d 0%,
+                #57f8dd 29%,
+                #ff1361 67%,
+                #fff800 100%  );
+            background-size:auto auto;
+            background-clip: border-box;
+            background-size:200% auto;
+            color: #fff;
+            background-clip: text;
+            text-overflow: transparent;
+            -webkit-background-clip:text;
+            -webkit-text-fill-color: transparent;
+            animation: textani 5s linear infinite ;
+            animation-timing-function:relative;
+            position:fixed;
+            left: 10%;
+            top:7%;
+            font-size: 200%;
+            text-align:left;
+            font-style: italic;
+        }
+        @keyframes textani{to {background-position: bottom;}}
+            
+                
+            
+        p{
+            color:antiquewhite ;
+            padding-left: 2%;
+        }
+       
+        
+       
+        h1{color:aqua; }
+        h2{color: red;}
+        h3{color:aqua; }
+        h4{color:#3bda2d;}
+        h5{color: rgb(250, 139, 13); font-size: 100%;}
+
+        li{padding: 2px;}
+        li:hover{
+            cursor: pointer;
+            color:burlywood;
+            font-size: 100%;
+        }
+       ul{ color:yellow;}
+
+        #topics{           
+            position:fixed;
+            left: 1%;
+            top:15%;
+            margin-left: 1%;
+            width: 25% 25%;
+            display: inline;
+            color: rgb(241, 245, 244);
+            padding: 1%;   
+        }
+        td,th,ol,li {
+            border: 2px solid rgb(107, 105, 102);
+            border-collapse: collapse;
+            
+          }
+        
+
+
+
+        
+        #intro{
+            margin-top: 10%;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        #Explore,#Home{
+            margin-top: 10%;
+            border: 10px;
+            border: solid;
+            border-radius: 20%;
+            padding: 10px;
+            justify-content: center;
+            position:relative;
+            color: whitesmoke;
+            font-size: 150%;
+        }
+        #Home{margin-left: 2%;}
+        #Explore:hover,#Home:hover{
+            cursor: pointer;
+            color:burlywood;
+            transition: 1s;
+            
+        }
+
+
+        #content{
+            
+            margin-left: 25%; 
+            margin-right: 2%; 
+            margin-bottom: 10%;
+            margin-top: 2%;
+           
+             
+        }    
+        
+        
+        
+        page{
+            position:absolute;
+            margin-left: 25%;
+            margin-top: 2%;
+            margin-bottom: 10%;
+            
+            justify-content: space-around;
+        
+        }
+
+        #BID{
+            position: fixed;
+            bottom: 0%;
+            right: 2%;
+            left:25%;
+            padding-top: 1%;
+
+            
+            
+            
+        }
+        
+        #BIcon{
+            width:30px;
+            position:relative;
+            text-align: center;
+            border-radius: 50%;
+            display:flexbox;
+        }
+        #Bhd{background-image: linear-gradient(
+            -225deg,
+            #3bda2d 0%,
+            #57f8dd 29%,
+            #ff1361 67%,
+            #fff800 100%  );
+        background-size:auto auto;
+        background-clip: border-box;
+        background-size:200% auto;
+        color: #fff;
+        background-clip: text;
+        text-overflow: transparent;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color: transparent;
+        animation: textani 5s linear infinite ;
+        animation-timing-function:relative;
+        position:relative;
+        display: inline;
+        font-size: 100%;
+        text-align:left;
+        font-style: italic;
+    }
+    #BContact:hover{
+        color: yellow;
+        cursor: pointer;
+    }
+    
+    
+  
+
+}
+        
