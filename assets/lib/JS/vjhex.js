@@ -24,6 +24,8 @@
       var cenbt = document.getElementById("cenbt");
     
       con.removeChild(cenbt);
+      var btn = document.getElementById("btn");
+      con.removeChild(btn);
   }
 
   
@@ -50,7 +52,7 @@
         document.getElementById("intro").innerHTML=" Hereby we are thrilled to inform you that we have multiple courses made available for you to pursue  in the field of IT."   ;                                                      
         
                                                             // To append html codes into created element
-        pro.innerHTML+='                         <div id="prj"><img id="im" src="../../../Common/Media/Background/BG5.jpg"><a  onclick="Soon()"><h3 id="prclk">HTML</h3></a></div> \
+        pro.innerHTML+='                         <div id="prj"><img id="im" src="Common/Media/Background/BG5.jpg"><a  onclick="Soon()"><h3 id="prclk">HTML</h3></a></div> \
                                                  <div id="prj"><img id="im" src=""><a id="prclk" onclick="Soon()" ><h3>JavaScript</h3></a></div> \
                                                  <div id="prj"><img id="im" src=""><a id="prclk" onclick="Soon()"><h3>CSS</h3></a></div> \
                                                  <div id="prj"><img id="im" src=""><a id="prclk" onclick="Soon()" ><h3>SQL</h3></a></div> \
