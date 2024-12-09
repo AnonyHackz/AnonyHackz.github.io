@@ -73,7 +73,7 @@
         
                                                         // To append html codes into created element
         bottmBID.innerHTML+=    '<center>\
-                                        <center><img id="BIcon" src="../Common/Media/Logo/logo-white.png">\
+                                        <center><img id="BIcon" src="Common/Media/Logo/logo-white.png">\
                                         <h1 id="Bhd"> Anony Hackz </h1> </center>\
                                         <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
                                         <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\

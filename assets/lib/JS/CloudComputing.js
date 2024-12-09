@@ -40,9 +40,9 @@ function en(){
                             </form>\
                         </div>\
                         <div id="content" style=" display:inline-block;" >\
-                                <img id="intIMG" src="../Cloud Computing/medias/IMG/Entry.png" alter="logo" style="margin-top:7%;width:50%; height:120%;">\
+                                <img id="intIMG" src="../../../Cloud Computing/medias/IMG/Entry.png" alter="logo" style="margin-top:7%;width:50%; height:120%;">\
                                 <video id="intVideo" autoplay controls loop style="margin-top:8%;width:47%; height:95%; padding-left:2%;">\
-                                        <source src="../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">\
+                                        <source src="../../../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">\
                                 </video>\
                         </div>'
 
@@ -53,7 +53,7 @@ function en(){
         
                                                         // To append html codes into created element
         bottmBID.innerHTML+=    '<center>\
-                                        <center><img id="BIcon" src="../Common/Media/Logo/logo-white.png">\
+                                        <center><img id="BIcon" src="../../../Common/Media/Logo/logo-white.png">\
                                         <h1 id="Bhd"> Anony Hackz </h1> </center>\
                                         <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
                                         <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\
@@ -243,7 +243,7 @@ function Introduction(){
                                                         is often far more secure than traditional computing, because companies like Google and\
                                                         Amazon can attract and retain cyber-security personnel of a higher quality than many\
                                                         governmental agencies.</p>\
-                                                        <img src="../Cloud Computing/medias/IMG/1.png" alter="logo" style="padding-left:3%;">\
+                                                        <img src="../../../Cloud Computing/medias/IMG/1.png" alter="logo" style="padding-left:3%;">\
                                                         <h4>There are the following operations that we can do using cloud computing:</h4>\
                                                         <p>  ●   Developing new applications and services</p>\
                                                         <p>  ●   Storage, back up, and recovery of data</p>\
@@ -270,7 +270,7 @@ function Introduction(){
                                                         <p>To establish such IT infrastructure, we need to spend lots of money. To overcome all\
                                                         these problems and to reduce the IT infrastructure cost, Cloud Computing comes into\
                                                         existence.</p>\
-                                                        <center><img src="../Cloud Computing/medias/IMG/2.png" alter="logo" style="width:100%; height:100%;"></center>\
+                                                        <center><img src="../../../Cloud Computing/medias/IMG/2.png" alter="logo" style="width:100%; height:100%;"></center>\
                                                 <center><h1>Characteristics of Cloud Computing</h1></center>\
                                                 <h2> The characteristics of cloud computing are given below:</h2>\
                                                         <h3>1) Agility:-</h3>\
@@ -383,7 +383,7 @@ function Advantages_and_Disadvantages(){
                                                         <p>As we all know that Cloud computing is trending technology. Almost every company\
                                                         switched their services on the cloud to rise the company growth.</p>\
                                                         <h4>Here, we are going to discuss some important advantages of Cloud Computing-</h4>\
-                                                        <center><img src="../Cloud Computing/medias/IMG/3.png" alter="logo" style="width:100%; height:100%;"></center>\
+                                                        <center><img src="../../../Cloud Computing/medias/IMG/3.png" alter="logo" style="width:100%; height:100%;"></center>\
                                                         <h3>1) Back-up and restore data:-</h3>\
                                                                 <p> ●   Once the data is stored in the cloud, it is easier to get back-up and restore that data\
                                                                 using the cloud.</p>\
@@ -444,7 +444,7 @@ function Advantages_and_Disadvantages(){
                                                                 are perpetrated by employees.</p>\
                                                 <h2>Disadvantages of Cloud Computing:-</h2>\
                                                         <h4>A list of the disadvantage of cloud computing is given below -</h4>\
-                                                        <center><img src="../Cloud Computing/medias/IMG/4.png" alter="logo" style="width:100%; height:100%;"></center>\
+                                                        <center><img src="../../../Cloud Computing/medias/IMG/4.png" alter="logo" style="width:100%; height:100%;"></center>\
                                                         <h3>1) Internet Connectivity:-</h3>\
                                                                 <p>●   As you know, in cloud computing, every data (image, audio, video, etc.) is stored on the\
                                                                 cloud, and we access these data through the cloud by using the internet connection. If\
@@ -703,7 +703,7 @@ function Architecture(){
                                                                 <ul>&emsp;  ● Back End</ul>\
                                                          </table>\
                                                 <h4>    The below diagram shows the architecture of cloud computing </h4>\
-                                                <img src='../Cloud Computing/medias/IMG/5.png' style='width:100%;'>\
+                                                <img src='../../../Cloud Computing/medias/IMG/5.png' style='width:100%;'>\
                                                 <h3> Front End:-</h3> \
                                                 <p>&emsp;   ● The front end is used by the client. It contains client-side interfaces and applications\
                                                         that are required to access the cloud computing platforms. The front end includes web\
