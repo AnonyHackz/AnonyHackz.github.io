@@ -86,29 +86,24 @@
     
     
     #bt{
-        display:block;
-        justify-content: center;
-        text-align: center;
-        margin-top: 5%;
-        margin-left: 25%;
-        position:relative; 
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
+        margin-top: 10%;
+        border: 10px;
+        border: solid;
+        border-radius: 50px;
         padding: 10px;
+        justify-content: center;
+        position:relative;
+        color: whitesmoke; 
+        font-family: 'Brush Script MT', 'cursive';
+        font-size: x-large;
+        
         
     
     }
     #bt:hover{
         cursor: pointer;
-        color: rgb(204, 241, 38);
-        background-color: rgb(250, 34, 232);
-        border-radius: 50px;
-        display: block;
-        text-align: center;
-        border-color: #4aff13;
-        border-width: 5px;
+        color:burlywood;
+        transition: 1s;
     }
     
     
@@ -117,7 +112,7 @@
     #project{
         margin-top:10%;
         color: chartreuse;
-        justify-content: space-around;
+        justify-content:space-between;
         
       
     
@@ -139,11 +134,12 @@
         border: solid ;
         border-color: antiquewhite;
         padding: 0%;
-        width: 30vb;
-        height: 30vh;
+        width: 25vb;
+        height: 25vh;
         display: inline-block;
         margin: 10px;
         margin-top: 10px;
+       
     }
 
     #prj:hover{
@@ -160,7 +156,10 @@
         padding-bottom: 1%;
         padding-left: 2%;  
         color: antiquewhite;  
-        display: block;
+        display: inline-block;
+        font-size:small;
+        
+        
     }
     #prclk:hover{
         color: yellow ;
@@ -173,8 +172,6 @@
         display: block;
         text-align: center;
         justify-content: center;
-        margin-top: 5%;
-        margin-left: 10%;
         font-size:xx-large;
         font-family: 'Brush Script MT', 'cursive';
         color:rgb(72, 252, 27);
@@ -249,14 +246,51 @@
         border-width: 5px;
     }
 
+    #BID{
+        position:relative;
+        bottom: 0%;
+        width: 100%;
+    }
+    #BIcon{
+        width:50px;
+        position:relative;
+        text-align: center;
+        border-radius: 50%;
+        display:flexbox;
+    }
+    #Bhd{background-image: linear-gradient(
+        -225deg,
+        #3bda2d 0%,
+        #57f8dd 29%,
+        #ff1361 67%,
+        #fff800 100%  );
+    background-size:auto auto;
+    background-clip: border-box;
+    background-size:200% auto;
+    color: #fff;
+    background-clip: text;
+    text-overflow: transparent;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation: textani 5s linear infinite ;
+    animation-timing-function:relative;
+    position:relative;
+    display: inline;
+    font-size: 100%;
+    text-align:left;
+    font-style: italic;
+    }
+    #BContact{
+        margin: 1%;
+        font-size: 80%;
+    }
+    #BContact:hover{
+        color: yellow;
+        cursor: pointer;
+    }
+
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {}
-
-@media (min-width: 768px) and (max-width: 1024px){}
-
-@media (min-width: 1025px) and (max-width: 1280px){}
-@media (min-width: 1281px) {}
 @media  (min-width: 1025px){
     *{
         
@@ -376,28 +410,21 @@
     
     
     #bt{
-        display: inline-block;
-        text-align: center;
-        margin-top: 5%;
-        margin-left: 45%;
-        position: relative;
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
-        transition-duration: 0.3s;
-        padding: 5px;
+        margin-top: 10%;
+        border: 10px;
+        border: solid;
+        border-radius: 50px;
+        padding: 10px;
+        justify-content: center;
+        position:relative;
+        color: whitesmoke;
+        font-size: 150%;
     
     }
     #bt:hover{
         cursor: pointer;
-        color: rgb(18, 255, 58);
-        background-color: rgb(255, 4, 4);
-       
-        border-radius: 50px;
-        text-align: center;
-        border-color: #0dfcf0;
-        border-width: 5px;
+        color:burlywood;
+        transition: 1s;
     }
     
     
@@ -406,7 +433,7 @@
     #project{
         margin-top:2%;
         color: antiquewhite;
-        display: flexbox;
+        
         margin-left: 10%;
         margin-right: 10%;
     
@@ -440,7 +467,7 @@
         cursor: pointer;
         color: yellow ;
     }
-    }
+    
 
     #im{
         width:100%;
@@ -456,10 +483,11 @@
         justify-content: center;
         margin-top: 2%;
         border-top: 5px;
-        font-size: large;
+        font-size:large;
     }
     #prclk:hover{
         color: yellow ;
+        font-size: medium;
     }
     
     
@@ -467,25 +495,21 @@
     
     #bt2{
         
-        text-align: center;
+        margin-top: 2%;
+        border: 10px;
+        border: solid;
+        border-radius: 50px;
+        padding: 10px;
         justify-content: center;
-        margin-top: 5%;
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
-        transition-duration: 0.3s;
+        position:relative;
+        color: whitesmoke;
+        font-size: 150%;
      
     }
     #bt2:hover{
         cursor: pointer;
-        color: rgb(255, 18, 30);
-        background-color: rgb(232, 246, 248);
-        border-radius: 50px;
-        display: block;
-        text-align: center;
-        border-color: #0dfcf0;
-        border-width: 5px;
+        color:burlywood;
+        transition: 1s;
     }
 
 
@@ -521,32 +545,71 @@
 
 
     #btsoon{
-        display:block;
-        
+        margin-top: 2%;
+        border: 10px;
+        border: solid;
+        border-radius: 50px;
+        padding: 10px;
         justify-content: center;
-        text-align: center;
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
-        transition-duration: 0.3s;
+        position:relative;
+        color: whitesmoke;
+        font-size: 150%;
     }
     
     #btsoon:hover{
        
         cursor: pointer;
-        color: rgb(18, 255, 58);
-        background-color: rgb(255, 4, 4);
-        border-radius: 50px;
-        display: block;
-        text-align: center;
-        border-color: #0dfcf0;
-        border-width: 5px;
+        color:burlywood;
+        transition: 1s;
+        
     }
     
 
+    #BID{
+        position:relative;
+        margin-top: 2%;
+        
+    }
+    
+    #BIcon{
+        width:30px;
+        position:relative;
+        text-align: center;
+        border-radius: 50%;
+        display:flexbox;
+    }
+    #Bhd{background-image: linear-gradient(
+        -225deg,
+        #3bda2d 0%,
+        #57f8dd 29%,
+        #ff1361 67%,
+        #fff800 100%  );
+    background-size:auto auto;
+    background-clip: border-box;
+    background-size:200% auto;
+    color: #fff;
+    background-clip: text;
+    text-overflow: transparent;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation: textani 5s linear infinite ;
+    animation-timing-function:relative;
+    position:relative;
+    display: inline;
+    font-size: 100%;
+    text-align:left;
+    font-style: italic;
+    }
+    #BContact:hover{
+        color: yellow;
+        cursor: pointer;
+    }
+
+    p {
+        color: antiquewhite;
+       
+      }
 
 
 
-
-  
+}

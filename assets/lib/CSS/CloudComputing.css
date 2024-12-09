@@ -189,10 +189,7 @@
 
 
 
-@media (min-width: 768px) and (max-width: 1024px){}
 
-@media (min-width: 1025px) and (max-width: 1280px){}
-@media (min-width: 1281px) {}
 @media  (min-width: 1025px){
         *{
             background-image: url(../../../Common/Media/Background/BG7.jpg);
@@ -332,9 +329,9 @@
         
         
         
-        page{
+        #page{
             position:absolute;
-            margin-left: 25%;
+            
             margin-top: 2%;
             margin-bottom: 10%;
             
@@ -348,10 +345,6 @@
             right: 2%;
             left:25%;
             padding-top: 1%;
-
-            
-            
-            
         }
         
         #BIcon{
@@ -382,11 +375,12 @@
         font-size: 100%;
         text-align:left;
         font-style: italic;
-    }
-    #BContact:hover{
-        color: yellow;
-        cursor: pointer;
-    }
+        }
+        #BContact:hover{
+            color: yellow;
+            cursor: pointer;
+        }
+        
     
     
   
