@@ -3,71 +3,59 @@
 function en(){
         
         var en= document.createElement("div");            // To create element
-        
-
         en.setAttribute('id','Entry');                  // To set id or class name to the created element
-        
                                                         // To append html codes into created element
-        en.innerHTML+=     '<div id="topics">\
-                                <form>\
-                                <tr><td><th><center><h3 color="red"> Cloud Computing Syllabus</h3></th></center></td> </tr>\
-                                <tr>\
-                                    <td>\
-                                        <ol>\
-                                            <li id="1" onclick="Syllabus()" >Syllabus</li>\
-                                            <li id="2" onclick="Introduction()">Cloud Computing Introduction</li>\
-                                            <li id="3" onclick="Advantages_and_Disadvantages()">Advantages and Disadvantages</li>\
-                                            <li id="4" onclick="History()">History of Cloud Computing</li>\
-                                            <li id="5" onclick="Architecture()">Cloud Computing Architecture</li>\
-                                            <li id="6" onclick="Technologies()">Cloud Computing Technologies</li>\
-                                            <li id="7" onclick="Cloud_vs_Grid()">Cloud Computing VS Grid Computing</li>\
-                                            <li id="8" onclick="Cloud_Computing_Works()">How Dose Cloud Computing Works</li>\
+        en.innerHTML+=     `<div id="topics">
+                                <form>
+                                <tr><td><th><center><h3 color="red"> Cloud Computing Syllabus</h3></th></center></td> </tr>
+                                <tr>
+                                    <td>
+                                        <ol>
+                                            <li id="1" onclick="Syllabus()" >Syllabus</li>
+                                            <li id="2" onclick="Introduction()">Cloud Computing Introduction</li>
+                                            <li id="3" onclick="Advantages_and_Disadvantages()">Advantages and Disadvantages</li>
+                                            <li id="4" onclick="History()">History of Cloud Computing</li>
+                                            <li id="5" onclick="Architecture()">Cloud Computing Architecture</li>
+                                            <li id="6" onclick="Technologies()">Cloud Computing Technologies</li>
+                                            <li id="7" onclick="Cloud_vs_Grid()">Cloud Computing VS Grid Computing</li>
+                                            <li id="8" onclick="Cloud_Computing_Works()">How Dose Cloud Computing Works</li>
                                             <li id="9" onclick="Applications()">Cloud Computing Applications</li>\
-                                            <li id="10" onclick="Security_And_Risk()">Security and Risk of Cloud Computing</li>\
-                                            <li id="11" onclick="AWS()">AWS</li>\
-                                            <li id="12" onclick="AWS_Architecture()">AWS Architecture</li>\
-                                            <li id="13" onclick="AWS_Features()">AWS Features</li>\
-                                            <li id="14" onclick="AWS_Pros_And_Cons()">AWS Pros & Cons</li>\
-                                            <li id="15" onclick="AWS_Application()">AWS Application</li>\
-                                            <li id="16" onclick="AWS_Console_Mobile_App()">AWS Console Mobile App</li>\
-                                            <li id="17" onclick="AWS_Account()">AWS Account</li>\
-                                            <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>\
-                                            <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>\
-                                            <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>\
-                                        </ol>\
-                                    </td>\
-                                </tr>\
-                            </form>\
-                        </div>\
-                        <div id="content" style=" display:inline-block;" >\
-                                <img id="intIMG" src="../../../Cloud Computing/medias/IMG/Entry.png" alter="logo" >\
-                                <video id="intVideo" autoplay controls loop >\
-                                        <source src="../../../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">\
-                                </video>\
-                        </div>'
+                                            <li id="10" onclick="Security_And_Risk()">Security and Risk of Cloud Computing</li>
+                                            <li id="11" onclick="AWS()">AWS</li>
+                                            <li id="12" onclick="AWS_Architecture()">AWS Architecture</li>
+                                            <li id="13" onclick="AWS_Features()">AWS Features</li>
+                                            <li id="14" onclick="AWS_Pros_And_Cons()">AWS Pros & Cons</li>
+                                            <li id="15" onclick="AWS_Application()">AWS Application</li>
+                                            <li id="16" onclick="AWS_Console_Mobile_App()">AWS Console Mobile App</li>
+                                            <li id="17" onclick="AWS_Account()">AWS Account</li>
+                                            <li id="18" onclick="AWS_Management_Console()">AWS Management Console</li>
+                                            <li id="19" onclick="AWS_Developer_Tools()">AWS Developer Tools</li>
+                                            <li id="20" onclick="AWS_Management_Tools()">AWS Management Tools</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </form>
+                        </div>
+                        <div id="content" style=" display:inline-block;" >
+                                <img id="intIMG" src="../../../Cloud Computing/medias/IMG/Entry.png" alter="logo" >
+                                <video id="intVideo" autoplay controls loop >
+                                        <source src="../../../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">
+                                </video>
+                        </div>`
 
         var bottmBID= document.createElement("div");            // To create element
-        
-
-        bottmBID.setAttribute('id','BID');                  // To set id or class name to the created element
-        
-                                                        // To append html codes into created element
+        bottmBID.setAttribute('id','BID');                      // To set id or class name to the created element
+                                                   
         bottmBID.innerHTML+=    '<center>\
                                         <center><img id="BIcon" src="../../../Common/Media/Logo/logo-white.png">\
                                         <h1 id="Bhd"> Anony Hackz </h1> </center>\
                                         <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
                                         <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\
                                 </center>'      
-                                 
-                      
-                                
                      
-
-
-
-        var con = document.getElementById("container");    // To append created element into html file
-        con.appendChild(en);                 
-        con.removeChild(int);    // To remove elements
+        document.getElementById("container").appendChild(en);      // To append created element into html file
+        if (document.contains(document.getElementById("int"))){document.getElementById("int").remove();};       // To remove elements     
+          
         document.getElementById("Entry").insertAdjacentElement("afterend", bottmBID);       
                 
  }
@@ -76,9 +64,9 @@ function en(){
 function Syllabus(){
 
 
-        var con = document.getElementById("container");    // To append created element into html file
-        var Entry= document.getElementById("Entry");               
-        con.removeChild(Entry);
+         // To append created element into html file
+                      
+        document.getElementById("container").removeChild(Entry);
 
         var en= document.createElement("div");            // To create element
 
@@ -120,7 +108,7 @@ function Syllabus(){
 
 
         document.getElementById("BID").insertAdjacentElement("beforebegin",en); 
-        var content=document.getElementById("content");
+        
         
         var pro= document.createElement("div");            // To create element
         
