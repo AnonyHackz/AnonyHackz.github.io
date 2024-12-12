@@ -40,8 +40,8 @@ function en(){
                             </form>\
                         </div>\
                         <div id="content" style=" display:inline-block;" >\
-                                <img id="intIMG" src="../../../Cloud Computing/medias/IMG/Entry.png" alter="logo" style="margin-top:7%;width:50%; height:120%;">\
-                                <video id="intVideo" autoplay controls loop style="margin-top:8%;width:47%; height:95%; padding-left:2%;">\
+                                <img id="intIMG" src="../../../Cloud Computing/medias/IMG/Entry.png" alter="logo" >\
+                                <video id="intVideo" autoplay controls loop >\
                                         <source src="../../../Cloud Computing/medias/Videos/Animations/CC1.mp4" type="video/mp4">\
                                 </video>\
                         </div>'

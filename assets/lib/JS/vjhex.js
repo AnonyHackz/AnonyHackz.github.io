@@ -1,41 +1,25 @@
 
-  
-  
-  
-
-
-
        // soon() section
 
   function Soon(){
-      var con = document.getElementById("container");
-      var pr = document.getElementById("project");
-      con.removeChild(pr);
-      var btn = document.getElementById("btn");
-      con.removeChild(btn);
+      
+      if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
+      if (document.contains(document.getElementById("btn"))){document.getElementById("btn").remove();};
       document.getElementById("intro").innerHTML=" We are pleased to consider exploring alternative courses at the moment."   ;                     
-      con.innerHTML += ` <h1 id="GoBack" >Coming Soon.......</h1>`;
-      con.innerHTML += `<center id="cenbt"><button id="btsoon" onclick="soonremove(); he()">Previous Page</button></center>`;
+      document.getElementById("container").innerHTML += ` <h1 id="GoBack" >Coming Soon.......</h1>`;
+      document.getElementById("container").innerHTML += `<center id="cenbt"><button id="btsoon" onclick="soonremove(); he()">Previous Page</button></center>`;
   }
+
+
   function soonremove(){
-      var con = document.getElementById("container");
-      var GoBack = document.getElementById("GoBack"); 
-      con.removeChild(GoBack);
-      var cenbt = document.getElementById("cenbt");
+      if (document.contains(document.getElementById("GoBack"))){document.getElementById("GoBack").remove();};
+      if (document.contains(document.getElementById("cenbt"))){document.getElementById("cenbt").remove();};
     
-      con.removeChild(cenbt);
-      var btn = document.getElementById("btn");
       
   }
 
   
-
-
-
-
-
-
-         // he()  section 
+                                                   // he()  section 
 
   function he(){
         
@@ -78,13 +62,12 @@
                                         <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
                                         <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\
                                 </center>'   
-        var con = document.getElementById("container");    // To append created element into html file
-        con.appendChild(pro);
+                                                 // To append created element into html file
+        document.getElementById("container").appendChild(pro);
         document.getElementById("project").insertAdjacentElement('afterend',bt2)
 
-                  // To remove elements
-        var bt= document.getElementById("bt");
-        con.removeChild(bt);
+                                                                // To remove elements
+        if (document.contains(document.getElementById("bDiv"))){document.getElementById("bDiv").remove();};
         document.getElementById("bt2").insertAdjacentElement('afterend',bottmBID)
       
 
@@ -92,23 +75,14 @@
   
 
 
-
-
-
-
-         // home() section
+                                                  // home() section
 
   function home(){
+      
+        if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
+        if (document.contains(document.getElementById("btn"))){document.getElementById("btn").remove();};
+        document.getElementById("container").innerHTML += `<div id="bDiv"><button id="bt" onclick="he()">Let's have a look</button></div>`;
     
-        var con = document.getElementById("container");
-        var pr = document.getElementById("project");
-        var btn=document.getElementById("btn");
-        con.removeChild(btn);
-        con.removeChild(pr);
-        con.innerHTML += `<button id="bt" onclick="he()">Let's have a look</button>`;
-    
-
-
   }
 
 

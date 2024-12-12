@@ -132,7 +132,9 @@
     }
 
  
-    
+    #intIMG{margin-top:0%;width:47%; height:130%; padding-left: 2%;}
+        
+    #intVideo{margin-top:8%;width:47%; height:90%; padding-left:2%}
     
     #page1{
         position:static;
@@ -325,7 +327,12 @@
             margin-top: 2%;
            
              
-        }    
+        }   
+        
+        #intIMG{margin-top:7%;width:50%; height:120%;}
+        
+        #intVideo{margin-top:8%;width:47%; height:95%; padding-left:2%}
+        
         
         
         
