@@ -181,12 +181,13 @@
 #BContact{
     margin: 1%;
     font-size: 80%;
+
 }
 #BContact:hover{
     color: yellow;
     cursor: pointer;
 }
-
+ 
 }
 
 

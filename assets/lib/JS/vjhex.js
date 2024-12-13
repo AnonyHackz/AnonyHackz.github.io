@@ -81,7 +81,7 @@
       
         if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
         if (document.contains(document.getElementById("btn"))){document.getElementById("btn").remove();};
-        document.getElementById("container").innerHTML += `<div id="bDiv"><button id="bt" onclick="he()">Let's have a look</button></div>`;
+        document.getElementById("container").innerHTML += `<div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>`;
     
   }
 
