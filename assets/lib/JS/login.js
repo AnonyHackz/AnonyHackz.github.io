@@ -51,7 +51,7 @@
     
 }*/
 
-const { ALL } = require('dns');
+/*const { ALL } = require('dns');
 let form = document.getElementsByClassName("Hd");
 
 function Con() {                                       // Collecting data from login.html
@@ -82,12 +82,12 @@ function Con() {                                       // Collecting data from l
 };
 
 
-Con();
+Con();/*
     
 
 
 
-/*// Create an object
+ Create an object
 const userData = {
     job: "Programmer",
     skills: [
@@ -101,3 +101,53 @@ localStorage.setItem("userData", JSON.stringify(userData));
 
 */
 
+
+
+var form = document.getElementById('Hd-form');
+var un_input = document.getElementById('Un');
+var ps_input = document.getElementById('Ps');
+
+
+form.addEventListener('submit',(e) =>{
+    let errors = []
+    
+    if(un_input){
+        errors = getSignupFormError(un_input.value,ps_input.value)
+    }
+    else{
+        errors = getLoginFormError(un_input.value,ps_input.value)
+    }
+
+    if(errors.length >0){
+        e.preventDefault()
+        document.getElementById('error_through').innerText = errors.join(".")
+    }
+
+    function getSignupFormError(un_input,ps_input){
+        let errors =[]
+        if(un_input === '' ||un_input == null){
+            errors.push('Username is required')
+            document.getElementById('Un').parentElement.classList.add('wrong')
+        }
+        if(ps_input === '' ||ps_input == null){
+            errors.push('Password is required')
+            document.getElementById('Ps').parentElement.classList.add('wrong')
+        }
+
+        return errors;
+        
+    }
+    
+})
+
+
+var allInput =[un_input , ps_input ].filter(input => input != null)
+
+allInput.forEach(input =>{
+    input.addEventListener('input',()=>{
+        if(input.parentElement.classList.contains('wrong')){
+            input.parentElement.classList.remove('wrong')
+            document.getElementById('error_through').innerText=''
+        }
+    })
+})

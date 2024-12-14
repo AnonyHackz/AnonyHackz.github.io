@@ -1,6 +1,26 @@
 
        // soon() section
 
+/*var form = document.getElementById('form-d');
+
+form.addEventListener('submit',() =>{
+    window.open('assets/lib//HTML/login.html');
+});*/
+
+
+var form = document.getElementById('form-d');
+form.addEventListener('submit',() =>{
+    let newWindow = open('assets/lib//HTML/login.html', 'width=300,height=300');
+
+            newWindow.onload = function() {
+            newWindow.close();
+            alert(newWindow.closed); // true
+            };})
+
+
+
+
+
   function Soon(){
       
       if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
