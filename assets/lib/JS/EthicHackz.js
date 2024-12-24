@@ -61,3 +61,21 @@ function check() {;
         alert ("Please agree with terms and conditions!.");
     }
 }
+
+
+
+
+
+
+  /*if (!this._connectCalled) {
+    this._connectCalled = true;
+
+    // Connect either via a UNIX domain socket or a TCP socket.
+    this._socket = (this.config.socketPath)
+      ? Net.createConnection(this.config.socketPath)
+      : Net.createConnection(this.config.port, this.config.host);
+
+    // Connect socket to connection domain
+    if (Events.usingDomains) {
+      this._socket.domain = this.domain;
+    }*/
