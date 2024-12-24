@@ -8,6 +8,7 @@ form.addEventListener('submit',() =>{
 });*/
 
 //<div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>
+//https://2.49.66.28:3000
 var form = document.getElementById('form-d');
 form.addEventListener('submit',() =>{
     let newWindow = open('assets/lib//HTML/login.html', 'width=300,height=300');
