@@ -7,7 +7,7 @@ form.addEventListener('submit',() =>{
     window.open('assets/lib//HTML/login.html');
 });*/
 
-//<div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>
+
 
 var form = document.getElementById('form-d');
 form.addEventListener('submit',() =>{
