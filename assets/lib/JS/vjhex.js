@@ -6,6 +6,23 @@
 form.addEventListener('submit',() =>{
     window.open('assets/lib//HTML/login.html');
 });*/
+//<center><button id="bt" onclick="he()">Let's have a look</button></center>
+
+/*<div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>
+
+    // Fetch the HTML content from the server
+    fetch('https://2.49.66.28:3000')
+        .then(response => response.text())
+        .then(data => {
+            // Insert the HTML content into the div
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => console.error('Error:', error));
+
+*/
+
+
+
 
 
 

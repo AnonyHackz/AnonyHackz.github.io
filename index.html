@@ -22,8 +22,28 @@
               <p id="intro">Thank you for selecting our Anony Hackz learning platform. We highly appreciate your decision and are delighted to have you as part of our community.</p>
       
         </div>
-        <div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>
-        <p>Already have account? <a href="https://2.49.66.28:3000">Log In</a></p>
+        <div id="bDiv"></div>
+        
+        <p id="sig">Already have account? <a href="https://2.49.66.28:3000">Log In</a></p>
+
+
+
+        <script>
+            window.onload = function() {
+                // Check if there's button HTML stored in localStorage
+                const buttonHTML = localStorage.getItem('butHTML');
+        
+                // If there's button HTML, insert it into #bDiv
+                if (buttonHTML) {
+                    document.getElementById('bDiv').innerHTML = buHTML;
+        
+                    // Clear the button HTML from localStorage after using it
+                    localStorage.removeItem('butHTML');
+                    if(document.contains(document.getElementById("bDiv"))){document.getElementById("sig").remove();};
+
+                }
+            };
+        </script>
 
   </form>
     
