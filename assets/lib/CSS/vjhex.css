@@ -83,6 +83,57 @@ html{
         font-size:xx-large; 
         
     }
+
+    #linking{padding-left: 5%; padding-right: 5%;}
+
+    form{justify-content: center;}
+    .lbl{
+        display: inline-block;
+        width: 30px;   /* Width of the image */
+        height: 30px;  /* Height of the image */
+        vertical-align: middle;
+        margin-right:10px; 
+        justify-content: center;
+        
+
+    }
+    #d{
+        width: 100%;   /* Makes the image fill the label area */
+        height: 100%;  /* Makes the image fill the label area */
+        object-fit: contain; /* Ensures the image is contained within the label */
+        border: none; 
+        background-color: blue;
+        
+    }
+ 
+    input[type="text"], input[type="password"] {
+        
+        padding-left: 35px;              /* Padding to make space for the icon */
+        font-size: 16px;
+        height: 30px;
+        width: 250px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: black;
+        background-color: white;        /* White background */
+        background-image: none;         /* Remove any background image */
+        backface-visibility: hidden;
+        
+    }
+    #subt{
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: solid;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #subt:hover{
+        background-color: #4cae4c;
+    }
+
+
   
     
     
@@ -120,13 +171,20 @@ html{
     
     
     }
-    
+    #LS{
+        color: coral;
+    }
     #LS:hover{
      
         cursor: pointer;
         color: rgb(250, 34, 232);
-       
+        padding: auto;
+        border-radius: 50px;
+        font-size:larger
+        
     }
+
+  
 
     #prj{
         background-color: #fff;

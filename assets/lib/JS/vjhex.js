@@ -73,12 +73,13 @@ document.getElementById('lof').addEventListener('submit', async function (e) {
         const rlt = await response.json();
         
         if (rlt.success) {
-            localStorage.setItem('buHTML', rlt.buHTML);
+            document.getElementById('bDiv').innerHTML= rlt.buHTML;
             document.getElementById('l_in').style.display = 'none';
             document.getElementById('s_up').style.display = 'none';
             document.getElementById('main').style.display = 'block';
-            window.location.href = rlt.goto;
-            document.getElementById("linking").remove();
+            //window.location.href = rlt.goto;
+            document.getElementById("llinking").style.display ='none';
+            document.getElementById("slinking").style.display ='none';
                 
             
             
