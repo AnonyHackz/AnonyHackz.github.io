@@ -37,6 +37,95 @@ form.addEventListener('submit',() =>{
 
     }
 };*/
+document.getElementById('main').style.display = 'block';
+document.getElementById('l_in').style.display = 'none';
+document.getElementById('s_up').style.display = 'none';
+
+function sig_Up(){
+    document.getElementById('main').style.display = 'none';
+    document.getElementById('l_in').style.display = 'none';
+    document.getElementById('s_up').style.display = 'block';
+}
+function log_In(){
+    document.getElementById('main').style.display = 'none';
+    document.getElementById('l_in').style.display = 'block';
+    document.getElementById('s_up').style.display = 'none';
+}
+
+
+
+// Login form submit event
+document.getElementById('lof').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    try {
+        const response = await fetch('https://2.49.66.28:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+            localStorage.setItem('buHTML', result.buHTML);
+            document.getElementById('l_in').style.display = 'none';
+            document.getElementById('s_up').style.display = 'none';
+            document.getElementById('main').style.display = 'block';
+
+            window.location.href = result.goto;
+        } else {
+            document.getElementById('sig').innerText = result.msg;
+        }
+    } catch (error) {
+        console.error('Error during login:', error);
+    }
+});
+
+
+
+
+// Sign-up form submit event
+document.getElementById('sif').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-cpassword').value;
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+        document.getElementById('sig').innerText = 'Passwords do not match!';
+        return;
+    }
+
+    try {
+        const response = await fetch('https://2.49.66.28:3000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById('sig').innerText = 'Account created successfully! You can log in now.';
+            document.getElementById('s_up').style.display = 'none';
+            document.getElementById('l_in').style.display = 'block';
+        } else {
+            document.getElementById('sig').innerText = result.msg;
+        }
+    } catch (error) {
+        console.error('Error during sign-up:', error);
+    }
+});
 
 
 
@@ -46,14 +135,15 @@ form.addEventListener('submit',() =>{
 
 
 
-var form = document.getElementById('form-d');
-form.addEventListener('submit',() =>{
-    let newWindow = open('assets/lib//HTML/login.html', 'width=300,height=300');
-
-            newWindow.onload = function() {
-            newWindow.close();
-            alert(newWindow.closed); // true
-            };})
+        // On page load, check if we have HTML stored in localStorage
+        window.onload = function() {
+            const buttonHTML = localStorage.getItem('buHTML');
+            if (buttonHTML) {
+                document.getElementById('bDiv').innerHTML = buttonHTML;
+                localStorage.removeItem('buHTML'); // Clear it after use
+            }
+        };
+            
 
 
 

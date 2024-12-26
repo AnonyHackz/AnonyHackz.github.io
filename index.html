@@ -3,61 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >  AnonyHackz</title>
+    <title>AnonyHackz</title>
     <link rel="icon" type="image/png" sizes="32x32" href="Common/Media/Logo/logo-white.png">
-   
     <script defer type="text/javascript" src="assets/lib/JS/vjhex.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="assets/lib/CSS/vjhex.css">
 </head>
 <body id="container">
-  hellow
-
-  <form id="form-d">
-  
-    
-        <div id="HdIntro">
-              <div  id="parent">  <img id="icon" src="Common/Media/Logo/logo-white.png"><h1 id="hd"> Anony Hackz </h1> </div>
-
-              <p id="intro">Thank you for selecting our Anony Hackz learning platform. We highly appreciate your decision and are delighted to have you as part of our community.</p>
-      
+   
+    <div id="HdIntro">
+        <div id="parent">  
+            <img id="icon" src="Common/Media/Logo/logo-white.png">
+            <h1 id="hd">Anony Hackz</h1> 
         </div>
+        
+    </div>
+
+
+    <div id="main" >
+        <p id="intro">Thank you for selecting our Anony Hackz learning platform. We highly appreciate your decision and are delighted to have you as part of our community.</p>
         <div id="bDiv"></div>
+        <p id="sig">Explore <a id="LS" onclick="log_In()">Log In</a></p>
+        <p id="sig">Don't have an account?, Create an account <a id="LS" onclick="sig_Up()">Sign Up</a></p>
+    </div>
+
+
+
+    <div id="l_in" class="l_In"><hr size="10" color="white">
+        <h1 style="color: beige;">Log In</h1>
+        <p id="sig"></p>
+        <form id="lof">
+            
+                <label class="lbl" for="username" >
+                    <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+                </label>
+                <input type="text" id="username" name="username" placeholder="Username" required /><br>
+            
+                <label class="lbl" for="password">
+                    <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
+                </label>
+                <input type="password" id="password" name="password" placeholder="Password" required /><br>
+                <button id="subt" type="submit">Login</button>
+        </form>
+        <p id="sig1">Don't have an account? <a id="LS" onclick="sig_Up()">Sign Up</a></p>
         
-        <p id="sig">Already have account? <a href="https://2.49.66.28:3000">Log In</a></p>
+    </div>
 
 
-
-       
-       
+    <div style="color: beige;" id="s_up" class="l_In"><hr size="10" color="white">
+        <h1 style="color: beige;">Sign In</h1>
+        <p id="sig"></p>
+        <form id="sif">
+            
+            <label class="lbl" for="username" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="username" name="username" placeholder="Username" required /><br>
+            <label class="lbl" for="password">
+                <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
+            </label>
+            <input type="password" id="password" name="password" placeholder="Password" required /><br>
+            <label class="lbl" for="C_password">
+                <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
+            </label>
+            <input type="password" id="password" name="C_password" placeholder="Confirm Password" required /><br>
+            <button id="subt" type="submit">Sign Up</button>
+        </form>
+        <p id="sig1">Already have an account? <a id="LS" onclick="log_In()">Log In</a></p>
         
+    </div>
 
-  </form>
-    
-  <script>
-        window.onload = function() {
-            // Check if there's button HTML stored in localStorage
-            const buHTML = localStorage.getItem('buHTML');
-
-            // If there's button HTML, insert it into #bDiv
-            if (buHTML) {
-                document.getElementById('bDiv').innerHTML = buHTML;
-
-                // Clear the button HTML from localStorage after using it
-                localStorage.removeItem('buHTML');
-                if (document.contains(document.getElementById("bDiv"))) {
-                    document.getElementById("sig").remove();
-                }
-            }
-        };
-
-</script>
-
-
-
-
+  
 </body>
-
 </html>
-
-

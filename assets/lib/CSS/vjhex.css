@@ -120,11 +120,8 @@ html{
     
     
     }
-    a[href]{
-        color:chartreuse ;
-        text-decoration: none;
-    }
-    a:hover{
+    
+    #LS:hover{
      
         cursor: pointer;
         color: rgb(250, 34, 232);
@@ -312,10 +309,9 @@ html{
         
         width:150px;
         position:relative;
-        animation: iconanirotate 1s 5s linear infinite, iconani2 5s 5s linear ;
+        animation: iconanirotate 5s 5s linear 2  ;
         text-align: center;
         border-radius: 50%;
-        margin-left: 27%;
         display: inline;
         
     }
@@ -411,9 +407,57 @@ html{
           width: 100%;
         }
     }
+
+
+
+    
       
-    
-    
+    form{justify-content: center;}
+    .lbl{
+        display: inline-block;
+        width: 30px;   /* Width of the image */
+        height: 30px;  /* Height of the image */
+        vertical-align: middle;
+        margin-right:10px; 
+        justify-content: center;
+        
+
+    }
+    #d{
+        width: 100%;   /* Makes the image fill the label area */
+        height: 100%;  /* Makes the image fill the label area */
+        object-fit: contain; /* Ensures the image is contained within the label */
+        border: none; 
+        background-color: blue;
+        
+    }
+ 
+    input[type="text"], input[type="password"] {
+        
+        padding-left: 35px;              /* Padding to make space for the icon */
+        font-size: 16px;
+        height: 30px;
+        width: 250px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        color: black;
+        background-color: white;        /* White background */
+        background-image: none;         /* Remove any background image */
+        backface-visibility: hidden;
+        
+    }
+    #subt{
+        padding: 10px;
+        background-color: #5cb85c;
+        color: white;
+        border: solid;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #subt:hover{
+        background-color: #4cae4c;
+    }
     
     #bt{
         margin-top: 10%;
@@ -444,17 +488,19 @@ html{
         margin-right: 10%;
     
     }
-    a[href]{
-        color:rgb(235, 147, 17) ;
-        text-decoration: none;
+ 
+    
+    #LS{
+        color: coral;
     }
-    a:hover{
+    #LS:hover{
      
         cursor: pointer;
         color: rgb(250, 34, 232);
         padding: auto;
         border-radius: 50px;
-        display: block;
+        font-size:larger
+        
     }
     
 
