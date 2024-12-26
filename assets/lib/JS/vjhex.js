@@ -58,8 +58,8 @@ function log_In(){
 document.getElementById('lof').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
+    const username = document.getElementById('l_username').value;
+    const password = document.getElementById('l_password').value;
 
     try {
         const response = await fetch('https://2.49.66.28:3000/login', {
@@ -94,9 +94,9 @@ document.getElementById('lof').addEventListener('submit', async function (e) {
 document.getElementById('sif').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const username = document.getElementById('signup-username').value;
-    const password = document.getElementById('signup-password').value;
-    const confirmPassword = document.getElementById('signup-cpassword').value;
+    const username = document.getElementById('s_username').value;
+    const password = document.getElementById('s_password').value;
+    const confirmPassword = document.getElementById('s_Cpassword').value;
 
     // Check if passwords match
     if (password !== confirmPassword) {
