@@ -28,25 +28,34 @@
 
 
 
-        <script>
-            window.onload = function() {
-                // Check if there's button HTML stored in localStorage
-                const buttonHTML = localStorage.getItem('butHTML');
+       
+       
         
-                // If there's button HTML, insert it into #bDiv
-                if (buttonHTML) {
-                    document.getElementById('bDiv').innerHTML = buHTML;
-        
-                    // Clear the button HTML from localStorage after using it
-                    localStorage.removeItem('butHTML');
-                    if(document.contains(document.getElementById("bDiv"))){document.getElementById("sig").remove();};
-
-                }
-            };
-        </script>
 
   </form>
     
+  <script>
+        window.onload = function() {
+            // Check if there's button HTML stored in localStorage
+            const buHTML = localStorage.getItem('buHTML');
+
+            // If there's button HTML, insert it into #bDiv
+            if (buHTML) {
+                document.getElementById('bDiv').innerHTML = buHTML;
+
+                // Clear the button HTML from localStorage after using it
+                localStorage.removeItem('buHTML');
+                if (document.contains(document.getElementById("bDiv"))) {
+                    document.getElementById("sig").remove();
+                }
+            }
+        };
+
+</script>
+
+
+
+
 </body>
 
 </html>

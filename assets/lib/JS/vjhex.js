@@ -23,6 +23,26 @@ form.addEventListener('submit',() =>{
 
 
 
+/*window.onload = function() {
+    // Check if there's button HTML stored in localStorage
+    const buttonHTML = localStorage.getItem('butHTML');
+
+    // If there's button HTML, insert it into #bDiv
+    if (buttonHTML) {
+        document.getElementById('bDiv').innerHTML = buHTML;
+
+        // Clear the button HTML from localStorage after using it
+        localStorage.removeItem('butHTML');
+        if(document.contains(document.getElementById("bDiv"))){document.getElementById("sig").remove();};
+
+    }
+};*/
+
+
+
+
+
+
 
 
 
