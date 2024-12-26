@@ -70,17 +70,17 @@ document.getElementById('lof').addEventListener('submit', async function (e) {
             body: JSON.stringify({ username, password }),
         });
 
-        const result = await response.json();
+        const rlt = await response.json();
         
-        if (result.success) {
-            localStorage.setItem('buHTML', result.buHTML);
+        if (rlt.success) {
+            localStorage.setItem('buHTML', rlt.buHTML);
             document.getElementById('l_in').style.display = 'none';
             document.getElementById('s_up').style.display = 'none';
             document.getElementById('main').style.display = 'block';
 
-            window.location.href = result.goto;
+            window.location.href = rlt.goto;
         } else {
-            document.getElementById('sig').innerText = result.msg;
+            document.getElementById('lin').innerText = rlt.msg;
         }
     } catch (error) {
         console.error('Error during login:', error);
