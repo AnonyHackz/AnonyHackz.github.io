@@ -77,7 +77,7 @@ document.getElementById('lof').addEventListener('submit', async function (e) {
             document.getElementById('l_in').style.display = 'none';
             document.getElementById('s_up').style.display = 'none';
             document.getElementById('main').style.display = 'block';
-            //window.location.href = rlt.goto;
+           
             document.getElementById("llinking").style.display ='none';
             document.getElementById("slinking").style.display ='none';
                 
