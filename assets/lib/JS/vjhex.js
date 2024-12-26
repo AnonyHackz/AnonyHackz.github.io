@@ -77,8 +77,11 @@ document.getElementById('lof').addEventListener('submit', async function (e) {
             document.getElementById('l_in').style.display = 'none';
             document.getElementById('s_up').style.display = 'none';
             document.getElementById('main').style.display = 'block';
-
             window.location.href = rlt.goto;
+            document.getElementById("linking").remove();
+                
+            
+            
         } else {
             document.getElementById('lin').innerText = rlt.msg;
         }
