@@ -68,7 +68,7 @@
             <label class="lbl" for="e_m" >
                 <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
             </label>
-            <input type="text" id="e_m" name="e_m" placeholder="Email" required /><br>
+            <input type="email" id="e_m" name="e_m" placeholder="Email" required /><br>
 
 
             <label class="lbl" for="c_ph" >
@@ -101,130 +101,16 @@
                 <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
             </label>
             <input type="password" id="s_Cpassword" name="C_password" placeholder="Confirm Password" required /><br>
-            <button id="subt" type="submit">Sign Up</button>
+            <button id="subt1" type="submit" >Sign Up</button>
         </form>
         <p >Already have an account? <a id="LS" onclick="log_In()">Log In</a></p>
         
     </div>
+    <div id="ot">
+        <input type="text" id="otp" placeholder="Enter OTP" />
+        <button onclick="v_OTP()">Verify OTP</button>
+    </div>
 
-  <script>document.getElementById('main').style.display = 'block';
-    document.getElementById('l_in').style.display = 'none';
-    document.getElementById('s_up').style.display = 'none';
-    
-    function sig_Up(){
-        document.getElementById('main').style.display = 'none';
-        document.getElementById('l_in').style.display = 'none';
-        document.getElementById('s_up').style.display = 'block';
-    }
-    function log_In(){
-        document.getElementById('main').style.display = 'none';
-        document.getElementById('l_in').style.display = 'block';
-        document.getElementById('s_up').style.display = 'none';
-    }
-    
-    
-    
-    // Login form submit event
-    document.getElementById('lof').addEventListener('submit', async function (e) {
-        e.preventDefault();
-    
-        const username = document.getElementById('l_username').value;
-        const password = document.getElementById('l_password').value;
-    
-        try {
-            const response = await fetch('https://2.49.66.28:3000/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
-            });
-    
-            const rlt = await response.json();
-            
-            if (rlt.success) {
-                document.getElementById('bDiv').innerHTML= rlt.buHTML;
-                document.getElementById('l_in').style.display = 'none';
-                document.getElementById('s_up').style.display = 'none';
-                document.getElementById('main').style.display = 'block';
-               
-                document.getElementById("llinking").style.display ='none';
-                document.getElementById("slinking").style.display ='none';
-                    
-                
-                
-            } else {
-                document.getElementById('lin').innerText = rlt.msg;
-            }
-        } catch (error) {
-            console.error('Error during login:', error);
-        }
-    });
-    
-    
-    
-    
-    // Sign-up form submit event
-    document.getElementById('sif').addEventListener('submit', async function (e) {
-        e.preventDefault();
-    
-        const username = document.getElementById('s_username').value;
-        const password = document.getElementById('s_password').value;
-        const confirmPassword = document.getElementById('s_Cpassword').value;
-        const lastName = document.getElementById('l_n').value;
-        const firstName = document.getElementById('f_n').value;
-        const address = document.getElementById('adr').value;
-        const city = document.getElementById('city').value;
-        const email = document.getElementById('e_m').value;
-        const phone = document.getElementById('c_ph').value;
-       
 
-    
-        // Check if passwords match
-        if (password !== confirmPassword) {
-            document.getElementById('sig').innerText = 'Passwords do not match!';
-            return;
-        }
-    
-        try {
-            const response = await fetch('https://2.49.66.28:3000/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password, firstName, lastName,address,city,email,phone }),
-            });
-    
-            const result = await response.json();
-    
-            if (result.success) {
-                document.getElementById('sig').innerText = 'Account created successfully! You can log in now.';
-                document.getElementById('s_up').style.display = 'none';
-                document.getElementById('l_in').style.display = 'block';
-            } else {
-                document.getElementById('sig').innerText = result.msg;
-            }
-        } catch (error) {
-            console.error('Error during sign-up:', error);
-        }
-    });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            // On page load, check if we have HTML stored in localStorage
-            window.onload = function() {
-                const buttonHTML = localStorage.getItem('buHTML');
-                if (buttonHTML) {
-                    document.getElementById('bDiv').innerHTML = buttonHTML;
-                    localStorage.removeItem('buHTML'); // Clear it after use
-                }
-            };
-</script>
 </body>
 </html>         
