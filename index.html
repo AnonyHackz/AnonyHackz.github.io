@@ -55,10 +55,44 @@
         <p id="sig"></p>
         <form id="sif">
             
+            <label class="lbl" for="f_n" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="f_n" name="f_n" placeholder="Firstname" required /><br>
+
+            <label class="lbl" for="l_n" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="l_n" name="l_n" placeholder="Lastname" required /><br>
+
+            <label class="lbl" for="e_m" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="e_m" name="e_m" placeholder="Email" required /><br>
+
+
+            <label class="lbl" for="c_ph" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="c_ph" name="c_ph" placeholder="Phone Number" required /><br>
+
+
+
+            <label class="lbl" for="adr" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="adr" name="adr" placeholder="Address" required /><br>
+
+            <label class="lbl" for="city" >
+                <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
+            </label>
+            <input type="text" id="city" name="city" placeholder="City" required /><br>
+
             <label class="lbl" for="username" >
                 <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
             </label>
             <input type="text" id="s_username" name="username" placeholder="Username" required /><br>
+
             <label class="lbl" for="password">
                 <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
             </label>
@@ -137,6 +171,14 @@
         const username = document.getElementById('s_username').value;
         const password = document.getElementById('s_password').value;
         const confirmPassword = document.getElementById('s_Cpassword').value;
+        const lastName = document.getElementById('l_n').value;
+        const firstName = document.getElementById('f_n').value;
+        const address = document.getElementById('adr').value;
+        const city = document.getElementById('city').value;
+        const email = document.getElementById('e_m').value;
+        const phone = document.getElementById('c_ph').value;
+       
+
     
         // Check if passwords match
         if (password !== confirmPassword) {
@@ -150,7 +192,7 @@
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ username, password }),
+                body: JSON.stringify({ username, password, firstName, lastName,address,city,email,phone }),
             });
     
             const result = await response.json();
@@ -184,6 +226,5 @@
                 }
             };
 </script>
-hellowd
 </body>
 </html>         

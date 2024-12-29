@@ -1,49 +1,4 @@
 
-       // soon() section
-
-/*var form = document.getElementById('form-d');
-
-form.addEventListener('submit',() =>{
-    window.open('assets/lib//HTML/login.html');
-});*/
-//<center><button id="bt" onclick="he()">Let's have a look</button></center>
-
-/*<div id="bDiv"><center><button id="bt" onclick="he()">Let's have a look</button></center></div>
-
-    // Fetch the HTML content from the server
-    fetch('https://2.49.66.28:3000')
-        .then(response => response.text())
-        .then(data => {
-            // Insert the HTML content into the div
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => console.error('Error:', error));
-
-*/
-
-
-
-/*window.onload = function() {
-    // Check if there's button HTML stored in localStorage
-    const buttonHTML = localStorage.getItem('butHTML');
-
-    // If there's button HTML, insert it into #bDiv
-    if (buttonHTML) {
-        document.getElementById('bDiv').innerHTML = buHTML;
-
-        // Clear the button HTML from localStorage after using it
-        localStorage.removeItem('butHTML');
-        if(document.contains(document.getElementById("bDiv"))){document.getElementById("sig").remove();};
-
-    }
-};*/
-
-            
-
-
-
-
-
   function Soon(){
       
       if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
@@ -130,3 +85,10 @@ form.addEventListener('submit',() =>{
 
 
     
+
+
+
+
+
+
+  
