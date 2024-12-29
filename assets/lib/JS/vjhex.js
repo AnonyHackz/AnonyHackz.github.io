@@ -132,9 +132,10 @@ function lg_rlt(){
 }
 
 function s_proceed_rlt(){
-    document.getElementById('sig').innerText = 'Account created successfully! You can log in now.';
+    document.getElementById('lin').innerText = 'Account created successfully! You can log in now.';
     document.getElementById('s_up').style.display = 'none';
     document.getElementById('l_in').style.display = 'block';
+    document.getElementById('lin').style.display = 'block';
 }
 
 
