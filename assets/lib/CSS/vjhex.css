@@ -106,7 +106,7 @@ html{
         
     }
  
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"] ,input[type="email"] {
         
         padding-left: 35px;              /* Padding to make space for the icon */
         font-size: 16px;
@@ -490,7 +490,7 @@ html{
         
     }
  
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"], input[type="email"] {
         
         padding-left: 35px;              /* Padding to make space for the icon */
         font-size: 16px;
