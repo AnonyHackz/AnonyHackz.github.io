@@ -116,7 +116,7 @@ window.onload = function() {
 
 
 function lg_rlt(){
-    document.getElementById('bDiv').innerHTML= rlt.buHTML;
+    
     document.getElementById('l_in').style.display = 'none';
     document.getElementById('s_up').style.display = 'none';
     document.getElementById('main').style.display = 'block'; 
@@ -224,6 +224,7 @@ function v_OTP() {
         const rlt = await response.json();
         
         if (rlt.success) {
+            document.getElementById('bDiv').innerHTML= rlt.buHTML;
             lg_rlt()
         } else {
             document.getElementById('lin').innerText = rlt.msg;
