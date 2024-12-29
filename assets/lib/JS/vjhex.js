@@ -114,12 +114,6 @@ window.onload = function() {
       document.getElementById('ot').style.display = 'none';
     }
 
-function lg_sub(){
-    document.getElementById('ot').style.display = 'block';
-    document.getElementById('main').style.display = 'none';
-    document.getElementById('l_in').style.display = 'none';
-    document.getElementById('s_up').style.display = 'none';
-}
 
 function lg_rlt(){
     document.getElementById('bDiv').innerHTML= rlt.buHTML;
@@ -216,8 +210,7 @@ function v_OTP() {
 
     const username = document.getElementById('l_username').value;
     const password = document.getElementById('l_password').value;
-    lg_sub()
-
+    
 
     try {
         const response = await fetch('https://2.49.66.28:3000/login', {
