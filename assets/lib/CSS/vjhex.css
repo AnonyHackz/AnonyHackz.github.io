@@ -1,4 +1,5 @@
-html{
+html,body{
+    height: 100%;
     text-align: center;
 }
 @media (max-width: 480px){
@@ -361,13 +362,17 @@ html{
     }
     
 
-    #container{justify-content: center;}
+    #container{
+        
+        flex-direction: column;
+        min-height: 100vh;
+        }
     
     #icon{
         
-        width:150px;
+        width:100px;
         position:relative;
-        animation: iconanirotate 5s 5s linear 2  ;
+        
         text-align: center;
         border-radius: 50%;
         display: inline;
@@ -394,22 +399,12 @@ html{
     
     #hd {
         
-        background-image: linear-gradient(
-            -225deg,
-            #3bda2d 0%,
-            #57f8dd 29%,
-            #ff1361 67%,
-            #fff800 100%  );
+     
+        color: #fff800;
         
-        background-size:auto auto;
-        background-clip: border-box;
-        background-size:  200%  auto;
-        color: #fff;
-        background-clip: text;
-        text-overflow: transparent;
-        -webkit-background-clip:text;
-        -webkit-text-fill-color: transparent;
-        animation: textani 5s linear infinite , textslide 5s linear;
+       
+        
+        animation: textani 5s linear infinite , ;
         animation-timing-function:relative;
        
         position:relative;
@@ -434,13 +429,35 @@ html{
        
          
     }
-    @keyframes textani{
-        to {
-            background-position: bottom;
-          }
+   
+    
+  
+    #Profile{
+        
+        display:flex;
+        position: absolute;
+        right: 5%;
+        top:5%;
+        width: 50px;   /* Width of the image */
+        height: 50px;  /* Height of the image */
+        vertical-align: middle;
+        margin-right:10px; 
+        justify-content: center;
+        backface-visibility: hidden;
+         
     }
-    
-    
+
+    #prof{
+        display:flex;
+        position: sticky;
+        
+        top:30%;
+   
+        vertical-align: middle;
+        margin-right:10px; 
+        justify-content: center;
+        backface-visibility: hidden;
+    }
     
     
     #intro{
@@ -451,6 +468,7 @@ html{
         animation-duration: 5s;
         animation-name: slideintro;
         animation-iteration-count: relative;  
+        
         
     }
     @keyframes slideintro {
@@ -630,7 +648,6 @@ html{
         justify-content: center;
         color: rgb(44, 223, 21);
         
-        
         animation: blackintro 5s  linear  , gobackanifi 5s 7s linear infinite; 
     }
 
@@ -692,22 +709,9 @@ html{
         border-radius: 50%;
         display:flexbox;
     }
-    #Bhd{background-image: linear-gradient(
-        -225deg,
-        #3bda2d 0%,
-        #57f8dd 29%,
-        #ff1361 67%,
-        #fff800 100%  );
-    background-size:auto auto;
-    background-clip: border-box;
-    background-size:200% auto;
-    color: #fff;
-    background-clip: text;
-    text-overflow: transparent;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    animation: textani 5s linear infinite ;
-    animation-timing-function:relative;
+    #Bhd{
+   
+    color: yellow;
     position:relative;
     display: inline;
     font-size: 100%;
@@ -724,6 +728,26 @@ html{
        
       }
 
+
+
+}
+
+
+
+
+
+
+#bd{
+
+
+    
+   
+    display: block;
+   
+
+    
+    justify-content: center;
+    backface-visibility: hidden;
 
 
 }

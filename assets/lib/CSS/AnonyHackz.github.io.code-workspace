@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../login-form"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AnonyHackz.github.io"
+	}
+}

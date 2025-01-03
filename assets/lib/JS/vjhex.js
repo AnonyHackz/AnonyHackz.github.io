@@ -1,4 +1,31 @@
 
+  
+  
+  
+  const un_name ='vijay';
+  
+  function p_file(){ 
+    var ud = document.createElement('div');
+    ud.setAttribute('id','prof');
+    ud.innerHTML+= `<div>
+                        <label class="lbl" for="username" >Username</label>
+                        <h3 id ="pfUN"name="username"></h3>
+                    </div>`
+    if(document.contains(document.getElementById('prof'))){
+
+            document.getElementById("pfUN").textContent = un_name;
+            document.getElementById('prof').style.color='white',position='absolute', top='30%';
+            pr_check()
+        }else{
+            document.getElementById('container').appendChild(ud);
+            document.getElementById("pfUN").textContent = un_name;
+            document.getElementById('prof').style.color='white',position='absolute', top='30%';
+            pr_check()
+        }
+    
+  }
+  
+  
   function Soon(){
       
       if (document.contains(document.getElementById("project"))){document.getElementById("project").remove();};
@@ -44,7 +71,7 @@
                                                  <div id="prj" onclick="window.location.href='assets/lib/HTML/EthicHackz.html';" ><img id="im" src="Cyber Security/Icons/icon.png"><span id="prclk" >Cyber Security </span ></div> 
                                                  <div id="prj" onclick="Soon()" ><img id="im" src="Machine Learning/Icons/icon.png"><span id="prclk" >Machine Learning</span ></div> 
                                                  <div id="prj" onclick="Soon()" ><img id="im" src="Java/Icons/icon.png"><span id="prclk" >Java</span ></div> 
-                                                 <div id="prj" onclick="window.location.href='assets/lib/HTML/CloudComputing.html';"><img id="im" src="Cloud Computing/Icons/icon.png">   <span id="prclk" >Cloud Computing</span ></div> 
+                                                 <div id="prj" onclick="C_C()"><img id="im" src="Cloud Computing/Icons/icon.png">   <span id="prclk" >Cloud Computing</span ></div> 
                                                  <div id="prj" onclick="Soon()" ><img id="im" src="Web Development/Icons/icon.png"><span id="prclk" >Web Development</span ></div> 
                                                  <div id="prj" onclick="Soon()" ><img id="im" src="Reverse Engineering/Icons/icon.png"><span id="prclk" >Reverse Engineering</span ></div> 
                         `;
@@ -54,12 +81,7 @@
        
         
                                                         // To append html codes into created element
-        bottmBID.innerHTML+=    '<center>\
-                                        <center><img id="BIcon" src="Common/Media/Logo/logo-white.png">\
-                                        <h1 id="Bhd"> Anony Hackz </h1> </center>\
-                                        <center><span style=" color: aliceblue;">Contact Us If You Need Help</span></center>\
-                                        <center><p id="BContact">+971503118352, +919047891106, vijayveerappa741@gmail.com</p></center>\
-                                </center>'   
+         
                                                  // To append created element into html file
         document.getElementById("container").appendChild(pro);
         document.getElementById("project").insertAdjacentElement('afterend',bt2)
@@ -87,6 +109,7 @@
 // On page load, check if we have HTML stored in localStorage
 window.onload = function() {
     const buttonHTML = localStorage.getItem('buHTML');
+    if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
     _onload()
     if (buttonHTML) {
         document.getElementById('bDiv').innerHTML = buttonHTML;
@@ -100,18 +123,21 @@ window.onload = function() {
     document.getElementById('l_in').style.display = 'none';
     document.getElementById('s_up').style.display = 'none';
     document.getElementById('ot').style.display = 'none';
+    if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
   }
   
   function sig_Up(){
       document.getElementById('main').style.display = 'none';
       document.getElementById('l_in').style.display = 'none';
       document.getElementById('s_up').style.display = 'block';
+      if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
   }
   function log_In(){
       document.getElementById('main').style.display = 'none';
       document.getElementById('l_in').style.display = 'block';
       document.getElementById('s_up').style.display = 'none';
       document.getElementById('ot').style.display = 'none';
+      if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
     }
 
 
@@ -123,6 +149,7 @@ function lg_rlt(){
     document.getElementById("llinking").style.display ='none';
     document.getElementById("slinking").style.display ='none';
     document.getElementById("ot").style.display ='none';
+    if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
 }
 
 function s_proceed_rlt(){
@@ -130,6 +157,7 @@ function s_proceed_rlt(){
     document.getElementById('s_up').style.display = 'none';
     document.getElementById('l_in').style.display = 'block';
     document.getElementById('lin').style.display = 'block';
+    if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
 }
 
 
@@ -139,6 +167,18 @@ function ot_send_rlt(){
     document.getElementById('main').style.display = 'none';
     document.getElementById('l_in').style.display = 'none';
     document.getElementById('s_up').style.display = 'none';
+    if( document.contains(document.getElementById("prof"))){ document.getElementById("prof").style.display ='none';};
+}
+
+function pr_check(){
+    
+    document.getElementById('l_in').style.display = 'none';
+    document.getElementById('s_up').style.display = 'none';
+    document.getElementById('main').style.display = 'none'; 
+    document.getElementById("llinking").style.display ='none';
+    document.getElementById("slinking").style.display ='none';
+    document.getElementById("ot").style.display ='none';
+    
 }
 
 
@@ -281,4 +321,37 @@ function v_OTP() {
             console.error('Error during sign-up:', error);
         }
     };
+
+    //Cloud computing colabration
+async function C_C(){
+        const cc_IN = 6000036;
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            document.getElementById('sig').innerText = 'Passwords do not match!';
+            return;
+        }
+    
+        try {
+            const response = await fetch('https://2.49.66.28:3000/5566rEq741', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ cc_IN}),
+            });
+    
+            const c_Rlt = await response.json();
+    
+            if (c_Rlt.success) {
+                if(document.contains(document.getElementById('project'))){document.getElementById('project').remove()};
+                document.getElementsByClassName('.bDiv_cont').innerHTML=c_Rlt.res_Content;
+             
+                
+            } else {
+                alert(c_Rlt.msg);
+            }
+        } catch (error) {
+            console.error('Error during connecting:', error);
+        }
+}
    
