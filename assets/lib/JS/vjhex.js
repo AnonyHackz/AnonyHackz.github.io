@@ -325,15 +325,11 @@ function v_OTP() {
     //Cloud computing colabration
 async function C_C(){
         const cc_IN = 6000036;
-        // Check if passwords match
-        if (password !== confirmPassword) {
-            document.getElementById('sig').innerText = 'Passwords do not match!';
-            return;
-        }
+       
     
         try {
             const response = await fetch('https://2.51.149.76:3000/5566rEq741', {
-                method: 'GET',
+                method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -344,7 +340,7 @@ async function C_C(){
     
             if (c_Rlt.success) {
                 if(document.contains(document.getElementById('project'))){document.getElementById('project').remove()};
-                document.getElementsByClassName('.bDiv_cont').innerHTML=c_Rlt.res_Content;
+                document.getElementById('bDiv_cont').innerHTML= [c_Rlt.C_rlt];          
              
                 
             } else {

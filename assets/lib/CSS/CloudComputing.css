@@ -1,13 +1,6 @@
-@media (min-width:320px ) and (max-width:480px){
-    *{
-        background-image: url(../../../Common/Media/Background/BG7.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size:cover;
-    
-        
-    }
-    
+/*@media (min-width:320px ) and (max-width:480px){
+
+   
     
   
     #icon{
@@ -190,66 +183,19 @@
  
 }
 
-
+*/
 
 
 @media  (min-width: 1025px){
-        *{
-            background-image: url(../../../Common/Media/Background/BG7.jpg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+
+   
         
         
       
-        #icon{
-            
-            width:100px;
-            position:fixed;
-            left: 3%;
-            top:3%;
-            animation:  iconani2 5s 5s linear ;
-            text-align: center;
-            border-radius: 50%;
-            display:flexbox;
-        
-            
-        }
-        @keyframes iconani2{
-            0%   { }
-            20%   {border-radius: 25%; }
-            30% {border-radius: 50%;}
-            50% { border-radius: 25%; }
-            100% {border-radius: 10%; }
-        }
-        
+   
 
-        #hd {
-            background-image: linear-gradient(
-                -225deg,
-                #3bda2d 0%,
-                #57f8dd 29%,
-                #ff1361 67%,
-                #fff800 100%  );
-            background-size:auto auto;
-            background-clip: border-box;
-            background-size:200% auto;
-            color: #fff;
-            background-clip: text;
-            text-overflow: transparent;
-            -webkit-background-clip:text;
-            -webkit-text-fill-color: transparent;
-            animation: textani 5s linear infinite ;
-            animation-timing-function:relative;
-            position:fixed;
-            left: 10%;
-            top:7%;
-            font-size: 200%;
-            text-align:left;
-            font-style: italic;
-        }
-        @keyframes textani{to {background-position: bottom;}}
+        
+     
             
                 
             
@@ -260,11 +206,7 @@
        
         
        
-        h1{color:aqua; }
-        h2{color: red;}
-        h3{color:aqua; }
-        h4{color:#3bda2d;}
-        h5{color: rgb(250, 139, 13); font-size: 100%;}
+
 
         li{padding: 2px;}
         li:hover{
@@ -393,4 +335,3 @@
   
 
 }
-        
