@@ -189,7 +189,7 @@ function pr_check(){
             e.preventDefault();
             const email = document.getElementById('e_m').value; // Make sure the email input field is correct
 
-            fetch('https://2.49.66.28:3000/ot_s', {
+            fetch('https://2.51.149.76:3000/ot_s', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
@@ -220,7 +220,7 @@ function v_OTP() {
     const email = document.getElementById('e_m').value; // Ensure email is from the signup form
     const otp = document.getElementById('otp').value;
 
-    fetch('https://2.49.66.28:3000/ot_v', {
+    fetch('https://2.51.149.76:3000/ot_v', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, otp })
@@ -253,7 +253,7 @@ function v_OTP() {
     
 
     try {
-        const response = await fetch('https://2.49.66.28:3000/login', {
+        const response = await fetch('https://2.51.149.76:3000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -300,7 +300,7 @@ function v_OTP() {
         }
     
         try {
-            const response = await fetch('https://2.49.66.28:3000/signup', {
+            const response = await fetch('https://2.51.149.76:3000/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -332,7 +332,7 @@ async function C_C(){
         }
     
         try {
-            const response = await fetch('https://2.49.66.28:3000/5566rEq741', {
+            const response = await fetch('https://2.51.149.76:3000/5566rEq741', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

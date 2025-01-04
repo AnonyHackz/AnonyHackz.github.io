@@ -1,0 +1,1 @@
+SELECT * FROM Cloud_Computing;
