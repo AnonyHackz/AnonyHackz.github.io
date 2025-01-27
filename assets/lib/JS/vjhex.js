@@ -60,22 +60,6 @@ document.getElementById('log_out').addEventListener('click',()=>{
 })
 
 
-document.getElementById('log_in').addEventListener('click',()=>{
-    in_Dex('5566rEq739', 55); 
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Handle response for "l_s_Face" and display content
 function l_s_Face(rlt) {
@@ -135,7 +119,7 @@ setInterval(() => {
 async function in_Dex(seq, id) {
     const response = await fetch(`https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/${encodeURIComponent(seq)}`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ c_key: id })
+        body: JSON.stringify({ id })
     });
     const c_Rlt = await response.json();
     if (c_Rlt.success) {
