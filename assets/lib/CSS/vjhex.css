@@ -1,449 +1,382 @@
-html,body{
-    height: 100%;
+body{
+    min-height: 100%;
+    background-color: #4b4545;
+    justify-content: center;
     text-align: center;
 }
-@media (max-width: 480px){
-    *{
-        background-image: url(../../../Common/Media/Background/BG7.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size:cover;
-    }
-    
-    #icon{
-        margin: 2%;
-    
-        width:50px;
-        position:absolute;top:0%; right:0%;
-        animation: iconanirotate 5s 5s linear infinite, iconani2 5s 5s linear ;
-        border-radius: 50%;
-        
-    }
-
-    @keyframes iconanirotate{
-        from{transform: rotate(0deg);}
-        100%{  transform: rotate(360deg);}
-       }
-       
-    @keyframes iconani2{
-           0%   { }
-           20%   {border-radius: 25%; }
-           30% {border-radius: 50%;}
-           50% { border-radius: 25%; }
-           100% {border-radius: 10%; }
-       }
-       
-
-
-
-       #hd {
-    
-        background-image: linear-gradient(
-            -225deg,
-            #3bda2d 0%,
-            #57f8dd 29%,
-            #ff1361 67%,
-            #fff800 100%  );
-        
-        background-size:auto auto;
-        background-clip: border-box;
-        background-size:  200%  auto;
-        color: #fff;
-        background-clip: text;
-        text-overflow: transparent;
-        -webkit-background-clip:text;
-        -webkit-text-fill-color: transparent;
-        animation: textani 5s linear infinite ;
-        animation-timing-function:relative;
-        margin-left: 10%;
-        margin-top: 1%;
-        position:sticky;
-        font-size: 200%;
-        text-align:center;
-        font-style: italic;
-        display: inline;
-
-        
-      
-        
-    }
-    
-    @keyframes textani{
-        to {
-            background-position: bottom;
-          }
-    }
-    
-    
-    
-    
-    #intro{
-        color: rgb(253, 253, 253);
-        font-family:'Brush Script MT', 'cursive' ;
-        text-align:center;
-        font-size:xx-large; 
-        
-    }
-
-    #linking{padding-left: 5%; padding-right: 5%;}
-
-    form{justify-content: center;}
-    .lbl{
-        display: inline-block;
-        width: 30px;   /* Width of the image */
-        height: 30px;  /* Height of the image */
-        vertical-align: middle;
-        margin-right:10px; 
-        justify-content: center;
-        
-
-    }
-    #d{
-        width: 100%;   /* Makes the image fill the label area */
-        height: 100%;  /* Makes the image fill the label area */
-        object-fit: contain; /* Ensures the image is contained within the label */
-        border: none; 
-        background-color: blue;
-        
-    }
- 
-    input[type="text"], input[type="password"] ,input[type="email"] {
-        
-        padding-left: 35px;              /* Padding to make space for the icon */
-        font-size: 16px;
-        height: 30px;
-        width: 250px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        color: black;
-        background-color: white;        /* White background */
-        background-image: none;         /* Remove any background image */
-        backface-visibility: hidden;
-        
-    }
-    #subt{
-        padding: 10px;
-        background-color: #5cb85c;
-        color: white;
-        border: solid;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #subt:hover{
-        background-color: #4cae4c;
-    }
-
-
-  
-    
-    
-    
-    #bt{
-        margin-top: 10%;
-        border: 10px;
-        border: solid;
-        border-radius: 50px;
-        padding: 10px;
-        justify-content: center;
-        position:relative;
-        color: whitesmoke; 
-        font-family: 'Brush Script MT', 'cursive';
-        font-size: x-large;
-        
-        
-    
-    }
-    #bt:hover{
-        cursor: pointer;
-        color:burlywood;
-        transition: 1s;
-    }
-    
-    
-       
-    
-    #project{
-        margin-top:10%;
-        color: chartreuse;
-        justify-content:space-between;
-        
-      
-    
-    
-    }
-    #LS{
-        color: coral;
-    }
-    #LS:hover{
-     
-        cursor: pointer;
-        color: rgb(250, 34, 232);
-        padding: auto;
-        border-radius: 50px;
-        font-size:larger
-        
-    }
-
-  
-
-    #prj{
-        background-color: #fff;
-        border: solid ;
-        border-color: antiquewhite;
-        padding: 0%;
-        width: 42%;
-        height: 25vh;
-        display: inline-block;
-        margin: 10px;
-        margin-top: 10px;
-
-       
-    }
-
-    #prj:hover{
-        cursor: pointer;
-    }
-
-    #im{
-        width:100%;
-        height: 80%;
-
-        
-    }
-    #prclk{
-        padding-bottom: 1%;
-        padding-left: 2%;  
-        color: antiquewhite;  
-        display: inline-block;
-        font-size:small;
-        
-        
-    }
-    #prclk:hover{
-        color: yellow ;
-    }
-    
-    
-    
-    
-    #bt2{
-        display: block;
-        text-align: center;
-        justify-content: center;
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
-      
-     
-    }
-    #bt2:hover{
-        cursor: pointer;
-        color: rgb(204, 241, 38);
-        background-color: rgb(250, 34, 232);
-        border-radius: 50px;
-        display: block;
-        text-align: center;
-        border-color: #4aff13;
-        border-width: 5px;
-    }
-
-
-
-    #GoBack{
-        display: block;
-        text-align: center;
-        justify-content: center;
-        color: rgb(44, 223, 21);
-        
-        
-        animation: blackintro 5s  linear  , gobackanifi 5s 7s linear infinite; 
-    }
-
-    @keyframes blackintro{
-        0%   {color:black;}
-        50%  {color:rgb(156, 95, 95);}
-        100% {color:blueviolet;}
-    }
-    @keyframes gobackanifi{
-        0%  {color:red; }
-        10% {color:aquamarine;}
-        20% {color:blue;}
-        30% {color: beige;}
-        40% {color: #fff800;}
-        50% {color:skyblue;}
-        60% {color: chartreuse;}
-        70% {color:#57f8dd;}
-        80% {color: blue;}
-        90% {color: aqua;}
-        100% {color: rgb(6, 247, 58);}
-    }
-
-
-    #btsoon{
-        display:block;
-        
-        justify-content: center;
-        text-align: center;
-        font-size:xx-large;
-        font-family: 'Brush Script MT', 'cursive';
-        color:rgb(72, 252, 27);
-        border-radius: 100px;
-        transition-duration: 0.3s;
-    }
-    
-    #btsoon:hover{
-       
-        cursor: pointer;
-        color: rgb(18, 255, 58);
-        background-color: rgb(255, 4, 4);
-        border-radius: 50px;
-        display: block;
-        text-align: center;
-        border-color: #0dfcf0;
-        border-width: 5px;
-    }
-
-    #BID{
-        position:relative;
-        bottom: 0%;
+@media (max-width: 720px) and (max-height: 1640px) and (orientation: portrait) {
+    /* Header/Taskbar Styling */
+    .HD {
+        margin: 0;
+        display: flex;
+        background-color: #645e5e;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        padding: 8px; /* Reduced padding for mobile */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
-    #BIcon{
-        width:50px;
-        position:relative;
+
+    #icon {
+        width: 40px; /* Smaller icon size */
+        height: 40px;
+        left: 5%;
+    }
+
+    #hd_n {
+        font-size: 18px; /* Adjust text size */
+        color: #fff800;
+        font-style: italic;
+    }
+
+    #log_in, #log_out {
+        padding: 8px 10px; /* Reduced padding for mobile */
+        font-size: 14px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 20px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    #log_in:hover, #log_out:hover {
+        background-color: #45a049;
+    }
+
+    /* Profile Picture */
+    #u_ple {
+        width: 40px; /* Smaller profile picture */
+        height: 40px;
+        top: 10px;
+        right: 5%;
+    }
+
+    /* Search Bar */
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 10px auto;
+        padding: 5px;
+        background-color: #464141;
+        border-radius: 20px;
+    }
+
+    #search {
+        width: 100%; /* Full width search input */
+        font-size: 14px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #464141;
+    }
+
+    #search-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    #search-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Content Containers */
+    #lin_sup_fo,
+    #ref,
+    .con_topics {
+        position: static; /* No fixed positioning */
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #c4c4e0;
+        border-radius: 10px;
+        margin: 10px 0;
+        background-color: #2c2c3c;
+        color: white;
+    }
+
+    /* Scrollable Content Styling */
+    .con_topics, #bDiv {
+        max-height: 300px; /* Restrict height for scrolling */
+        overflow-y: auto;
+    }
+
+    .con_topics::-webkit-scrollbar,
+    #bDiv::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .con_topics::-webkit-scrollbar-thumb,
+    #bDiv::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 10px;
+    }
+
+    /* Project Cards */
+    .prj {
+        width: 100%; /* Full width for mobile */
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: #4b4545;
+    }
+
+    #prclk {
+        font-size: 16px; /* Adjusted font size */
         text-align: center;
-        border-radius: 50%;
-        display:flexbox;
+        margin-top: 5px;
+        color: white;
     }
-    #Bhd{background-image: linear-gradient(
-        -225deg,
-        #3bda2d 0%,
-        #57f8dd 29%,
-        #ff1361 67%,
-        #fff800 100%  );
-    background-size:auto auto;
-    background-clip: border-box;
-    background-size:200% auto;
-    color: #fff;
-    background-clip: text;
-    text-overflow: transparent;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    animation: textani 5s linear infinite ;
-    animation-timing-function:relative;
-    position:relative;
-    display: inline;
-    font-size: 100%;
-    text-align:left;
-    font-style: italic;
-    }
-    #BContact{
-        margin: 1%;
-        font-size: 80%;
-        color:antiquewhite ;
-    }
-    #BContact:hover{
+
+    #prclk:hover {
         color: yellow;
         cursor: pointer;
     }
 
+    /* Form Styling */
+    form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #645e5e;
+        border-radius: 10px;
+        color: white;
+    }
+
+    form input[type="text"], form input[type="password"], form input[type="email"] {
+        width: 100%; /* Full width for mobile */
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        background-color: white;
+        color: black;
+    }
+
+    /* Links and Text */
+    a {
+        font-size: 14px; /* Adjust link font size */
+        color: #fff800;
+    }
+
+    a:hover {
+        color: yellow;
+        cursor: pointer;
+    }
+
+    h4 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    h5 {
+        font-size: 16px; /* Adjust subheading size */
+    }
+}
+
+/* Media Query for Infinix Hot 10 (Landscape Orientation) */
+@media (max-width: 1640px) and (max-height: 720px) and (orientation: landscape) {
+    .HD {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+    }
+
+    #icon {
+        width: 30px;
+    }
+
+    #hd_n {
+        font-size: 14px;
+    }
+
+    #log_in, #log_out {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .search-container {
+        width: 95%;
+    }
+
+    #search {
+        font-size: 12px;
+    }
+
+    #search-btn {
+        font-size: 12px;
+    }
+
+    .prj {
+        width: 48%; /* Two cards per row */
+    }
 }
 
 @media  (min-width: 1025px){
-    *{
+  
+    .HD {
+        margin: 0%;
+        display: flex;
+        background-color: #645e5e;
+        justify-content: center;
+        width: 100%; /* Ensure it takes full width */
+        position: relative; /* Default position */
+        transition: all 0.3s ease; /* Smooth transition for background and position change */
+        padding: 5px 0; /* Space inside the taskbar */
+        z-index: 100; /* Ensure it stays on top of other content */
+    }
+    
+    /* When scrolled, make it fixed and like a sticky taskbar */
+    .HD.scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for taskbar effect */
+        padding: 5px 0; /* Reduced padding when scrolled */
+    }
+
+
+
+
+
+
+
+
+
+
+   
+    
+    #icon{
+        vertical-align: middle;
+        width:50px;
+        position:absolute;
+        left: 1%;
+        border-radius: 50%;
+        display: inline-block;
+
         
-        background-image: url(../../../Common/Media/Background/BG7.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size:cover;
+    }
+    #hd_n {
+        color: #fff800;
+      
+ 
+        position:absolute;
+        left: 4%;
+        font-size:140%;
+        text-align:center;
+        font-style: italic;
+        display: inline-block;
         
+        
+    }
+
+   
+    
+
+    .search-container {
+      
+        display: inline-block;
+       
+        vertical-align: middle;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        padding: 5px 5px;
+        
+        background-color: #464141;
+    }
+    
+    #search {
+        vertical-align: middle;
+        display: inline-flex;
+        width: 300px;
+        background-color: #464141;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        color: #fcfcfc;
+
+    }
+    
+    #search-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    
+    #search-btn:hover {
+        background-color: #45a049;
+    }
+    
+    #search:focus {
+        outline: none;
+        
+    }
+
+    #subt{
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    #subt:hover{background-color: #45a049; }
+
+
+
+    #log_in, #log_out {
+        display: inline-block;
+        position: absolute;
+        top: 10px;  /* You can adjust this value to move the buttons up or down */
+        width: 80px;   /* Width of the button */
+        height: 50px;  /* Height of the button */
+        vertical-align: middle;
+        justify-content: center;
+        backface-visibility: hidden;
+    }
+
+    #log_in{
+        right: 5%;
+    }
+    #log_out{ 
+        right: 10%;
     }
     
 
-    #container{
-        
-        flex-direction: column;
-        min-height: 100vh;
-        }
-    
-    #icon{
-        
-        width:100px;
-        position:relative;
-        
-        text-align: center;
-        border-radius: 50%;
-        display: inline;
-        
-    }
-    
-    
-    @keyframes iconanirotate{
-     from{transform: rotate(0deg);}
-     100%{  transform: rotate(360deg);}
-    }
-    
-    @keyframes iconani2{
-        0%   { }
-        20%   {border-radius: 25%; }
-        30% {border-radius: 50%;}
-        50% { border-radius: 25%; }
-        100% {border-radius: 10%; }
-    }
-    
-    
-    
-    
-    
-    #hd {
-        
-     
-        color: #fff800;
-        
-       
-        
-        animation: textani 5s linear infinite , ;
-        animation-timing-function:relative;
-       
-        position:relative;
-        font-size: 500%;
-        text-align:center;
-        font-style: italic;
-        display: inline;
-        
-      
-        
-    
-    }
-    @keyframes textslide{
-       
-        0%    { }
-        10%   {left:45%; top:40%;}
-        30%   {left:0%; top:360%;}
-        60%   {left:-0%; top:360%; }
-        70%   {left:-35%; top:120%;}
-        90%   {left:-35%; top:120%;}
-        100%  { left:0%; top:0%;}
-       
-         
-    }
-   
-    
+
+
   
-    #Profile{
+    #u_ple{
         
-        display:flex;
         position: absolute;
-        right: 5%;
-        top:5%;
-        width: 50px;   /* Width of the image */
-        height: 50px;  /* Height of the image */
+        right: 1%;
+        top: 10px; 
+        width: 50px;
+        height: 50px;
         vertical-align: middle;
-        margin-right:10px; 
         justify-content: center;
         backface-visibility: hidden;
+        z-index: 90;
          
     }
 
@@ -459,57 +392,126 @@ html,body{
         backface-visibility: hidden;
     }
     
-    
-    #intro{
-        color: rgb(255, 255, 255);
-        font-family:'Brush Script MT', 'cursive' ;
-        text-align:center;
-        font-size:xx-large; 
-        animation-duration: 5s;
-        animation-name: slideintro;
-        animation-iteration-count: relative;  
-        
-        
+
+  
+
+    #lin_sup_fo{
+     
+        display: flex;
+        position: fixed;
+        width: 100%;
+        max-height: 85%; /* Set the maximum height for the container */
+        min-height: 85%;
+        overflow-y: auto;
+        border: 3px solid ;
+        align-items: center;          /* Centers the content vertically */
+        flex-direction: column;
+        vertical-align: middle;
+        padding: 20px;
     }
-    @keyframes slideintro {
+    #ref{
+        display: flex;
+        position: fixed;
+        width: 30%;
+        max-height: 85%; /* Set the maximum height for the container */
+        min-height: 85%;
+        overflow-y: auto;
+        border: 3px solid #c4c4e0;
+        border-radius: 20px;
+        background-color: #2c2c3c;   
+        align-items: center;          /* Centers the content vertically */
+        flex-direction: column;
+        vertical-align: middle;
+    }
+
+    .course_box{
        
-        from {
-          margin-left: -300%;
-          width: 300%;
+        position: fixed;
+        width: 100%;
+        max-height: 85%; /* Set the maximum height for the container */
+        min-height: 85%;
+        overflow-y: auto;
+        border: 3px solid ;
+        align-items: center;          /* Centers the content vertically */
+        padding: 20px;
+    }
+    .con_topics{  
+        display: flex;
+        position: fixed;
+        width: 20%;
+       
+        max-height: 85%; /* Set the maximum height for the container */
+        min-height: 85%;
+        overflow-y: auto;
+        border: 3px solid #c4c4e0;
+        border-radius: 20px;
+         
+        align-items: center;          /* Centers the content vertically */
+        flex-direction: column;
         }
-      
-        to {
-          margin-left: 0%;
-          width: 100%;
+
+
+  
+          /* Optional: Customize scrollbar appearance */
+        .con_topics::-webkit-scrollbar {
+        width: 30px; /* Set the width of the scrollbar */
         }
+    
+        .con_topics::-webkit-scrollbar-thumb {
+        background-color: #888; /* Set the scrollbar color */
+        border-radius: 50px; /* Add some rounding */
+        }
+    
+        /*.con_topics::-webkit-scrollbar-thumb:hover {
+        background-color: #030303; /* Change color on hover 
+          }*/
+
+
+
+
+
+
+
+
+
+
+
+
+    #l_in{
+        text-align: center;
+        padding: 20px;
+       
+        
     }
 
+    .con_Box{
+        display: flex;
+        position: fixed;
+        left: 21%;
+        width: 20%;
+        height: 85%;
+        padding: 1%;
+        border-radius: 20px;
+        align-items: center;          /* Centers the content vertically */
+        flex-direction: column;
+        color: #fcfcfc;
+        }
 
+        .int_link{
+            margin-top: 10px;
+            justify-content: center;
+            vertical-align: middle;
+            text-align: center;
+        }
+   
 
     
+
       
     form{justify-content: center;}
-    .lbl{
-        display: inline-block;
-        width: 30px;   /* Width of the image */
-        height: 30px;  /* Height of the image */
-        vertical-align: middle;
-        margin-right:10px; 
-        justify-content: center;
-        
-
-    }
-    #d{
-        width: 100%;   /* Makes the image fill the label area */
-        height: 100%;  /* Makes the image fill the label area */
-        object-fit: contain; /* Ensures the image is contained within the label */
-        border: none; 
-        background-color: blue;
-        
-    }
+    
  
-    input[type="text"], input[type="password"], input[type="email"] {
-        
+    form input[type="text"], form input[type="password"], form input[type="email"] {
         padding-left: 35px;              /* Padding to make space for the icon */
         font-size: 16px;
         height: 30px;
@@ -520,78 +522,52 @@ html,body{
         color: black;
         background-color: white;        /* White background */
         background-image: none;         /* Remove any background image */
-        backface-visibility: hidden;
-        
+        backface-visibility: hidden;   
     }
-    #subt{
-        padding: 10px;
-        background-color: #5cb85c;
-        color: white;
-        border: solid;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    #subt:hover{
-        background-color: #4cae4c;
-    }
+
+
+
+
+
+
+
+
+
+#topics{
+   
+  
+    border: 3px solid #ffffff;
+    color: #fff800;
+   
+    align-items: center;          /* Centers the content vertically */
+    flex-direction: column; 
+}
+
+
+
+  
     
-    #bt{
-        margin-top: 10%;
-        border: 10px;
-        border: solid;
-        border-radius: 50px;
-        padding: 10px;
-        justify-content: center;
-        
-        color: whitesmoke;
-        font-size: 150%;
-    
-    }
-    #bt:hover{
-        cursor: pointer;
-        color:burlywood;
-        transition: 1s;
-    }
+   
     
     
        
     
-    #project{
-        margin-top:2%;
-        color: antiquewhite;
-        
-        margin-left: 10%;
-        margin-right: 10%;
     
-    }
  
     
-    #LS{
-        color: coral;
-    }
-    #LS:hover{
-     
-        cursor: pointer;
-        color: rgb(250, 34, 232);
-        padding: auto;
-        border-radius: 50px;
-        font-size:larger
-        
-    }
-    
 
-    #prj{
-        background-color: #fff;
-        border: solid ;
-        border-color: antiquewhite;
-        padding: 0%;
+
+    .prj{ 
+        display: inline-block;
+        padding: 5px;
         width: 30vb;
         height: 30vh;
-        display: inline-block;
+        visibility: visible;
         margin: 10px;
+        border: #fcfcfc solid 5px;
     }
 
-    #prj:hover{
+    .prj:hover{
         cursor: pointer;
         color: yellow ;
     }
@@ -619,135 +595,65 @@ html,body{
     }
     
     
-    
-    
-    #bt2{
-        
-        margin-top: 2%;
-        border: 10px;
-        border: solid;
-        border-radius: 50px;
-        padding: 10px;
-        justify-content: center;
-        position:relative;
-        color: whitesmoke;
-        font-size: 150%;
-     
-    }
-    #bt2:hover{
-        cursor: pointer;
-        color:burlywood;
-        transition: 1s;
-    }
-
-
-
-    #GoBack{
-        display: block;
-        text-align: center;
-        justify-content: center;
-        color: rgb(44, 223, 21);
-        
-        animation: blackintro 5s  linear  , gobackanifi 5s 7s linear infinite; 
-    }
-
-    @keyframes blackintro{
-        0%   {color:black;}
-        50%  {color:rgb(156, 95, 95);}
-        100% {color:blueviolet;}
-    }
-    @keyframes gobackanifi{
-        0%  {color:red; }
-        10% {color:aquamarine;}
-        20% {color:blue;}
-        30% {color: beige;}
-        40% {color: #fff800;}
-        50% {color:skyblue;}
-        60% {color: chartreuse;}
-        70% {color:#57f8dd;}
-        80% {color: blue;}
-        90% {color: aqua;}
-        100% {color: rgb(6, 247, 58);}
-    }
-
-
-    #btsoon{
-        margin-top: 2%;
-        border: 10px;
-        border: solid;
-        border-radius: 50px;
-        padding: 10px;
-        justify-content: center;
-        position:relative;
-        color: whitesmoke;
-        font-size: 150%;
-    }
-    
-    #btsoon:hover{
-       
-        cursor: pointer;
-        color:burlywood;
-        transition: 1s;
-        
-    }
-
     #bDiv{
-        display: block;
-        justify-content: center;    }
+        display: flex;
+        position: fixed;
+        left: 21%;
+        width: 76%;
+        height: 85%;
+        padding: 1%;
+        border-radius: 20px;
+        color: #fcfcfc;
     
-
-    #BID{
-        position:relative;
-        margin-top: 2%;
-        
-    }
+        flex-wrap: wrap;              /* Allows items to wrap to the next row */
+        justify-content: space-evenly; /* Distributes items evenly */
+        align-items: flex-start;      /* Align items to the top */
+        gap: 1rem;                    /* Adds spacing between items */
     
-    #BIcon{
-        width:30px;
-        position:relative;
-        text-align: center;
-        border-radius: 50%;
-        display:flexbox;
+        overflow-x: hidden;           /* Hides horizontal overflow */
+        overflow-y: auto;
     }
-    #Bhd{
    
-    color: yellow;
-    position:relative;
-    display: inline;
-    font-size: 100%;
-    text-align:left;
-    font-style: italic;
+
+
+    #bDiv::-webkit-scrollbar {
+        width: 30px; /* Set the width of the scrollbar */
+        }
+    
+        #bDiv::-webkit-scrollbar-thumb {
+        background-color: #888; /* Set the scrollbar color */
+        border-radius: 50px; /* Add some rounding */
+        }
+    
+        /*#bDiv::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Change color on hover 
+          }*/
+
+
+
+    
+    a{
+        color:rgb(243, 35, 35);
     }
-    #BContact:hover{
-        color: yellow;
+    a:hover{
+        color: #fff800;
         cursor: pointer;
     }
-
-    p {
-        color: antiquewhite;
-       
-      }
-
-
-
-}
-
-
-
-
-
-
-#bd{
-
-
-    
-   
-    display: block;
+    h4{
+        color: aqua;
+    }
+    h5{
+        color:#fcfcfc;
+    }
    
 
-    
-    justify-content: center;
-    backface-visibility: hidden;
+ 
+
+
+
+
+
+
 
 
 }

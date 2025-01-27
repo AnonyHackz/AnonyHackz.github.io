@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnonyHackz</title>
     <link rel="icon" type="image/png" sizes="32x32" href="Common/Media/Logo/logo-white.png">
-    <script defer type="text/javascript" src="assets/lib/JS/vjhex.js"></script>
+    <script defer type="text/javascript" src="assets/lib/JS/vjhex1.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="assets/lib/CSS/vjhex.css">
-    <link rel="stylesheet" href="assets/lib/CSS/CloudComputing.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <link rel="stylesheet" href="assets/lib/CSS/vjhex.css"></link>
+   
 
 
  
@@ -17,131 +19,18 @@
 
 </head>
 <body >
-
-    <div id="HdIntro">
+    <div class="HD">
         <div id="parent">  
             <img id="icon" src="Common/Media/Logo/logo-white.png">
-            <h1 id="hd">AnonyHackz</h1> 
-            <div id="Profile">><img id="d" type="image/png" src="Common/Media/Icons/form.png" onclick="p_file()"></img></div>
-        </div>
-    </div><hr size="5" color="white">
-
-
-    <div id="container">
-            <div id="main" style="color: beige;" >
-                <p id="intro">Thank you for selecting our Anony Hackz learning platform. We highly appreciate your decision and are delighted to have you as part of our community.</p>
-                <div id="bDiv" ></div>
-                <p id="llinking">Explore <a id="LS" onclick="log_In()">Log In</a></p>
-                <p id="slinking">Don't have an account?, Create new one <a id="LS" onclick="sig_Up()">Sign Up</a></p>
+            <h1 id="hd_n">AnonyHackz</h1> 
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search...">
+                <button type="submit" id="search-btn">Search</button>
             </div>
-            
-                
-            
-            
-
-
-          
-
-
-            <div id="l_in" class="l_In" style="color: beige;" >
-                <h1 style="color: beige;">Log In</h1>
-                <p id="lin" style="color:coral;"></p>
-                <form id="lof">
-                    
-                        <label class="lbl" for="username" >
-                            <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
-                        </label>
-                        <input type="text" id="l_username" name="username" placeholder="Username" required /><br>
-                    
-                        <label class="lbl" for="password">
-                            <img id="d" src="Common/Media/Icons/2.png" alt="Username Icon" />
-                        </label>
-                        <input type="password" id="l_password" name="password" placeholder="Password" required /><br>
-                        <button id="subt" type="submit">Login</button>
-                </form>
-                <p >Don't have an account? <a id="LS" onclick="sig_Up()">Sign Up</a></p>
-                
-            </div>
-
-
-            <div style="color: beige;" id="s_up" class="l_In">
-                <h1 >Sign In</h1>
-                <p id="sig"></p>
-                <form id="sif">
-                    
-                    <label class="lbl" for="f_n" >
-                        <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
-                    </label>
-                    <input type="text" id="f_n" name="f_n" placeholder="Firstname" required /><br>
-
-                    <label class="lbl" for="l_n" >
-                        <img id="d" src="Common/Media/Icons/1.png" alt="Lastname Icon" />
-                    </label>
-                    <input type="text" id="l_n" name="l_n" placeholder="Lastname" required /><br>
-
-                    <label class="lbl" for="e_m" >
-                        <img id="d" src="Common/Media/Icons/mail.png" alt="Email Icon" />
-                    </label>
-                    <input type="email" id="e_m" name="e_m" placeholder="Email" required /><br>
-
-
-                    <label class="lbl" for="c_ph" >
-                        <img id="d" src="Common/Media/Icons/PN.png" alt="Phone Number Icon" />
-                    </label>
-                    <input type="text" id="c_ph" name="c_ph" placeholder="Phone Number" required /><br>
-
-
-
-                    <label class="lbl" for="adr" >
-                        <img id="d" src="Common/Media/Icons/adr.png" alt="Address Icon" />
-                    </label>
-                    <input type="text" id="adr" name="adr" placeholder="Address" required /><br>
-
-                    <label class="lbl" for="city" >
-                        <img id="d" src="Common/Media/Icons/city.png" alt="City Icon" />
-                    </label>
-                    <input type="text" id="city" name="city" placeholder="City" required /><br>
-
-                    <label class="lbl" for="username" >
-                        <img id="d" src="Common/Media/Icons/1.png" alt="Username Icon" />
-                    </label>
-                    <input type="text" id="s_username" name="username" placeholder="Username" required /><br>
-
-                    <label class="lbl" for="password">
-                        <img id="d" src="Common/Media/Icons/2.png" alt="Password Icon" />
-                    </label>
-                    <input type="password" id="s_password" name="password" placeholder="Password" required /><br>
-                    <label class="lbl" for="C_password">
-                        <img id="d" src="Common/Media/Icons/2.png" alt="Confirm Password Icon" />
-                    </label>
-                    <input type="password" id="s_Cpassword" name="C_password" placeholder="Confirm Password" required /><br>
-                    <button id="subt" type="submit" >Sign Up</button>
-                </form>
-                <p >Already have an account? <a id="LS" onclick="log_In()">Log In</a></p>
-                
-            </div>
-            <div id="ot">
-                <input type="text" id="otp" placeholder="Enter OTP" /><br>
-                <button id="subt" onclick="v_OTP()">Verify OTP</button>
-            </div>
-
-
+            <button id="log_in">Log in</button>
+            <button id="log_out">Log out</button>
            
-
-
-
-
-    </div>   
-
-    <div id='bDiv_cont'></div>
-
-    <footer id="bd" ><hr size="5" color="white">
-        <img id="BIcon" src="../../../Common/Media/Logo/logo-white.png">
-        <h1 id="Bhd"> AnonyHackz </h1> <br>
-        <span style=" color: aliceblue;">Contact Us If You Need Help</span><br>
-        <p id="BContact">+971503118352, +919047891106, anonyhackz741@gmail.com</p>
-
-    </footer>
-
+        </div>
+    </div><hr size="5" color="white">  
 </body>
 </html>         

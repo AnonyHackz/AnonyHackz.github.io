@@ -1,115 +1,166 @@
-:root{
-    --accent-color:var(--accent-color)
+/* Global Body and Layout Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../../../Common/Media/Background/bgf.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the background image covers the entire screen */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
 }
-html{
+
+h2 {
+    text-align: center;
+    margin-bottom: 2%; /* Relative margin */
+    color: #ffffff;
+    font-size: 3vw; /* Font size based on viewport width */
+}
+
+/* Container Styling */
+.container {
+    width: 50%; /* Set width to 50% of the parent */
+    max-width: 500px; /* Maximum width */
+    padding: 5%; /* Padding relative to the container size */
+    box-shadow: 0 4px 8px rgb(255, 254, 254);
+    background: rgb(0, 0, 0);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 0.3s ease;
+    overflow: auto; /* Enable scrolling when content overflows */
+    max-height: 70%; /* Limit the height of the container to 80% of the viewport height */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%; /* Dynamic gap between form elements */
+    width: 100%; /* Ensure form takes up full width of container */
+}
+
+.error-message{
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+/* Form Group Styling */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 2%; /* Space between label and input */
+    width: 100%;
+    justify-content: center;
+}
+
+/* Label Styling */
+.lbl {
+    display: inline-block;
+    width: 25%; /* Adjust width to 25% of the container's width */
+    height: auto; /* Height adjusts based on content */
+    margin-right: 0%; /* Space between label and input */
     text-align: center;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+/* Input Fields Styling */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    padding-left: 2%; /* Relative padding */
+    font-size: 1.2em; /* Relative font size */
+    width: 100%; /* Width relative to the parent container */
+    height: 5vh; /* Height based on viewport height */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 2%; /* Margin to separate input fields */
 }
 
-body{
-    min-width: 100vh;
-    background-image: url(../../../Common/Media/Background/8.jpg);
-    background-size: cover;
-    background-position: right;
-
-    overflow: hidden;
-}
-
-#BD{
-    box-sizing: border-box;
-    background-color:rgb(152, 255, 178);
-    justify-content:center;
-    flex-direction: column;
-    align-content: center;
-    display: flex;
-    width: max(40%, 600px);
-    height: 100vh;
-    padding: 20px;
-    border-radius: 30px 30px 30px 30px;
-}
-
-h1{
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-
-}
-
-
-
-form{
-    
-    margin-top: 20px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-}
-
-form div{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border-radius: 30px;
-}
-
-form label{
-    flex-shrink: 0;
-    height: 50px;
-    width: 50px;
-    background-color:rgb(228, 228, 238);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px 0 0 10px;
-}
-
-form input{
-    width: 0;
-    box-sizing: border-box;
-    border-radius: 0 10px 10px 0;
-    flex-grow: 0.5;
-    padding: 1em;
-
-}
-
-form input:hover{
-    border-color: black;
-}
-
-form input:focus{
-    outline: none;
-    border-color: blue;
-}
-
-div:has(input:focus) label{
-    background-color: var(--text-color);
-}
-
-form button{
-    margin-top: 10px;
+/* Button Styling */
+button {
+    padding: 2% 5%; /* Button padding relative to container size */
+    background-color: #40ad40;
+    color: white;
     border: none;
-    border-radius: 1000px;
-    padding: 0.80em 4em;
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5%; /* Margin between button and inputs */
+    width: auto; /* Button width adapts to the content */
+    font-weight: bold;
+    font-size: 1.5em; /* Font size based on container size */
 }
 
-form button:hover{
-    background-color: bisque;
+button:hover {
+    background-color: #89c489;
 }
 
-
-form div.wrong label{
-    border-color: red;
+/* Toggle Link Styling */
+.toggle-link {
+    text-align: center;
+    margin-top: 2%; /* Space between toggle link and button */
+    color: white;
 }
 
-form div.wrong input{
-    border-color: red;
+.toggle-link a {
+    color: #007db8;
+    text-decoration: none;
+}
+
+.toggle-link a:hover {
+    color: #fac000;
+    cursor: pointer;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 720px) {
+    .container {
+        width: 90%; /* Make container take up more space on small screens */
+        max-width: 400px; /* Max width for small screens */
+        padding: 8%; /* Adjust padding on smaller screens */
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack labels and inputs vertically */
+        gap: 3%; /* Add more space between label and input */
+    }
+
+    .lbl {
+        display: none;
+        width: 100%; /* Make labels take up full width in small screens */
+        margin-bottom: 5%; /* Space below label */
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"] {
+        width: 100%; /* Inputs fill the container */
+    }
+
+    button {
+        width: 100%; /* Button takes up full width on small screens */
+    }
+
+    h2 {
+        font-size: 5vw; /* Adjust heading size based on small screen width */
+    }
+
+    #d {
+        width: 20%;
+        height: auto; /* Auto height based on width */
+        object-fit: contain; /* Make sure image fits within container */
+    }
+}
+
+/* Image styling */
+#d {
+    width: 30%;
+    height: auto; /* Auto height based on width */
+    object-fit: contain; /* Make sure image fits within container */
 }
