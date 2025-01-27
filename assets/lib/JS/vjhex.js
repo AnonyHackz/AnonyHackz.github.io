@@ -77,14 +77,61 @@ function linSupFo(rlt){
 }
 
 
-function courses(rlt){
+/*function courses(rlt){
     const body = document.querySelector('body');
     const c_box = document.getElementById('course_box');
     if (!c_box) {
         body.insertAdjacentHTML('beforeend', `<div id="course_box" class="course_box">${rlt}</div>`);
     } else c_box.innerHTML = rlt;
+*/
 
+let currentState = 0;
+
+function courses(rlt) {
+    const body = document.querySelector('body');
+    const c_box = document.getElementById('course_box');
+    
+    // Insert or update the content (without removing previous content)
+    if (!c_box) {
+        body.insertAdjacentHTML('beforeend', `<div id="course_box" class="course_box">${rlt}</div>`);
+    } else {
+        c_box.innerHTML = rlt;
+    }
+
+    // Hide the current content if moving forward
+    const courseBox = document.getElementById('course_box');
+    if (currentState > 0) {
+        courseBox.style.display = 'block';  // Show the current content
+    }
+    
+    // Push state to browser history
+    currentState++;
+    history.pushState({ page: currentState }, '', `?page=${currentState}`);
+}
+
+function handleBackAndForward() {
+    window.addEventListener('popstate', function(event) {
+        // Handle back/forward button clicks
+        if (event.state && event.state.page) {
+            currentState = event.state.page;
+            const courseBox = document.getElementById('course_box');
+            
+            if (currentState > 0) {
+                // If we're in a "new" state, show the current content
+                courseBox.style.display = 'block';
+            } else {
+                // If we're back to the initial state, hide the current content
+                courseBox.style.display = 'none';
+            }
+        }
+    });
+}
+
+// Initialize popstate listener on page load
+window.onload = function() {
+    handleBackAndForward();
 };
+
 
 
 

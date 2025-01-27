@@ -15,8 +15,19 @@ body {
     width: 100%; /* Ensure it takes full width */
     position: relative; /* Default position */
     transition: all 0.3s ease; /* Smooth transition for background and position change */
-    padding: 5px 0; /* Space inside the taskbar */
+   
     z-index: 100; /* Ensure it stays on top of other content */
+}
+
+  /* When scrolled, make it fixed and like a sticky taskbar */
+  .HD.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow for taskbar effect */
+    padding: 5px 0; /* Reduced padding when scrolled */
 }
 
 #icon {
@@ -30,9 +41,10 @@ body {
     font-size: 18px;
     color: #fff800;
     font-style: italic;
+    display: inline;
 }
 
-#log_in, #log_out {
+#log_out {
     padding: 8px 10px;
     font-size: 14px;
     background-color: #4CAF50;
@@ -40,9 +52,11 @@ body {
     border-radius: 20px;
     margin: 0 5px;
     cursor: pointer;
+    display: flex;
+    right: 1.dvb;
 }
 
-#log_in:hover, #log_out:hover {
+#log_out:hover {
     background-color: #45a049;
 }
 
@@ -144,7 +158,7 @@ body {
 /* Images in Cards */
 .prj img {
     width: 70px;
-    height: 70px;
+    height: 200px;
     margin-bottom: 10px;
     border-radius: 5px;
 }
