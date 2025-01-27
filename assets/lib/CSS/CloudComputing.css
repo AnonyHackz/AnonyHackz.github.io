@@ -1,10 +1,7 @@
 
     
 
-    p{
-        color:antiquewhite ;
-        padding-left: 2%;
-    }
+  
     h1{color:aqua; }
     h2{color: red;}
     h3{color:aqua; }
@@ -12,24 +9,12 @@
     h5{color: rgb(250, 139, 13); font-size: 100%;}
 
     
-    li:hover{
-        cursor: pointer;
-        color:burlywood;
-        font-size: 100%;
-        
-    }
-    button:hover{
-        cursor: pointer;
-        color:burlywood;
-        font-size: 100%;
-    }
-    #topics{           
-        position:relative;
-        color:rgb(241, 245, 244);
-        
-    }
-    td,th,ol,li {
-        border: 2px solid rgb(107, 105, 102);
+    
+   
+
+    td,th,ol,li,p {
+        color:antiquewhite ;
+        padding-left: 2%;
         border-collapse: collapse;
         
       }
@@ -37,85 +22,8 @@
 
 
     
-    #intro{
-        margin-top: 10%;
-       
-    }
 
-    #Explore,#Home{
-            margin-top: 10%;
-            border: 10px;
-            border: solid;
-            border-radius: 20%;
-            padding: 10px;
-            justify-content: center;
-            position:relative;
-            color: whitesmoke; 
-    }
-    #Home{margin-left: 2%;}
-    #Explore:hover,#Home:hover{
-        cursor: pointer;
-        color:burlywood;
-        transition: 1s;
-    }
 
- 
-    #intIMG{margin-top:0%;width:47%; height:130%; padding-left: 2%;}
-        
-    #intVideo{margin-top:8%;width:47%; height:90%; padding-left:2%}
-    
-    #page1{
-        position:static;
-        margin-top: 10%;
-        color: rgba(0, 0, 0, 0.966);
-        justify-content: space-around;
-    
-    }
-
-    #BID{
-        position:relative;
-        bottom: 0%;
-        width: 100%;
-    }
-    #BIcon{
-        width:50px;
-        position:relative;
-        text-align: center;
-        border-radius: 50%;
-        display:flexbox;
-    }
-    #Bhd{background-image: linear-gradient(
-        -225deg,
-        #3bda2d 0%,
-        #57f8dd 29%,
-        #ff1361 67%,
-        #fff800 100%  );
-    background-size:auto auto;
-    background-clip: border-box;
-    background-size:200% auto;
-    color: #fff;
-    background-clip: text;
-    text-overflow: transparent;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    animation: textani 5s linear infinite ;
-    animation-timing-function:relative;
-    position:relative;
-    display: inline;
-    font-size: 100%;
-    text-align:left;
-    font-style: italic;
-}
-#BContact{
-    margin: 1%;
-    font-size: 80%;
-
-}
-#BContact:hover{
-    color: yellow;
-    cursor: pointer;
-}
- 
 
 
 
