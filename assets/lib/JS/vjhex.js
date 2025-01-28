@@ -1,24 +1,34 @@
-// For user management
+let Host;
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if user profile exists in localStorage
-    const stored_u_ple = localStorage.getItem('u_ple');
+document.addEventListener('DOMContentLoaded', async () => {
 
-    if (stored_u_ple ) {
-        // Parse stored profile and validate
-        const u_Ple = JSON.parse(stored_u_ple );
-        
-        if (u_Ple && u_Ple.token && u_Ple.username) {
-            console.log('User is already logged in:', u_Ple);
-            in_Dex('5566rEq739', 57) // Render logged-in state
+    try {
+        // Fetch the host.json file and assign Host
+        const response = await fetch('assets/lib/JS/host.json');
+        const dat = await response.json();
+        Host = dat.host; // Assign the host value
+        console.log('Host:', Host); // Log the Host value to check if it loaded properly
+
+        // Check if user profile exists in localStorage
+        const stored_u_ple = localStorage.getItem('u_ple');
+
+        if (stored_u_ple) {
+            // Parse stored profile and validate
+            const u_Ple = JSON.parse(stored_u_ple);
             
+            if (u_Ple && u_Ple.token && u_Ple.username) {
+                console.log('User is already logged in:', u_Ple);
+                await in_Dex('5566rEq739', 57); // Render logged-in state
+            } else {
+                console.log('Invalid profile data. Clearing storage.');
+                localStorage.removeItem('u_ple'); // Clear invalid data
+            }
         } else {
-            console.log('Invalid profile data. Clearing storage.');
-            localStorage.removeItem('u_ple'); // Clear invalid data
+            alert('No user profile found. Rendering initial state.');
+            window.location.href = 'assets/lib/HTML/login.html';
         }
-    } else {
-        alert('No user profile found. Rendering initial state.');
-        window.location.href='assets/lib/HTML/login.html'
+    } catch (error) {
+        console.error('Error loading host:', error);
     }
 });
 
@@ -164,23 +174,38 @@ setInterval(() => {
 
 // Fetch and render content from the server based on ID
 async function in_Dex(seq, id) {
-    const response = await fetch(`https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/${encodeURIComponent(seq)}`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id })
-    });
-    const c_Rlt = await response.json();
-    if (c_Rlt.success) {
-        if (id == 55) {
-            linSupFo(c_Rlt.C_rlt);
-            l_in()
+    if (!Host) {
+        console.error('Host is not defined!');
+        return; // Return early if Host is not yet defined
+    }
 
-        }else if (id == 56){ 
-            linSupFo(c_Rlt.C_rlt);
-            s_Up();
-        }else if (id >= 57 && id <= 60) {
-            courses(c_Rlt.C_rlt);
-        }else if (id >= 5566 && id <= 5580) {
-            courses(c_Rlt.C_rlt);
-        }else {console.log(c_Rlt.C_rlt)};
-    } else alert(c_Rlt.msg);
+    try {
+        const response = await fetch(`${Host}/${encodeURIComponent(seq)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id })
+        });
+        
+        const c_Rlt = await response.json();
+        
+        if (c_Rlt.success) {
+            if (id == 55) {
+                linSupFo(c_Rlt.C_rlt);
+                l_in();
+            } else if (id == 56) { 
+                linSupFo(c_Rlt.C_rlt);
+                s_Up();
+            } else if (id >= 57 && id <= 60) {
+                courses(c_Rlt.C_rlt);
+            } else if (id >= 5566 && id <= 5580) {
+                courses(c_Rlt.C_rlt);
+            } else {
+                console.log(c_Rlt.C_rlt);
+            }
+        } else {
+            alert(c_Rlt.msg);
+        }
+    } catch (error) {
+        console.error('Error in in_Dex:', error);
+    }
 }

@@ -1,33 +1,50 @@
+
+
+
+
+
+
+let Host;
+
+
 // For user management
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to check user profile in localStorage
-    const checkUserProfile = () => {
-        // Check if user profile exists in localStorage
-        const stored_u_ple = localStorage.getItem('u_ple');
+document.addEventListener('DOMContentLoaded', async () =>  {
+   // Fetch the host.json file and assign Host
+       try{ const response = await fetch('assets/lib/JS/host.json');
+            const dat = await response.json();
+            Host = dat.host; // Assign the host value
+            console.log('Host:', Host); // Log the Host value to check if it loaded properly;
 
-        if (stored_u_ple) {
-            // Parse stored profile and validate
-            const u_Ple = JSON.parse(stored_u_ple);
 
-            if (u_Ple && u_Ple.token && u_Ple.username) {
-                console.log('User is already logged in:', u_Ple);
-               //window.location.href = '../../../index.html'; // Redirect to logged-in state
-            } else {
-                console.log('Invalid profile data. Clearing storage.');
-                localStorage.removeItem('u_ple'); // Clear invalid data
+            // Function to check user profile in localStorage
+            const checkUserProfile = () => {
+                // Check if user profile exists in localStorage
+                const stored_u_ple = localStorage.getItem('u_ple');
+
+                if (stored_u_ple) {
+                    // Parse stored profile and validate
+                    const u_Ple = JSON.parse(stored_u_ple);
+
+                    if (u_Ple && u_Ple.token && u_Ple.username) {
+                        console.log('User is already logged in:', u_Ple);
+                    //window.location.href = '../../../index.html'; // Redirect to logged-in state
+                    } else {
+                        console.log('Invalid profile data. Clearing storage.');
+                        localStorage.removeItem('u_ple'); // Clear invalid data
+                    }
+                } else {
+                    console.log('No user profile found. Rendering initial state.');
+                    lin(); // Call the lin function for the initial state
+                }
             }
-        } else {
-            console.log('No user profile found. Rendering initial state.');
-            lin(); // Call the lin function for the initial state
-        }
-    };
+            // Call the function initially when the page loads
+            checkUserProfile();
 
-    // Call the function initially when the page loads
-    checkUserProfile();
-
-    // Set an interval to check user profile every 5 seconds (5000ms)
-    setInterval(checkUserProfile, 120000); // Adjust the interval time as needed (in milliseconds)
-});
+            // Set an interval to check user profile every 5 seconds (5000ms)
+            setInterval(checkUserProfile, 120000); // Adjust the interval time as needed (in milliseconds)
+        }catch (error) {
+            console.error('Error loading host:', error);
+        }});
 
 
 
@@ -44,7 +61,13 @@ document.addEventListener("click", (event) => {
     }
 });
 
+
+
+
+
+
 function lin() {
+   
     const ll = `
         <form id="login-form" void="javascript" method="post">
             <div class="form-group">
@@ -86,7 +109,7 @@ function lin() {
             const password = document.getElementById('l_password').value.trim();
 
             try {
-                const response = await fetch('https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/5566_ln', {
+                const response = await fetch(`${Host}/5566_ln`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password }),
@@ -213,7 +236,7 @@ function sup() {
 
             try {
                 // Call the signup API
-                const res = await fetch('https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/ot_s', {
+                const res = await fetch(`${Host}/ot_s`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData),
@@ -245,7 +268,7 @@ function sup() {
                         const otp = document.getElementById('otp-code').value.trim();
 
                         try {
-                            const res = await fetch('https://375d-2001-8f8-1a67-44cc-5cdc-617b-30a6-69a4.ngrok-free.app/ot_v', {
+                            const res = await fetch(`${Host}/ot_v`, {
                                 method: 'POST',
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({ formData,otp }),
@@ -275,3 +298,7 @@ function sup() {
     }
 }
 window.sup = sup;
+
+
+
+
