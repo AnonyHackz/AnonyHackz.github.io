@@ -10,12 +10,10 @@ let Host;
 // For user management
 document.addEventListener('DOMContentLoaded', async () =>  {
    // Fetch the host.json file and assign Host
-       try{ const response = await fetch('assets/lib/JS/host.json');
+       try{ const response = await fetch('../JS/host.json');
             const dat = await response.json();
             Host = dat.host; // Assign the host value
-            console.log('Host:', Host); // Log the Host value to check if it loaded properly;
-
-
+            
             // Function to check user profile in localStorage
             const checkUserProfile = () => {
                 // Check if user profile exists in localStorage
