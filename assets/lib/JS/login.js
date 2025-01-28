@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () =>  {
        try{ const response = await fetch('../JS/host.json');
             const dat = await response.json();
             Host = dat.host; // Assign the host value
-            
+
             // Function to check user profile in localStorage
             const checkUserProfile = () => {
                 // Check if user profile exists in localStorage
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', async () =>  {
                         localStorage.removeItem('u_ple'); // Clear invalid data
                     }
                 } else {
-                    console.log('No user profile found. Rendering initial state.');
                     lin(); // Call the lin function for the initial state
                 }
             }

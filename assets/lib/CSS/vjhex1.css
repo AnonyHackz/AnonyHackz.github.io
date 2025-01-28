@@ -53,7 +53,9 @@ body {
     margin: 0 5px;
     cursor: pointer;
     display: flex;
-    right: 1.dvb;
+    right: 1%;
+    top:1%;
+    
 }
 
 #log_out:hover {
@@ -237,7 +239,7 @@ h5 {
     }
 
     .prj {
-        width: 70%;
+        width: 95%;
     }
 
     #search {
@@ -250,7 +252,7 @@ h5 {
 
     #course_box {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 items per row on small screens */
         gap: 10px;
     }
 
@@ -310,13 +312,13 @@ h5 {
 
     #course_box {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 items per row on large screens */
+        grid-template-columns: repeat(6, 1fr); /* 4 items per row on large screens */
         gap: 20px;
     }
 
     .prj img {
-        width: 80px;
-        height: 80px;
+        width: 200px;
+        height: 100px;
     }
 
     #prclk {

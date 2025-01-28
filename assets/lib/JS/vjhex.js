@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             const u_Ple = JSON.parse(stored_u_ple);
             
             if (u_Ple && u_Ple.token && u_Ple.username) {
-                console.log('User is already logged in:', u_Ple);
+                
                 await in_Dex('5566rEq739', 57); // Render logged-in state
             } else {
                 console.log('Invalid profile data. Clearing storage.');
                 localStorage.removeItem('u_ple'); // Clear invalid data
             }
         } else {
-            alert('No user profile found. Rendering initial state.');
+            alert('Please Log In.');
             window.location.href = 'assets/lib/HTML/login.html';
         }
     } catch (error) {
@@ -67,6 +67,8 @@ document.getElementById('log_out').addEventListener('click',()=>{
     localStorage.removeItem('u_ple'); // Clear stored profile
     console.log('User logged out.');
     alert('You have been logged out.'); 
+    location.reload();
+
 })
 
 
