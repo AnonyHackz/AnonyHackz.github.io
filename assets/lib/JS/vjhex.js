@@ -101,11 +101,18 @@ let currentState = 0;
 
 function courses(rlt) {
     const body = document.querySelector('body');
+    const hr = document.getElementById('hd_hr')
     const c_box = document.getElementById('course_box');
+    
     
     // Insert or update the content (without removing previous content)
     if (!c_box) {
-        body.insertAdjacentHTML('beforeend', `<div id="course_box" class="course_box">${rlt}</div>`);
+        
+        const dd = document.createElement('div');  // Create a new div element
+        dd.id = 'course_box';                      // Set the id
+        dd.classList.add('course_box');            // Add the class
+        dd.innerHTML = rlt;                        // Set the innerHTML
+        hr.insertAdjacentElement('afterend', dd);
     } else {
         c_box.innerHTML = rlt;
     }
@@ -121,19 +128,61 @@ function courses(rlt) {
     history.pushState({ page: currentState }, '', `?page=${currentState}`);
 }
 
+
+function lesson(rlt) {
+    const body = document.querySelector('body');
+    const les_box = document.getElementById('les_box');
+    const les_syll = document.getElementById('syllu_bus');
+    const les_con = document.getElementById('les_con');
+    const hr = document.getElementById('hd_hr')
+
+    
+    // Insert or update the content (without removing previous content)
+    if (!les_box) {
+        const lesBox = document.createElement('div');
+        lesBox.id = 'les_box';
+        lesBox.classList.add('les_box');
+        lesBox.innerHTML = `<div class="syllu_bus" id="syllu_bus"></div>
+                            <div class="les_con" id="les_con">${rlt}</div>`
+        hr.insertAdjacentElement('afterend',lesBox);
+    } else {
+        //les_syll.innerHTML = rlt.syllubus;
+        les_con.innerHTML = rlt;
+    }
+
+    // Hide the current content if moving forward
+    const lesBox = document.getElementById('les_box');
+    if (currentState > 0) {
+        lesBox.style.display = 'block';  // Show the current content
+    }
+
+    const courseBox = document.getElementById('course_box');
+    if (currentState > 0) {
+        courseBox.style.display = 'none';  // Show the current content
+    }
+    
+    // Push state to browser history
+    currentState++;
+    history.pushState({ page: currentState }, '', `?page=${currentState}`);
+}
+
+
 function handleBackAndForward() {
     window.addEventListener('popstate', function(event) {
         // Handle back/forward button clicks
         if (event.state && event.state.page) {
             currentState = event.state.page;
             const courseBox = document.getElementById('course_box');
+            const lesBox = document.getElementById('les_box');
             
             if (currentState > 0) {
                 // If we're in a "new" state, show the current content
-                courseBox.style.display = 'block';
+                courseBox.style.display = 'grid';
+                lesBox.style.display = 'none'; 
             } else {
                 // If we're back to the initial state, hide the current content
                 courseBox.style.display = 'none';
+                lesBox.style.display = 'block'; 
             }
         }
     });
@@ -200,7 +249,7 @@ async function in_Dex(seq, id) {
             } else if (id >= 57 && id <= 60) {
                 courses(c_Rlt.C_rlt);
             } else if (id >= 5566 && id <= 5580) {
-                courses(c_Rlt.C_rlt);
+                lesson(c_Rlt.C_rlt);
             } else {
                 console.log(c_Rlt.C_rlt);
             }

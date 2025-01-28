@@ -30,7 +30,7 @@ body {
     padding: 5px 0; /* Reduced padding when scrolled */
 }
 
-#icon {
+header .icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -75,7 +75,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width:fit-content;
     margin: 10px auto;
     padding: 5px;
     background-color: #464141;
@@ -106,7 +106,7 @@ body {
     background-color: #45a049;
 }
 
-/* Content Containers */
+/* Content Containers 
 #lin_sup_fo,
 #ref,
 .con_topics {
@@ -120,7 +120,7 @@ body {
     color: white;
 }
 
-/* Scrollable Content Styling */
+/* Scrollable Content Styling *
 .con_topics, #bDiv {
     max-height: 300px;
     overflow-y: auto;
@@ -135,7 +135,7 @@ body {
 #bDiv::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
-}
+}*/
 
 /* Project Cards */
 .prj {
@@ -311,9 +311,10 @@ h5 {
     }
 
     #course_box {
+        padding: 5%;
         display: grid;
         grid-template-columns: repeat(6, 1fr); /* 4 items per row on large screens */
-        gap: 20px;
+        gap: 50px;
     }
 
     .prj img {
