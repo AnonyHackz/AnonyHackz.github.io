@@ -1,10 +1,38 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
 /* Base Styling (Mobile-First Approach) */
 body {
     min-height: 100%;
-    background-color: #4b4545;
+    background-attachment: fixed;
+    background-image: url('../../../Common/Media/Background/BG7.jpg');
     justify-content: center;
     text-align: center;
 }
+
+
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: none; /* Hide spinner initially */
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
 
 /* Header/Taskbar Styling */
 .HD {
@@ -34,7 +62,7 @@ header .icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    left: 5%;
+    
 }
 
 #hd_n {
@@ -76,7 +104,7 @@ header .icon {
     justify-content: space-between;
     align-items: center;
     width:fit-content;
-    margin: 10px auto;
+    margin: 5px auto;
     padding: 5px;
     background-color: #464141;
     border-radius: 20px;
@@ -106,36 +134,7 @@ header .icon {
     background-color: #45a049;
 }
 
-/* Content Containers 
-#lin_sup_fo,
-#ref,
-.con_topics {
-    position: static;
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #c4c4e0;
-    border-radius: 10px;
-    margin: 10px 0;
-    background-color: #2c2c3c;
-    color: white;
-}
 
-/* Scrollable Content Styling *
-.con_topics, #bDiv {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.con_topics::-webkit-scrollbar,
-#bDiv::-webkit-scrollbar {
-    width: 10px;
-}
-
-.con_topics::-webkit-scrollbar-thumb,
-#bDiv::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}*/
 
 /* Project Cards */
 .prj {
@@ -204,7 +203,7 @@ form input[type="email"] {
 /* Links and Text */
 a {
     font-size: 14px;
-    color: #fff800;
+    color: #a200ff;
 }
 
 a:hover {
@@ -218,6 +217,9 @@ h4 {
 
 h5 {
     font-size: 16px;
+}
+p{
+    color: white;
 }
 
 /* Media Queries */
@@ -313,8 +315,10 @@ h5 {
     #course_box {
         padding: 5%;
         display: grid;
-        grid-template-columns: repeat(6, 1fr); /* 4 items per row on large screens */
+        grid-template-columns: repeat(5, 1fr); /* 4 items per row on large screens */
         gap: 50px;
+        max-height: 80%;
+        min-height: 80%;
     }
 
     .prj img {
@@ -325,4 +329,72 @@ h5 {
     #prclk {
         font-size: 16px;
     }
+
+
+
+    td,ol,li {
+        color:rgb(248, 186, 105) ;
+        padding-left: 2%;
+        border-collapse: collapse ;
+        
+      }
+
+      th {
+        color:rgb(255, 221, 177) ;
+        padding-left: 2%;
+        border-collapse: collapse ;
+        
+      }
+
+
+
+
+
+
+    .syllu_bus{     
+        width: auto;  /* Set a fixed width */
+        height: 50%; /* Set a fixed height */
+        overflow-y: auto; /* Enables vertical scrollbar */
+        overflow-x: hidden; /* Hides horizontal scrollbar */
+        padding: 20px 20px ;  
+    }
+    .les_con{
+       
+        width: 80%;  /* Set a fixed width */
+        height: 71vh; /* Set a fixed height */
+        overflow-y: auto; /* Enables vertical scrollbar */
+        overflow-x: hidden; /* Hides horizontal scrollbar */
+        /* border: 1px solid #ccc; Optional: Adds a border */
+        padding: 10px;
+        background:#000000;
+
+
+        
+    }
+    .les_box{
+        display:flex;
+        position: relative;
+        width: 100%;
+        height: 40%;
+      
+       
+       
+
+        
+    }
+    .footer{
+        margin: 0;
+        background-color: #050505;
+        display: flex;
+        width: 100%;
+        height:150px;
+        position: relative;
+        bottom: 100%;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+
+
 }

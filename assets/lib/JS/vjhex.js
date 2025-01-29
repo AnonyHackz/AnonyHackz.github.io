@@ -1,7 +1,8 @@
 let Host;
 
 document.addEventListener('DOMContentLoaded', async () => {
-
+    const spinner = document.getElementById('loading-spinner');
+    spinner.style.display = 'block'; // Show the spinner
     try {
         // Fetch the host.json file and assign Host
         const response = await fetch('assets/lib/JS/host.json');
@@ -29,6 +30,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error('Error loading host:', error);
+    }finally {
+        // Hide the spinner once the task is complete
+        spinner.style.display = 'none'; // Hide the spinner
     }
 });
 
@@ -73,10 +77,6 @@ document.getElementById('log_out').addEventListener('click',()=>{
 
 
 
-// Handle response for "l_s_Face" and display content
-function l_s_Face(rlt) {
-
-}
 
 
 function linSupFo(rlt){
@@ -98,7 +98,7 @@ function linSupFo(rlt){
 */
 
 let currentState = 0;
-
+/*
 function courses(rlt) {
     const body = document.querySelector('body');
     const hr = document.getElementById('hd_hr')
@@ -165,10 +165,70 @@ function lesson(rlt) {
     // Push state to browser history
     currentState++;
     history.pushState({ page: currentState }, '', `?page=${currentState}`);
+}*/
+
+// For courses content
+function courses(rlt) {
+    const body = document.querySelector('body');
+    const hr = document.getElementById('hd_hr');
+    const c_box = document.getElementById('course_box');
+
+    if (!c_box) {
+        const dd = document.createElement('div');  // Create a new div element
+        dd.id = 'course_box';
+        dd.classList.add('course_box');
+        dd.innerHTML = rlt;  // Set the innerHTML for the content
+        hr.insertAdjacentElement('afterend', dd);
+    } else {
+        c_box.innerHTML = rlt;  // Update content if div already exists
+    }
+
+    // Manage visibility if needed (hide/show)
+    const courseBox = document.getElementById('course_box');
+    if (currentState > 0) {
+        courseBox.style.display = 'block';  // Show current content
+    }
+
+    currentState++;
+    history.pushState({ page: currentState }, '', `?page=${currentState}`);
+}
+
+// For lesson content
+function lesson(rlt) {
+    const body = document.querySelector('body');
+    const les_box = document.getElementById('les_box');
+    const hr = document.getElementById('hd_hr');
+    document.getElementById('course_box')?.remove();
+
+    if (!les_box) {
+        const lesBox = document.createElement('div');
+        lesBox.id = 'les_box';
+        lesBox.classList.add('les_box');
+        lesBox.innerHTML = `<div class="syllu_bus" id="syllu_bus">${rlt.tbl}</div>
+                            <div class="les_con" id="les_con">${rlt.C_rlt}</div>
+                            <div class="les_details" id="les_details">Hii</div>`;
+        hr.insertAdjacentElement('afterend', lesBox);
+    } else {
+        les_box.innerHTML = `<div class="syllu_bus" id="syllu_bus">${rlt.tbl}</div>
+                             <div class="les_con" id="les_con">${rlt.C_rlt}</div>
+                             <div class="les_details" id="les_details">Hii</div>`;
+    }
+    
+
+    //courseBox.style.display = 'none';  // Show current content
+   
+    currentState++;
+    history.pushState({ page: currentState }, '', `?page=${currentState}`);
 }
 
 
-function handleBackAndForward() {
+
+
+
+
+
+
+/*function handleBackAndForward() {
     window.addEventListener('popstate', function(event) {
         // Handle back/forward button clicks
         if (event.state && event.state.page) {
@@ -187,7 +247,30 @@ function handleBackAndForward() {
             }
         }
     });
+}*/
+
+
+function handleBackAndForward() {
+    window.addEventListener('popstate', function(event) {
+        if (event.state && event.state.page) {
+            currentState = event.state.page;
+            const courseBox = document.getElementById('course_box');
+            const lesBox = document.getElementById('les_box');
+
+            if (currentState > 0) {
+                courseBox.style.display = 'grid';
+                lesBox.style.display = 'none';
+            } else {
+                courseBox.style.display = 'none';
+                lesBox.style.display = 'block';
+            }
+        }
+    });
 }
+
+
+
+
 
 // Initialize popstate listener on page load
 window.onload = function() {
@@ -224,7 +307,7 @@ setInterval(() => {
 
 
 
-// Fetch and render content from the server based on ID
+/*/ Fetch and render content from the server based on ID
 async function in_Dex(seq, id) {
     if (!Host) {
         console.error('Host is not defined!');
@@ -259,5 +342,47 @@ async function in_Dex(seq, id) {
         }
     } catch (error) {
         console.error('Error in in_Dex:', error);
+    }
+}*/
+
+
+
+async function in_Dex(seq, id) {
+    if (!Host) {
+        console.error('Host is not defined!');
+        return;
+    }
+    const spinner = document.getElementById('loading-spinner');
+    spinner.style.display = 'block'; // Show the loading spinner
+    try {
+        const response = await fetch(`${Host}/${encodeURIComponent(seq)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id })
+        });
+        
+        const c_Rlt = await response.json();
+
+        if (c_Rlt.success) {
+            if (id == 55) {
+                linSupFo(c_Rlt.C_rlt); // Render content for specific id
+                l_in(); // Additional action for id 55
+            } else if (id == 56) {
+                linSupFo(c_Rlt.C_rlt);
+                s_Up(); // Another specific action for id 56
+            } else if (id >= 57 && id <= 60) {
+                courses(c_Rlt.C_rlt); // Display course content for IDs 57-60
+            } else if (id >= 5566 && id <= 5580) {
+                lesson(c_Rlt); // Display lesson content for IDs 5566-5580
+            } else {
+                console.log(c_Rlt.C_rlt); // Log for debugging other cases
+            }
+        } else {
+            alert(c_Rlt.msg); // Show error message if no success
+        }
+    } catch (error) {
+        console.error('Error in in_Dex:', error);
+    }finally {
+        spinner.style.display = 'none'; // Hide the loading spinner after the task is completed
     }
 }
