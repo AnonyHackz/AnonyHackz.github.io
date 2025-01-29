@@ -351,17 +351,23 @@ p{
 
 
 
-    .syllu_bus{     
+    .syllu_bus{
+      
+       
+        
         width: auto;  /* Set a fixed width */
         height: 50%; /* Set a fixed height */
         overflow-y: auto; /* Enables vertical scrollbar */
         overflow-x: hidden; /* Hides horizontal scrollbar */
-        padding: 20px 20px ;  
+        padding: 20px 20px ;
+
+
+        
     }
     .les_con{
        
         width: 80%;  /* Set a fixed width */
-        height: 71vh; /* Set a fixed height */
+        height: 7vh; /* Set a fixed height */
         overflow-y: auto; /* Enables vertical scrollbar */
         overflow-x: hidden; /* Hides horizontal scrollbar */
         /* border: 1px solid #ccc; Optional: Adds a border */
