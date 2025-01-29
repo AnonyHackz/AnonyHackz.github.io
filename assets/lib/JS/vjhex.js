@@ -142,12 +142,13 @@ function lesson(rlt) {
         const lesBox = document.createElement('div');
         lesBox.id = 'les_box';
         lesBox.classList.add('les_box');
-        lesBox.innerHTML = `<div class="syllu_bus" id="syllu_bus"></div>
-                            <div class="les_con" id="les_con">${rlt}</div>`
+        lesBox.innerHTML = `<div class="syllu_bus" id="syllu_bus">${rlt.tbl}</div>
+                            <div class="les_con" id="les_con">${rlt.C_rlt}</div>`
         hr.insertAdjacentElement('afterend',lesBox);
     } else {
         //les_syll.innerHTML = rlt.syllubus;
-        les_con.innerHTML = rlt;
+        les_con.innerHTML = rlt.C_rlt;
+        les_syll.innerHTML = rlt.tbl
     }
 
     // Hide the current content if moving forward
@@ -249,7 +250,7 @@ async function in_Dex(seq, id) {
             } else if (id >= 57 && id <= 60) {
                 courses(c_Rlt.C_rlt);
             } else if (id >= 5566 && id <= 5580) {
-                lesson(c_Rlt.C_rlt);
+                lesson(c_Rlt);
             } else {
                 console.log(c_Rlt.C_rlt);
             }

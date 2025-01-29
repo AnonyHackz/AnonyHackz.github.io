@@ -1,21 +1,28 @@
-SELECT Content  FRom Front_face WHERE Seq_id= 5000001 ;
-"Content"
-"<div id=""l_in"" class=""l_In"" style=""color: beige;"">
-    <h1 style=""color: beige;"">Log In</h1>
-    <p id=""lin"" style=""color:coral;""></p>
-    <form id=""lof"">
-        
-            <label class=""lbl"" for=""username"">
-                <img id=""d"" src=""Common/Media/Icons/1.png"" alt=""Username Icon"">
-            </label>
-            <input type=""text"" id=""l_username"" name=""username"" placeholder=""Username"" required=""""><br>
-        
-            <label class=""lbl"" for=""password"">
-                <img id=""d"" src=""Common/Media/Icons/2.png"" alt=""Username Icon"">
-            </label>
-            <input type=""password"" id=""l_password"" name=""password"" placeholder=""Password"" required=""""><br>
-            <button id=""subt"" type=""submit"">Log In</button>
-    </form>
-    <p>Don't have an account? <a id=""56"">Sign Up</a></p>
-    
-</div>"
+
+UPDATE Cloud_Computing
+SET Content = '    <table border="1">
+        <tr>
+            <th>Topics</th>
+        </tr>
+        <tr><td>Syllabus</td></tr>
+        <tr><td>Cloud Computing Introduction</td></tr>
+        <tr><td>Advantages and Disadvantages</td></tr>
+        <tr><td>History of Cloud Computing</td></tr>
+        <tr><td>Cloud Computing Architecture</td></tr>
+        <tr><td>Cloud Computing Technologies</td></tr>
+        <tr><td>Cloud Computing VS Grid Computing</td></tr>
+        <tr><td>How Does Cloud Computing Work</td></tr>
+        <tr><td>Cloud Computing Applications</td></tr>
+        <tr><td>Security and Risk of Cloud Computing</td></tr>
+        <tr><td>AWS</td></tr>
+        <tr><td>AWS Architecture</td></tr>
+        <tr><td>AWS Features</td></tr>
+        <tr><td>AWS Pros & Cons</td></tr>
+        <tr><td>AWS Application</td></tr>
+        <tr><td>AWS Console Mobile App</td></tr>
+        <tr><td>AWS Account</td></tr>
+        <tr><td>AWS Management Console</td></tr>
+        <tr><td>AWS Developer Tools</td></tr>
+        <tr><td>AWS Management Tools</td></tr>
+    </table>'
+WHERE id = 6000036;
