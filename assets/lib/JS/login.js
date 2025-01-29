@@ -106,7 +106,7 @@ function lin() {
             const password = document.getElementById('l_password').value.trim();
 
             try {
-                const response = await fetch(`${Host}/5566_ln`, {
+                const response = await fetch(`${encodeURI(Host)}/5566_ln`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password }),
